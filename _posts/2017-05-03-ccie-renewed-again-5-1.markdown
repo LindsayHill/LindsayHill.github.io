@@ -2,7 +2,7 @@
 author: lindsay
 date: 2017-05-03 23:01:54+00:00
 layout: post
-slug: ccie-renewed-again-5-1
+slug: ccie-renewed-again-exam-400-101-v5-1
 title: CCIE Renewed Again - Exam 400-101 v5.1
 categories:
 - CCIE
