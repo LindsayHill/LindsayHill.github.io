@@ -1,0 +1,30 @@
+---
+author: lindsay
+date: 2013-11-18 14:00:28+00:00
+layout: post
+slug: kiwicon-7
+title: Kiwicon 7
+categories:
+- Security
+tags:
+- security
+---
+
+[Kiwicon](http://www.kiwicon.org/) 7 has just wrapped up in Wellington, New Zealand. Kiwicon is “New Zealand’s own Hacker Conference.” It’s a top-notch event that’s been running for 7 years now, and highly recommended for anyone in New Zealand with even a vague interest in IT Security.
+
+I've been to at least 4 editions of Kiwicon now, and I always enjoy it. There’s a wide range of quality speakers, both from New Zealand and overseas. There’s only one “track” though, which means that there’s a wide range of topics, and you can’t exactly specialise. Instead you might have a talk on low-level encryption details followed by a very high level philosophical view of finding anomalies with Big Data. No matter though, you'll get to see a range of talks, from talented people.
+
+My favourite talk was from Denis Andzakovic and Thomas Hibbert on "Enterprise" Management Software. Obviously this brings together two of my main interest areas: Security and Network Management. When an NMS only did monitoring, security was always a bit low on the agenda. After all, who really cares if other people can see your CPU stats? Maybe they can fix some of the alarms? But Network Management Systems now do more "Management" - i.e. they can make changes to the network, and they hold more data than ever. Given that level of access, you need to keep them very well-controlled. But security is a bit poor it turns out. Favourite attack was XSS via SNMP trap. I've often wondered about SNMP, and what would happen if I tell the NMS I'm a router, but start feeding back malicious data.
+
+Kiwicon is not profit-driven, and is largely run by volunteers, with a bit of help from some sponsors. It’s scheduled at the weekend, and the price is low ($60NZD), so it doesn’t matter if your boss doesn’t believe in security conferences - you can just pay for it yourself, as I did. This makes it very accessible, and you get a wide range of attendees. There’s plenty of “security professionals” working for The Man in attendance, but there’s also a good mix of students, developers, system administrators, and others with an interest in security. There's around 800 attendees these days.
+
+In a [nod to @EtherealMind](http://etherealmind.com/published-cloud-security-panel-at-gigaom-structure-public-private-sddc-symposium/), I do have to admit that there was a lock-picking session, and some mighty beards on display, but I somehow missed any discussions of the best martial art. There was a distinct “look” to the attendees though. Walking down the street to the venue, it was very obvious that either there was an IT Security conference happening, or there was a bogan festival in town. No need to ask if I had found the right place. A lot of black T-shirts and hoodies. I’d unintentionally worn my black hoody, so I fitted in. Well, except that I’ve got short hair and no beard.
+
+The best part of Kiwicon for me is the social aspect. It's a friendly conference, and New Zealand's a small place, so it's great for catching up with people I know in the industry. Coffee, lunch, dinner, drinks, whatever - you can find out what everyone's up to. And hey, even if you're new in this scene, people will welcome you into whatever discussion is going on. I think one late-night conversation concluded that Cisco's "[Internet of Things](http://www.cisco.com/web/solutions/trends/iot/overview.html)" may actually be a real "Thing", and not just marketing bollocks. Who knew?
+
+Overall, I highly recommend Kiwicon to anyone in New Zealand with even a vague interest in security. Low cost, plenty of interesting people to meet, and a good chance to talk all sorts of technical topics - what’s not to like? Oh and a special mention for this year’s pass - a stylised "grass mud horse ear", with an RFID ear-tag in it:
+
+[![Only in New Zealand](/assets/2013/11/kiwicon-tag.jpg)](/assets/2013/11/kiwicon-tag.jpg)
+
+{:.image-caption}
+Only in New Zealand

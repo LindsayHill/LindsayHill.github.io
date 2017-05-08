@@ -1,0 +1,31 @@
+---
+author: lindsay
+date: 2014-07-29 07:35:25+00:00
+layout: post
+slug: hp2910al-memory-leak-with-w-15-14-0007
+title: HP2910al - Memory Leak with W.15.14.0007?
+categories:
+- Routing &amp; Switching
+tags:
+- hp
+---
+
+I have an [HP 2910al](http://h17007.www1.hp.com/us/en/networking/products/switches/HP_2910_al_Switch_Series/index.aspx#.U9dK_4CSyWE) switch in my lab. I was running firmware version W.15.12.0012, but needed to upgrade, to fix a bug where "~" gets added to the snmp community configuration. I tried upgrading to W.15.14.0007, and it initially looked good, but shortly afterwards got alarms from my NMS about high memory usage.
+
+Digging in, here's a graph showing the memory usage - you can see how it has been very stable, but then spiked up just after I upgraded:
+
+[![Switch memory utilisation](/assets/2014/07/sw01pi-memory-utilisation.png)](/assets/2014/07/sw01pi-memory-utilisation.png)
+
+{:.image-caption}
+Switch memory utilisation
+
+The pictures don't lie. The switch was noticeably sluggish via CLI, and you can see that the ping response time spiked up:
+
+[![Switch response time](/assets/2014/07/sw01pi-response-time.png)](/assets/2014/07/sw01pi-response-time.png)
+
+{:.image-caption}
+Switch response time
+
+I rolled back to W.15.13.0008, which resolved my bug, and since then memory & response times have looked stable.
+
+Just another case where it's so handy having performance data both before and after a change.

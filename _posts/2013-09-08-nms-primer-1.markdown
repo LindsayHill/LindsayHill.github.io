@@ -1,0 +1,75 @@
+---
+author: lindsay
+date: 2013-09-08 19:00:07+00:00
+layout: post
+slug: nms-primer-1
+title: 'NMS Primer 1: What is an NMS?'
+series: 'NMS Primer'
+categories:
+- NMS
+tags:
+- NMS
+- series
+---
+
+{% include series.html %}
+
+This is the first in a short series of posts that will give a high-level view of what a Network Management System (NMS) is, how to go about choosing and implementing one, and requirements for ongoing care and attention. This will be reasonably generic - it’s not about the specific way to configure Product X or Y, but instead general considerations that apply to any NMS.
+
+Before going too far, let’s step back and look at what an NMS is, what it can do for me, and why I should implement one.
+
+
+## What is an NMS?
+
+
+NMS stands for **N**etwork **M**anagement **S**ystem. [According to Wikipedia](http://en.wikipedia.org/wiki/Network_management_system), an NMS:
+
+
+> ...is a combination of hardware and software used to monitor and administer a computer network or networks….Management tasks include discovering network inventory, monitoring device health and status, providing alerts to conditions that impact system performance, and identification of problems, their source(s) and possible solutions.
+
+
+It’s a short article, but that’s a pretty good summary of what an NMS is. Basically it’s software that discovers your network, keeps an eye on it, and tells you if it’s broken. There’s a few questions it raises though - such as how does it do those things? And what defines the scope of the “network” - does this mean just routers and switches, or does it mean all the compute elements making up our network?
+
+We’ll go into some of the “How” in the next post. The scope question is one that’s up to you - some people only care about routers and switches, some teams also need to monitor and manage the systems and applications that use those networks. Some systems will monitor all types of devices from one application, others will focus on discrete areas, and integrate with other systems.
+
+
+## What can it do for me?
+
+
+I’m a practical engineer. What I want to know is “What’s it going to do for me?” These are the sorts of things you can expect from any competent NMS:
+
+
+
+  * Fault detection - tell me if something’s broken. That might be the whole switch is dead, or it might be a faulty fan in that chassis. Maybe we’ve switched to the backup Internet link.
+
+  * Performance - tell me how the network is performing. How much capacity do I have on those links? How much spare memory do those core routers have?
+
+  * Bandwidth Hogs - who’s using all the bandwidth? Which applications?
+
+  * Inventory - show me all the devices in my network, what models, what versions, what linecards, etc.
+
+  * Network Topology Mapping - show me how my devices are interconnected.
+
+  * Network Configuration - backup all my devices. Deploy changes across all systems. Roll out software upgrades.
+
+  * Compliance - check that all my devices meet my compliance and security standards.
+
+
+[![SolarWinds NTA NetFlow monitoring](/assets/2013/09/solarwinds_nta.jpg)](/assets/2013/09/solarwinds_nta.jpg)
+
+{:.image-caption}
+SolarWinds NTA NetFlow monitoring
+
+
+## Why go to all the trouble?
+
+
+No matter what the marketing says, deploying an NMS is not simply a case of install it and you’re done. You will have to put in time and effort to make it useful. Those of you who are still scarred from early experiences with HP OpenView or CiscoWorks will ask “Is it really worth the pain?”
+
+Modern systems aren’t perfect. But they are a lot better than they used to be. Pretty much any modern NMS will save you time and money. You’ll be faster at identifying problems, and faster at solving them. You’ll also be able to deal with faults like dead power supplies or failed backup routers **before** they become a problem for your users. Less time investigating network faults means more time available to improve your network. It is also useful in reducing “time to innocence” - how many times have you had to prove it’s NOT the network’s fault? Collecting detailed statistics on how your network is performing can also be tremendously useful when trying to justify upgrades. If you don’t have hard numbers to back it up, it’s just conjecture.
+
+
+## OK, Where do I start?
+
+
+Easy - follow the links to read the rest of this series!

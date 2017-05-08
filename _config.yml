@@ -1,0 +1,38 @@
+# Dependencies
+markdown:         kramdown
+
+# Permalinks
+permalink:        /:title/
+
+# Setup
+title:            'Lindsay Hill'
+tagline:          'network control, visibility, management'
+description:      'Technical posts on network management, automation, career and worklife'
+url:              https://lkhill.github.io
+baseurl:             /
+
+author:
+  name:           'Lindsay Hill'
+  url:            https://twitter.com/northlandboy
+  email:          lindsay.k.hill@gmail.com
+  github:         LindsayHill
+  twitter:        northlandboy
+
+paginate:         10
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/LindsayHill/lkhill.github.io
+
+feed: 
+  path: /feed/index.xml
+
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-youtube

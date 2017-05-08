@@ -1,0 +1,90 @@
+---
+author: lindsay
+date: 2013-09-09 19:00:16+00:00
+layout: post
+slug: nms-primer-2
+title: 'NMS Primer 2: How Do They Work?'
+categories:
+- NMS
+series: 'NMS Primer'
+tags:
+- NMS
+- series
+---
+   
+{% include series.html %}
+
+OK, we’ve now got a bit of an idea about [WHAT an NMS might do for us]({% post_url 2013-09-08-nms-primer-1 %}). But HOW do they work? Here’s a quick overview of some of the protocols, tools and techniques used.
+
+
+## SNMP
+
+
+SNMP [(Simple Network Management Protocol)](http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol) is one of the oldest, mostly widely used protocols we have. It’s also widely despised, but often it’s all we’ve got, so get used to it. SNMP exposes system information in the form of variables that can be polled by an NMS. Examples of the type of information that can be retrieved includes system name, CPU usage, interface state, interface utilisation counters, routing tables, etc.
+
+There are standard objects that all systems should offer, and then there are vendor extensions to expose custom data - e.g. Active VPN tunnels on a Cisco ASA. It is this ability to extend SNMP that helped it catch on, as vendors are free to expose whatever information they think is useful. This information is published as “MIBs”, that defines the mapping between numeric SNMP OIDs and human-readable descriptions.
+
+Some values can also be “set”  - e.g. tell a switch to disable interface Gig0/1. Devices can also asynchronously send “traps” to an NMS, to inform it of changes of device state - e.g. a link going down.
+
+SNMP Agents are relatively lightweight, and have been implemented in very low-end systems. Both polling and traps use UDP, on ports 161 and 162, respectively. SNMP v1 and v2c use simple plaintext "community" strings for security, while SNMPv3 implements proper encryption and authentication. SNMP v2c is probably the most widely used version, in spite of its security shortcomings.
+
+The combination of these factors has led to widespread support across almost all network-capable systems. The array of information that can be accessed via SNMP provides the ‘core’ of our network management needs - it provides almost all device configuration and state information.
+
+
+## Discovery
+
+
+In order to monitor a network, the NMS first has to know what devices make up the network. There’s a few different ways of loading devices into your NMS - the simplest is to go and manually add a list of all devices. This is fine if you’ve got 10 nodes, but it doesn’t scale if you’ve got 1,000. So most systems have forms of auto-discovery. Simple methods include doing a ping sweep of a network, and then trying to poll responding systems via SNMP. If a system responds, and it’s the “right” sort of device, it gets added to the NMS. More advanced discovery methods will poll existing known systems, asking them about their neighbours (ARP/CDP/LLDP), and then try to discover those. Rinse and repeat, expanding outwards. This method will see become more common as we move to IPv6 networks, where ping sweeps are impractical.
+
+Once a network has been discovered, the NMS can show the interconnections:
+
+[![Network Topology in HP IMC](/assets/2013/09/imc_topology.png)](/assets/2013/09/imc_topology.png)
+
+{:.image-caption}
+Network Topology in HP IMC
+
+
+## Polling
+
+
+Once systems are discovered, they will be regularly polled, using both ICMP (ping) and SNMP. Ping provides initial availability testing, and SNMP provides more detailed state data. Polling windows vary, but a common starting point is 5-minute polling for all devices. This polling will check system health and availability, and retrieve performance counters. “Configuration” polling will also be done on a less-frequent basis, to retrieve information that changes less frequently - e.g. IOS version, line cards installed, etc. Some systems will also perform application-level polling - this may range from simply connecting to a port, to retrieving a webpage and checking its content.
+
+
+## Syslog
+
+
+Syslog is a simple logging method, long used by Unix systems. Devices can retain local logs, and/or they can use the syslog protocol to send their logs to a central server. Each line typically contains the date, a severity (e.g. CRITICAL, WARNING), a code, and a message. An example might be:
+
+
+```text
+Sep  2 21:34:44.178 NZST: %SYS-5-CONFIG_I: Configured from console by admin on vty1 (172.16.50.2)
+```
+
+
+By configuring all network devices to send their logs to one place, you can monitor the entries, and raise alarms when specific patterns are seen - e.g. “Power supply 1 has failed”. Network devices will also generally lose all logs at reboot - by storing them off-box, you can parse through them later. This is handy if a device has gone offline, and you suspect there may have been some useful log entries - e.g. If the last entry was “User lindsayh logged in”, then I know who I’d be pointing the finger at!
+
+
+## NetConf, CLI scraping (Telnet, SSH), TFTP
+
+
+If your NMS is also doing Network Configuration Management, it needs to retrieve configurations from devices. Sadly there has been very little standardisation here, with protocols like NetConf never really taking off. We’re reduced to sending commands to devices via Telnet or SSH, looking at the output, sending more commands, and capturing the results. TFTP, FTP, SFTP and SCP may also be used for transferring commands and software.
+
+
+## NetFlow, sFlow
+
+
+SNMP provides useful information about an interface utilisation, but it doesn’t tell us **what** is using that bandwidth. To get that sort of information, you need to configure NetFlow (on routers) or sFlow (on switches). This will collect metadata about the traffic flowing through a port. It then exports the data to a NetFlow collection station, which parses it. Note that this is traffic metadata - it does not simply mirror all packets. NetFlow can tell you which system(s) and which application(s) are using the bandwidth, how long the session lasted, etc. But it won't tell you what the contents of the email are.
+
+
+## IP SLA
+
+
+IP Service Level Agreements (IP SLAs) are a method of monitoring a network path or application from a router. A router is configured to perform specific tests - e.g. an ICMP echo to another router, a web page retrieval, a simulated VoIP call. The router collects data about response time, jitter, etc. The data can then be polled via SNMP. This provides a better picture of how the network is performing for key applications. Typical SNMP polling tells us about device health, but using IP SLA can tell us more about overall network performance, as experienced by real applications.
+
+
+## WMI
+
+
+We’re not going to go into it here, but [Windows Management Instrumentation](http://en.wikipedia.org/wiki/Windows_Management_Instrumentation) provides much more advanced capabilities than SNMP for managing Windows-based systems and applications. If you need to monitor Windows-based systems, you should be using WMI where possible, as this is very clearly the preferred direction for Microsoft. I’m not sure if we’ll see it much on network devices though.
+
+That covers most of the protocols and techniques used by a typical NMS. There are some advanced features we’re starting to see, such as supporting APIs for connecting to other applications and service providers. But we don’t need to worry too much about those right now. Next post coming up: Choosing an NMS: Narrowing down an enormous field.

@@ -1,0 +1,121 @@
+---
+author: lindsay
+date: 2013-09-11 19:00:05+00:00
+layout: post
+slug: nms-primer-4
+title: 'NMS Primer 4: Main NMS Players'
+categories:
+- NMS
+series: 'NMS Primer'
+tags:
+- NMS
+- series
+---
+
+{% include series.html %}
+
+There are many different NMS products on the market, and it is difficult trying to select the right one. I see four main product groupings - it's helpful to work out which general category suits you, then evaluate products from that smaller list. You can argue a bit about exactly where specific products fit in, and the exact classification, but this should give you a general understanding.
+
+{% include note.html content="I’ve also listed example products for each category. This is not extensive - it is just some of the well-known products, and/or those I’ve personally worked with. If you have other products you think should be listed here, then let me know." %}
+
+
+The four groupings I see are:
+
+
+
+  * Big Iron (Service Provider/Large Enterprise)
+
+  * Mid-Market (The rest of us)
+
+  * Open Source (Could be used at any level, if you've got the right people)
+
+  * Cloud-Based (For those allergic to running their own kit)
+
+
+## Big Iron
+
+
+> Everything is possible, but don’t expect it to be cheap or easy
+
+
+These systems are designed for very large, very complex networks. If you’ve got tens of thousands of nodes, and integration into Business Service Management frameworks is critical, this is where you should start looking. Hopefully you’ve got deep pockets too. Well-suited to organisations that expect to have resources dedicated to network management.
+
+_Common Features_: Distributed, hierarchical model. API. Integration with BSM frameworks. Advanced Root Cause Analysis. Policy-driven configuration. Add-on modules for extra functionality - e.g. NetFlow, IP Telephony monitoring.
+
+_Pros_: Extreme Scaling, Extensibility through API/Scripting, low management overhead in highly structured environments. Ability to define automatic management policies based on any device attribute - can vastly reduce maintenance overhead. Often have capabilities suited to very large networks - e.g. MPLS monitoring.
+
+_Cons:_ High price, expensive support, consulting often required, out of date interface. Relatively high system resources required for small networks - systems are designed to scale up, not down. Slow development cycles. Watch pricing of add-on modules. Integration between components can be of variable quality.
+
+_Products:_ [HP NNMi](https://saas.hpe.com/en-us/software/network-node-manager-i-network-management-software), [IBM Tivoli NetCool](http://www-03.ibm.com/software/products/us/en/ibmtivolinetcoolomnibus/), [CA eHealth](http://www.ca.com/us/products/detail/CA-Performance-Management.aspx), [BMC Entuity](http://www.bmc.com/products/product-listing/entuity-network-monitoring.html).
+
+_Price_: Expect to pay tens to hundreds of thousands of dollars.
+
+
+
+## Mid-Market
+
+
+> I’m not looking for super-fancy. What I want is to do the basics, and well.
+
+
+
+Designed for most Enterprises that have a few tens to a few thousands of devices. Most of the market will be well-served by this segment, or Open Source systems. Ideal organisations where internal network engineers will be deploying and maintaining the system, as opposed to consultants.
+
+_Common Features:_ Easy deployment/setup. Looks good in demos. Many features included in base product, rather than separately licensed add-on.
+
+_Pros:_ Greater visual appeal. Faster product development cycles. Focuses on the things that network engineers want. Simpler to deploy, configure and use. Better suited to ad-hoc changes.
+
+_Cons:_ Product inflexibility - it does what it’s designed to do well, but may not be customisable to the degree required. APIs can be limited. Scaling can be a challenge. In large networks, maintenance overhead may be excessive. May only have simple integrations with other systems. Limited Root Cause Analysis. May not offer advanced monitoring - e.g. MPLS.
+
+_Products:_ [SolarWinds NPM/NCM](http://www.solarwinds.com), [HP IMC](http://www.bmc.com/products/product-listing/entuity-network-monitoring.html), [WhatsUp Gold](http://www.whatsupgold.com/index.aspx),  [Cisco Prime Infrastructure](http://www.cisco.com/en/US/products/ps12239/index.html), [ManageEngine](http://www.manageengine.com), [ScienceLogic](http://www.sciencelogic.com/) (can also be cloud-based)
+
+_Price:_ Thousands to tens of thousands, depending on scale and features.
+
+
+
+## Open Source
+
+
+> Why would I pay for software? I can do anything I want with Nagios!
+
+
+
+Open Source systems can be used in all sizes of organisation, from very small to very large. The key is the quality of technical staff available, rather than the size of the network. Open Source systems are better suited to organisations that have good technical skills in-house. Common in Linux/Unix shops. With the right skills, and dedication, these systems can deliver the greatest benefits, as they can be made to fit an organisation perfectly.
+
+_Common Features:_ Source Code available, product can be completely customised. Setup and deployment needs a sysadmin, rather than a network engineer. Typically have strong user communities. Paid support is often an option, if you need to keep the boss happy.
+
+_Pros:_ May be the only product that can fit very specific niche use-cases. Price can be very compelling, particularly if you need to scale out hugely.
+
+_Cons:_ User interfaces can be variable in quality. Open Source isn’t much help if you don’t have the skills to change code yourself. Be aware of costs for add-on modules if using a product with a Freemium model.
+
+_Products:_ [Nagios](http://www.nagios.org), [Cacti](http://www.cacti.net), [Zenoss](http://www.zenoss.com), [Zabbix](http://www.zabbix.com), [OpenNMS](http://www.opennms.org), [NMIS](https://opmantek.com)
+
+_Price:_ Zero dollars up front. Possible costs if you use a freemium product, or need support. Probable time costs for implementation/maintenance (and remember, your time isn’t free).
+
+
+
+## Cloud-Based
+
+
+> Please take these servers away from me, I really don’t want to have to manage them. Just give me a useable product.
+
+
+This category overlaps somewhat with the others, but I’d like to highlight it, as it makes a lot of sense for some organisations. As I define it, these systems have a cloud-hosted central management system, with distributed collectors. You deploy collectors in your network on physical or virtual machines, and they are completely controlled by the central management system. Ideally, all of the underlying configuration will be managed by the provider - it’s just up to you to configure network discovery, define polling and alerting policies, etc. This model is best-suited to organisations that don’t want to manage their management infrastructure themselves - they just want to use it. Also works well for those who need to deploy collectors into cloud-based infrastructure - e.g. AWS, Azure.
+
+_Common Features:_ Distributed model, consumption-based pricing, core components managed by third party.
+
+_Pros:_ Greatly simplified setup. Reduced ongoing maintenance overhead. Flexible deployment options. Price flexibility.
+
+_Cons:_ Reliance on third party. May not work for all security models.
+
+_Products:_ [ScienceLogic](http://www.sciencelogic.com) (can also be self-hosted), [LogicMonitor](http://www.logicmonitor.com), [Auvik](http://auvik.com)
+
+_Price:_ Variable, but very flexible - can usually pay per device, per month, with no term. All OpEx costs, not CapEx. Overall costs comparable to mid-market solutions, with more flexibility. Be wary of costs if you may need to scale to a very large network.
+
+
+
+## Clear As Mud?
+
+
+
+This breakdown should have helped to clarify your thinking about what class of products suits you, and now you'll have some products to go and evaluate. I highly recommend the evaluation step too - don't buy a product you can't stand to use! Coming up next: Tips for implementation.

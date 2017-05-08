@@ -1,0 +1,70 @@
+---
+author: lindsay
+date: 2013-09-10 19:00:15+00:00
+layout: post
+slug: nms-primer-3
+title: 'NMS Primer 3: Choosing an NMS'
+categories:
+- NMS
+series: 'NMS Primer'
+tags:
+- NMS
+- series
+---
+
+{% include series.html %}
+
+OK, so we’ve decided that we need an NMS. There are many different NMS products on the market, and digging through the details can be extraordinarily time-consuming. By working through a few key decision points, you can narrow down your choices.
+
+The key decision points are:
+
+
+  * What do I want to monitor?
+
+  * Integration - with what, and how deep?
+
+  * Do I need to manage, or just monitor?
+
+  * Cloud-based, or on-site? Distributed or centralised?
+
+  * What’s my company culture?
+
+
+Let’s look at those in more detail.
+
+
+## What do I want to Monitor?
+
+
+We’re talking about Network Management Systems, so obviously we want to monitor network devices. But is this just routers and switches, or do we need to integrate wireless monitoring? That will probably paint us in a corner if we need that, as those tools tend to be vendor-specific. What about monitoring servers, and applications? What about VMware or Hyper-V? There’s a lot of interesting networking happening in the virtual world these days, do we need insights into that? Or is that a separate team, and they’ve already got the coverage they need? Figure out what the bounds of your domain are, what you want to do with your NMS, and what will be done by other systems. The needs of a transport-only ISP are quite different to those of a small Enterprise that wants visibility across the whole stack.
+
+
+## Integration - with what, and how deep?
+
+
+Very few systems will be truly standalone. Figure out what other systems you need to integrate with, and what level of integration that is - superficial forwarding of SNMP traps, or full database integration through APIs?  Do you need to be able to automatically create Incidents in your Service Desk tool? Or do you need to have full topology integration with some form of CMDB? It depends on the other products in use, and their capabilities, but you may find you have to pick a vendor here for full integration capabilities - e.g. If the rest of your environment is using the HP BSM suite, then HP NNMi is probably the best choice for Network Management. The vendors know this, and will screw you on price if they know you don’t have many options. It may also mean settling for a second-best product, forgoing best-of-breed in favour of ease of integration.
+
+[![HP NNMi Open Incidents View](/assets/2013/09/nnmi_incidents.png)](/assets/2013/09/nnmi_incidents.png)
+
+{:.image-caption}
+HP NNMi Open Incidents View
+
+
+## Monitor or Manage?
+
+
+Do you want to just be told when there’s a problem, or do you also want to orchestrate changes across your network? Does the management system need to be integrated with the monitoring system? The general trend now seems to be integrated network configuration management. If you’re happy with separate systems, you’ve got lots of options. If you want to consolidate your toolsets, you’ll find you have far fewer options to choose from. Luckily many of these are good choices.
+
+
+## Cloud-based or on-site?
+
+
+What’s your philosophy on externally hosted (and maybe externally managed) systems? Love ‘em or hate ‘em? Five years ago, everyone wanted to do it all themselves. I’m seeing a shift in the market, where some people are specifically choosing cloud-based systems wherever possible. I understand the logic of not wanting to manage the underlying infrastructure, but to just use the application to get results. Note: Cloud-based NMS systems almost always have an optional on-site collector component. You may also need distributed monitoring, where remote polling stations forward data to a central aggregation point.
+
+
+## What’s my company culture?
+
+
+You need to choose products that your team can look after. No point picking a Linux-based system that is entirely managed via configuration files, if your team is used to using MMC for configuring applications. Prefer ultimate customisability, rather than simple to use, pretty interfaces? Then the pretty GUI-driven tools probably aren’t right. The cultural fit has to work. You’ll already know where you fit here - the good news is that there are products for all points on the spectrum.
+
+Hopefully this has helped consolidate some of your thinking, and given you a better idea of what to look for in a product. Next up, we’ll look at the main product categories, and some of the key players in each category.
