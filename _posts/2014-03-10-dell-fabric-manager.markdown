@@ -23,7 +23,7 @@ It's a brave person that walks into a room full of CCIEs and Consultants, and sa
 
 Particularly when those CCIEs are also [Network Field Day](http://techfieldday.com/event/nfd7/) attendees, and they have no hesitation in telling the speaker exactly what they think. But that's what Arpit Joshipura said during the [Dell presentation at NFD7](http://techfieldday.com/appearance/dell-networking-presents-at-networking-field-day-7/) (around 17:40):
 
-{% youtube "https://www.youtube.com/watch?v=IwhFg2PMaFA" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IwhFg2PMaFA?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 This was part of a presentation on Dell's [Fabric Manager tool](http://www.dell.com/nz/business/p/dell-fabric-manager/pd), which can design your network, generate a Bill of Materials, create a wiring diagram, export a network diagram to Visio, generate the configurations, and deploy them to bare metal switches. Oh and tell you if you'd plugged the cables in the wrong way. It was unclear if it also made coffee, but maybe that's in the next release.
 

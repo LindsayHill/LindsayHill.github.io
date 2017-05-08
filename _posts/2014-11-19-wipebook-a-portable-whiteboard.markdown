@@ -13,7 +13,7 @@ tags:
 
 It is a stereotype, but engineers really do like whiteboards. Problem is, you can't carry one around with you. Plus there's still a few unenlightened employers who don't provide whiteboards. Enter the [Wipebook](http://www.wipebook.com), a spiral-bound notebook made of whiteboard-like pages:
 
-{% youtube "https://www.youtube.com/watch?v=T7oyx6MUTB4" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T7oyx6MUTB4?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 I normally carry a notebook for scratching out notes while talking to customers, sketching diagrams, working through problems, etc. I don't archive these notes - most are just short-term things, and I shred them. Important stuff gets turned into OmniFocus tasks/emails/etc.
 

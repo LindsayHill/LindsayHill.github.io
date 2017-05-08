@@ -71,7 +71,7 @@ This is manageable. You shouldn’t be configuring all your devices manually any
 
 I highly recommend watching [the videos](http://techfieldday.com/appearance/cumulus-networks-presents-at-networking-field-day-9/), to better understand what Cumulus is up to. In particular, I recommend this video where Dinesh Dutt talks about network configuration simplification:
 
-{% youtube "https://www.youtube.com/watch?v=B7aaX2wItPg" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B7aaX2wItPg?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 {% include note.html content="Aside: The attitude of the Cumulus Networks staff impressed me. They sought out opinions on what they’re doing, and where they should go. Some companies are too sure of themselves, and believe they’ve discovered the One True Way. If only." %}
 

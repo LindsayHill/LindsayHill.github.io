@@ -30,7 +30,7 @@ Errr...so why do you license it that way then?
 
 The actual setup of of NTA is reasonably easy, except for a couple of tiny bits that can really frustrate you. Save yourself the pain - just watch this video on NTA configuration. It will make your life a lot easier.
 
-{% youtube "http://www.youtube.com/watch?v=-TG8fpbxRv8" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-TG8fpbxRv8?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 {% include note.html content="For reference, HP NNMi NetFlow analysis (iSPI Traffic) is licensed on the number of interfaces generating data, and the type of flow data (NetFlow is more expensive than sFlow). Solarwinds NetFlow Traffic Analyzer needs to have a license that matches your NPM license - so it assumes that all nodes you have managed could be generating flow data." %}
 

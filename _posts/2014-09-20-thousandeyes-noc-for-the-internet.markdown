@@ -16,7 +16,7 @@ tags:
 
 I was fortunate enough to attend [Network Field Day 8](http://www.techfieldday.com/events/nfd8), where ThousandEyes was one of the presenters. During their presentation Mohit Lad gave a demonstration of using ThousandEyes to investigate performance issues:
 
-{% youtube "https://www.youtube.com/watch?v=eQiRXUCD4fI" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eQiRXUCD4fI?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 The problem with troubleshooting issues across the Internet is that it’s hard to get the complete visibility you need to track down where issues are happening. ThousandEyes helps, by giving you more viewpoints, but there’s still limits. Most of us can’t afford to run tests from hundreds of different public & private locations.
 

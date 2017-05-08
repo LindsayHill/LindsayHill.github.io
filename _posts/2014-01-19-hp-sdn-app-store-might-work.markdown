@@ -15,7 +15,7 @@ HP has been laying out their SDN vision over the last few months. They want to d
 
 One of the example applications they've been demonstrating is their UC&C Lync SDN application, and it's pretty cool:
 
-{% youtube "http://www.youtube.com/watch?v=pXMUz3ULbP8” %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pXMUz3ULbP8?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 It's a great example of using new technical capabilities to solve real problems - and it's not data-centre focused like everyone else. But at HP Discover 2013 in Barcelona, Dave Larson ([HP Networking CTO](http://www.hp.com/hpinfo/newsroom/press_kits/2013/HPatVMworld2013/Dave_Larson_bio.pdf)) said (paraphrasing): “We spent two years working with Microsoft to develop that application. " That comment struck at the heart of something that’s been nagging at me about SDN:
 

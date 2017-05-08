@@ -24,4 +24,4 @@ OK, so maybe the second rule's not so serious, but the first one has a grain of 
 
 Too many meetings have no clear purpose, or they can only agree that 'a decision needs to be made...pending further research.' Avoid those sorts of meetings. Otherwise it ends up like...well....Every Meeting Ever:
 
-{% youtube "https://www.youtube.com/watch?v=K7agjXFFQJU" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K7agjXFFQJU?ecver=1" frameborder="0" allowfullscreen></iframe>

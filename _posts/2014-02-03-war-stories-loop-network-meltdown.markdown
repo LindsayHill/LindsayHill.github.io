@@ -21,7 +21,7 @@ Inspired by the Packetpushers [War Stories](http://packetpushers.net/show-173-wa
 
 We've all heard stories about the bad things that can happen with you get a L2 loop in your network. Your switches start lighting up like a casino, and effectively all traffic stops, often including control-plane access to the switch.
 
-{% youtube "http://www.youtube.com/watch?v=g7-FADwzycY" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g7-FADwzycY?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 Remove the loop, and everything returns to normal. You go out and track down what caused the loop, and shake your head in wonder at how someone could take a cable coming out of the wall, connect a dumb hub, and then connect from the hub back to the wall. Were they trying to double their bandwidth? Hopefully you put in place some protection mechanisms so it doesn't cause a loop next time they do it. All good.
 

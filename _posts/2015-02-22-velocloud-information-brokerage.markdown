@@ -21,7 +21,7 @@ I won't go into the details of how it all works - [Brandon](https://twitter.com/
 
 In this video, Kangwarn Chinthammit talks about how VeloCloud is using their devices to monitor Internet quality. Because they're installed in a wide range of locations, with many different WAN connection types, they're building up some interesting data.
 
-{% youtube "https://www.youtube.com/watch?v=oEGJZuX3a5k" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oEGJZuX3a5k?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 They've been able to do some deeper analysis of the data, and break down quality measurements by location, circuit type, hour, and day. Some of the interesting results include:
 
@@ -43,7 +43,7 @@ VeloCloud has measurements that indicate that Internet links are unsuitable for 
 
 VeloCloud says that if you combine the dynamic redirection with their on-demand Forward Error Correction, you get that down to < 1%. Watch the demonstration video to see the impact:
 
-{% youtube "https://www.youtube.com/watch?v=mdNbNn4Ucy4" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mdNbNn4Ucy4?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 The use of the cloud gateway is what allows them to apply some more smarts to traffic redirection, FEC, and packet reordering. It's a pretty slick demo, although I have to admit to getting distracted by the action sports they were showing...
 
