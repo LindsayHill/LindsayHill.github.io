@@ -8,7 +8,7 @@ permalink:        /:title/
 title:            'Lindsay Hill'
 tagline:          'network control, visibility, management'
 description:      'Technical posts on network management, automation, career and worklife'
-url:              https://lkhill.github.io
+url:              https://lindsayhill.github.io
 baseurl:             /
 
 author:
@@ -24,7 +24,7 @@ paginate:         10
 version:          1.0.0
 
 github:
-  repo:           https://github.com/LindsayHill/lkhill.github.io
+  repo:           https://github.com/LindsayHill/lindsayhill.github.io
 
 feed: 
   path: /feed/index.xml
