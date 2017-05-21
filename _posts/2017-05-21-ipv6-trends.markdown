@@ -1,0 +1,51 @@
+---
+author: lindsay
+date: 2017-05-21
+layout: post
+slug: ipv6-trends
+title: IPv6 Trends, SixXS Sunset and Project Planning
+categories:
+- Routing &amp; Switching
+tags:
+- IPv6
+---
+
+Native IPv6 availability continues to increase, leading to the sunset of SixXS services. But it looks like we don't like starting any major IPv6 rollouts around Christmas/New Years, but instead start going into production from April onwards.
+
+## SixXS Sunset
+
+In March 2017, the SixXS team announced that they are [closing down all services in June 2017](https://www.sixxs.net/sunset/):
+
+> SixXS will be sunset in H1 2017. All services will be turned down on **2017-06-06**, after which the SixXS project will be retired. Users will no longer be able to use their IPv6 tunnels or subnets after this date, and are required to obtain IPv6 connectivity elsewhere, primarily with their Internet service provider.
+
+SixXS has provided a free IPv6 tunnel broker service for years, allowing people to get 'native' IPv6 connectivity even when their ISP didn't offer it. A useful service in the early days of IPv6, when ISPs were dragging the chain.
+
+But this is a Good Thing that it is now closing down. It's closing down because their mission has been achieved, and people no longer require tunnel broker services. IPv6 is now widely available in many countries, and not just from niche ISPs. Mainstream ISPs such as [Comcast](https://my.xfinity.com/) in the US, [Sky](https://www.sky.com) in the UK, and [Telstra](https://telstra.com) in Australia now enable IPv6 by default for consumer connections. 
+
+Of course there's technology laggards like [Spark](https://www.spark.co.nz) in NZ dragging the chain, but who cares when every other major ISP in that market offers IPv6?
+
+Plus I always hated IPv6 tunneling protocols. Maybe Cisco can finally remove it from the CCIE blueprint now?
+
+I wonder how long it will be before [HE](https://he.net/) shuts down their [tunnel broker](https://tunnelbroker.net) service?
+
+## IPv6 Rollouts - Do you all take Christmas off?
+
+I keep a close eye on the [Google IPv6 stats](https://www.google.com/intl/en/ipv6/statistics.html). These show the percentage of Google users that can access Google services using IPv6. The stats have been showing strong growth, now peaking at over 18%.
+
+![Google IPv6 usage](/assets/2017/05/ipv6_overall.png)
+
+A few months ago, Rich @ Gestalt IT highlighted IPv6's [bad case of the Mondays](http://gestaltit.com/exclusive/rich/ipv6-traffic-mondays-google/).
+
+> … traffic during the week is about 2-3% overall percentage points lower, about 25% of overall IPv6 traffic. It’s an IPv6 party on the weekend!
+
+I've been watching the stats for a few years now, and I think there's another pattern emerging: People flip the switch on their IPv6 rollouts around April.
+
+Look at what we see when we zoom in to Jan 2015 -> now:
+
+![IPv6 Rollout Trends](/assets/2017/05/ipv6_trends.png)
+
+Look at the areas I've highlighted. We see a peak around Jan 1, most likely due to heavy consumer/mobile usage. We then see flat usage for 3 months, before it starts trending upwards again.
+
+Looks like standard project planning to me. No-one wants to start anything before Christmas. The first few months of the year are spent planning and testing, and then by April we're ready to go. Production rollouts then kick in, and we see climbing IPv6 usage. Will be interesting to see if that pattern holds over the next couple of years.
+
+Or am I just staring too closely at the graph, and seeing what I want to see?
