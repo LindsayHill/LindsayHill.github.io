@@ -15,37 +15,28 @@ tags:
 I loathe MRTG graphs. They were cool in 2000, but now they're showing their age. We have much better visualisation tools available, and we don't need to be so aggressive with aggregating old data. I've been working with InfluxDB + Grafana recently. Much cooler, much more flexible. Here's a walk-through on setting up InfluxDB + Grafana, collecting network throughput data, and displaying it.
 
 
-
 ## Background - InfluxDB + Grafana
-
 
 
 There's three parts to this:
 
+  * **[Grafana](http://grafana.org/):** This is our main UI. Grafana is a "...graph and dashboard builder for visualizing time series metrics." It makes it easy to create dashboards for displaying time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB.
 
-  * **[Grafana](http://grafana.org/)**: This is our main UI. Grafana is a "...graph and dashboard builder for visualizing time series metrics." It makes it easy to create dashboards for displaying time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB.
+  * **[InfluxDB](http://influxdb.com/):** This is where we store the data that Grafana displays. InfluxDB is "...an open-source distributed time series database with no external dependencies." It's a relatively new project, and is not quite at 1.0 yet, but it shows a lot of promise. It can be used in place of Graphite. It is very flexible, and can store events as well as time series data.
 
-  * [**InfluxDB**](http://influxdb.com/): This is where we store the data that Grafana displays. InfluxDB is "...an open-source distributed time series database with no external dependencies." It's a relatively new project, and is not quite at 1.0 yet, but it shows a lot of promise. It can be used in place of Graphite. It is very flexible, and can store events as well as time series data.
-
-  * [**Influxsnmp**](https://github.com/paulstuart/influxsnmp)**:** We need to get data from the network into InfluxDB. There are a few options for doing this, but none of them are particularly good right now. Influxsnmp is a simple utility for collecting data via SNMP and storing it in InfluxDB.
-
+  * **[Influxsnmp](https://github.com/paulstuart/influxsnmp)**: We need to get data from the network into InfluxDB. There are a few options for doing this, but none of them are particularly good right now. Influxsnmp is a simple utility for collecting data via SNMP and storing it in InfluxDB.
 
 
 You might ask why I'm using separate collection, persistent store and presentation layers, rather than using one system that does it all. The advantage of this model is that is much more flexible - I can easily add collectors to get data from different sources, or I can use other data stores that I already have. If I later decide I don't like Grafana, I can query InfluxDB from something else.
 
 
-
 ## Installation
-
 
 
 All steps are taken on an Ubuntu 14.04 system. Steps may vary for other systems. Note also that I'm using the nightly builds for InfluxDB + Grafana, so expect to see the outputs change slightly in future.
 
 
-
 ### InfluxDB
-
-
 
 Download, install and start InfluxDB:
 
@@ -96,9 +87,7 @@ lhill@grafana:~$
 We now have InfluxDB running. You can connect to http://localhost:8083/ for a simple Web UI to InfluxDB, or query it with the CLI client.
 
 
-
 ### Influxsnmp
-
 
 
 Influxsnmp is written in [Go](http://golang.org/). Today it is only distributed as source, so we need to build it. The build process includes some components that require Go >= v1.3. The default repositories for Ubuntu 14.04 have Go v1.2.1. So for this setup we're going to download the latest Golang binary package, and use that.
@@ -146,7 +135,6 @@ lhill@grafana:~$ echo 'export GOPATH=$HOME/work' >> .profile
 lhill@grafana:~$ . .profile
 lhill@grafana:~$
 ```
-
 
 Now download the source for influxsnmp and build it:
 
@@ -259,9 +247,7 @@ time            value
 So far so good - we're collecting data, storing it, and we can query it with InfluxDB. Now we need to create visualisations.
 
 
-
 ### Grafana
-
 
 
 First download, install & start Grafana. Note that I'm using a nightly build again.
@@ -292,13 +278,11 @@ lhill@grafana:~$ sudo service grafana-server start
 lhill@grafana:~$
 ```
 
-
 Grafana is now listening on port 3000. Open a web browser, and login using the default admin/admin. Click on _Data Sources_ on the left:
 
 [![grafana_data_source](/assets/2015/10/grafana_data_source.png)](/assets/2015/10/grafana_data_source.png)
 
 Click _Add new_ and fill in these details:
-
 
 
   * _Name_: snmp
@@ -312,7 +296,7 @@ Click _Add new_ and fill in these details:
   * _InfluxDB Details:_ - set Database to 'snmp'. We're not using a username & password aren't used, but you need to put something in there to be able to save this. So use admin/admin
 
 
-[![grafana_new_datasource](/assets/2015/10/grafana_new_datasource.png)](/assets/2015/10/grafana_new_datasource.png)
+![grafana_new_datasource](/assets/2015/10/grafana_new_datasource.png)
 
 After you've clicked Add, you'll be able to click _Test Connection_ - try it, and make sure that it's OK.
 
@@ -321,26 +305,21 @@ Repeat the above process for a new Data Source, with two differences - set the D
 Now we're ready to go with creating dashboards.
 
 
-
 ## Visualising the Data
 
 
-
-
-
 ### Dashboards
-
 
 
 Grafana lets you have multiple dashboards. Each dashboard is a set of panels, where a panel could be a graph, a single metric, or some text. You could have a dashboard with 10 separate graphs, or maybe just one huge number. We want to set up a simple dashboard that shows us a graph of the current traffic on my ADSL link.
 
 Click on Dashboards on the left, then the drop-down arrow beside _Home_. Click _New_ at the bottom:
 
-[![new_dashboard](/assets/2015/10/new_dashboard.png)](/assets/2015/10/new_dashboard.png)
+![new_dashboard](/assets/2015/10/new_dashboard.png)
 
 On the new blank dashboard, click the small bar at the top left. That will expand out. Choose _Add Panel -> Graph_
 
-[![add_graph](/assets/2015/10/add_graph.png)](/assets/2015/10/add_graph.png)
+![add_graph](/assets/2015/10/add_graph.png)
 
 Now you'll get a graph with test data. Click on the title, where it says "no title (click here)." On the pop-up box, click _Edit_.
 
@@ -352,9 +331,9 @@ Click the "+ Query" button, and add a new query with the same settings as above,
 
 Now we need to edit the queries in 'raw' mode. Your query screen should look like this:
 
-[![query_editor](/assets/2015/10/query_editor.png)](/assets/2015/10/query_editor.png)
+![query_editor](/assets/2015/10/query_editor.png)
 
-Click the menu button in the top left, and click "Switch editor mode." We need to add the '[derivative()](https://influxdb.com/docs/v0.9/query_language/functions.html#derivative)' function, because we're collecting a counter, not a rate. We also need to multiply the result by 8, to get bps. Your queries should look like this:
+Click the menu button in the top left, and click "Switch editor mode." We need to add the [`derivative()`](https://influxdb.com/docs/v0.9/query_language/functions.html#derivative) function, because we're collecting a counter, not a rate. We also need to multiply the result by 8, to get bps. Your queries should look like this:
 
 
 ```sql
@@ -368,14 +347,12 @@ Click _Back to dashboard_. Click on the Gear icon near the top centre of the sc
 
 You should now have a screen that looks something like this:
 
-[![adsl_throughput](/assets/2015/10/adsl_throughput.png)](/assets/2015/10/adsl_throughput.png)
+![adsl_throughput](/assets/2015/10/adsl_throughput.png)
 
 Play around with the time picker in the top-left of the screen, and try selecting & zooming into a time window. It will get more interesting as you collect more data.
 
 
-
 ### Templating
-
 
 
 That graph is OK, but what about having a graph per interface? Or having a drop-down list of interfaces, so we can choose which ones get displayed? This is where the Grafana Template functionality is useful. Click on the Dashboard Gear icon, and click _Templating._ Click "+New"
@@ -386,8 +363,7 @@ Edit the original graph. Change each query to that it looks for the variable "$
 
 There will be a drop-down list of Interfaces at the top of the Dashboard. Choose a different interface, and watch the graph update. Select two interfaces at once, and see how you get two graphs:
 
-[![repeating_graphs](/assets/2015/10/repeating_graphs.png)](/assets/2015/10/repeating_graphs.png)
-
+![repeating_graphs](/assets/2015/10/repeating_graphs.png)
 
 
 ### Annotations
@@ -422,18 +398,15 @@ lhill@grafana:~$
 
 Now we get annotations on our graph. Hover over them, and the tool-tip displays some more info:
 
-[![annotations_graph](/assets/2015/10/annotations_graph.png)](/assets/2015/10/annotations_graph.png)
+![annotations_graph](/assets/2015/10/annotations_graph.png)
 
 One small niggle is that you can't disable annotations on a per-graph basis, only on a  per-dashboard basis. Still, it's very handy.
-
 
 
 ## Future improvements
 
 
-
 Obviously there's a lot that could be improved upon here:
-
 
 
   * Sort out the SNMP data capture - either package up influxsnmp properly, or (preferred answer): write a plugin for [Telegraf](https://github.com/influxdb/telegraf).
