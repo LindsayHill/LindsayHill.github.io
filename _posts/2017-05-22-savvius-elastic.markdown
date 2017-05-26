@@ -27,4 +27,6 @@ There's nothing stopping people centralizing the data either. You can modify the
 
 I'm very pleased to see the continuing evolution of log &amp; data management tools, going from high-value novelty to commodity item. One less excuse for the foot-draggers who still don't do centralised logging.
 
-> Aside: Am I the only one who finds it amazing that I can order devices like this via [Amazon Prime](https://www.amazon.com/Savvius-Insight-Network-Monitoring-Appliance/dp/B016APSVP4/ref=sr_1_3?ie=UTF8&qid=1495418623&sr=8-3&keywords=savvius)? We've come a long way from the traditional people-intensive, slow-moving sales process. 
+> ~~Aside: Am I the only one who finds it amazing that I can order devices like this via [Amazon Prime](https://www.amazon.com/Savvius-Insight-Network-Monitoring-Appliance/dp/B016APSVP4/ref=sr_1_3?ie=UTF8&qid=1495418623&sr=8-3&keywords=savvius)?~~
+
+**Update**: I've been informed that these are no longer available via Amazon. You'll need to go through the regular reseller process.
