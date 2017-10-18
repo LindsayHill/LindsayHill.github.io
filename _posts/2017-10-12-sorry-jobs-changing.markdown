@@ -24,4 +24,4 @@ This **is** going to put pressure on networking engineers. Your role will be for
 
 So you'd better think about what that means for how your role might change.
 
-Do you need to change jobs today? No. You don't have to [outrun the lion](http://www.ebaumsworld.com/jokes/outrun/699332/)' - but you do want to make sure you can outrun the other guy. If the boss wants to decreate headcount further, who's going to get picked?
+Do you need to change jobs today? No. You don't have to [outrun the lion](http://www.ebaumsworld.com/jokes/outrun/699332/)' - but you do want to make sure you can outrun the other guy. If the boss wants to decrease headcount further, who's going to get picked?
