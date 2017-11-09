@@ -293,7 +293,7 @@ Click _Add new_ and fill in these details:
 
   * _Http settings:_ - Url http://localhost:8086
 
-  * _InfluxDB Details:_ - set Database to 'snmp'. We're not using a username & password aren't used, but you need to put something in there to be able to save this. So use admin/admin
+  * _InfluxDB Details:_ - set Database to 'snmp'. We're not using a username & password, but you need to put something in there to be able to save this. So use admin/admin
 
 
 ![grafana_new_datasource](/assets/2015/10/grafana_new_datasource.png)
