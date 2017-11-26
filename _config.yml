@@ -30,7 +30,7 @@ feed:
   path: /feed/index.xml
 
 # Gems
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate

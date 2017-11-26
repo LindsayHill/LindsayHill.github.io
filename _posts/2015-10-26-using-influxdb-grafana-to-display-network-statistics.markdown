@@ -15,7 +15,7 @@ tags:
 I loathe MRTG graphs. They were cool in 2000, but now they're showing their age. We have much better visualisation tools available, and we don't need to be so aggressive with aggregating old data. I've been working with InfluxDB + Grafana recently. Much cooler, much more flexible. Here's a walk-through on setting up InfluxDB + Grafana, collecting network throughput data, and displaying it.
 
 
-{% include note.html content="These instructions are now out of date. `influxsnmp` isn't getting much love anymore, and the instructions below won't work properly. You're better off using [telegraf](https://www.influxdata.com/time-series-platform/telegraf/) with the SNMP plugin for data collection." %}
+{% include warning.html content="These instructions are now out of date. `influxsnmp` is no longer updated, and the instructions below won't work properly. Check out this new blog on how to use [Telegraf with InfluxDB and Grafana instead](/telegraf-influx-grafana-network-stats)." %}
 
 ## Background - InfluxDB + Grafana
 
