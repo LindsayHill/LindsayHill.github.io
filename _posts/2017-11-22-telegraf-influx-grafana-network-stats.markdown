@@ -19,9 +19,9 @@ Two years ago I wrote about how to use [InfluxDB & Grafana]({% post_url 2015-10-
 
 There's three parts to this:
 
-  * **[Grafana](https://grafana.com/):** Grafana is "The open platform for beautiful analytics and monitoring." It makes it easy to create dashboards for displaying data from many sources, particularly time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB. We're going to use this as our main front end for visualising our network statistics.
+  * **[Grafana](https://grafana.com/):** Grafana is "The open platform for beautiful analytics and monitoring." It makes it easy to create dashboards for displaying data from many sources, particularly time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB. We're going to use this as our main front end for visualizing our network statistics.
 
-  * **[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/):** InfluxDB is "...a data store for any use case involving large amounts of timestamped data." This is where we we're going to store our network statistics. It is designed for exactly this use-case, where metrics are collected over time.
+  * **[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/):** InfluxDB is "...a data store for any use case involving large amounts of timestamped data." This is where we're going to store our network statistics. It is designed for exactly this use-case, where metrics are collected over time.
 
   * **[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/):** Telegraf is "...a plugin-driven server agent for collecting and reporting metrics." This can collect data from a wide variety of sources, e.g. system statistics, API calls, DB queries, and SNMP. It can then send those metrics to a variety of datastores, e.g. Graphite, OpenTSDB, Datadog, Librato. Telegraf is maintained by [InfluxData](https://www.influxdata.com), the people behind InfluxDB. So it has **very** good support for writing data to InfluxDB.
 
@@ -254,7 +254,7 @@ Now we just need to tell Telegraf to pick up the new configuration:
 ubuntu@telegraf:/etc/telegraf$ sudo systemctl reload telegraf
 ```
 
-That will now begin collecting data, and storing it in InfluxDB.
+That will now begin collecting data and storing it in InfluxDB.
 
 After a couple of minutes, check to see if InfluxDB is storing results:
 
@@ -370,7 +370,7 @@ So, to recap:
 
 * We've installed InfluxDB to store our collected metrics.
 * We've configured Telegraf to collect data via SNMP, and store it in InfluxDB.
-* We've checked that Telegraf is getting data, and that it is stored in InfluxDB.
+* We've checked that Telegraf is getting data and that it is stored in InfluxDB.
 * We've installed Grafana, and configured it to query InfluxDB.
 
 Next steps: pulling it all together to create some graphs!
@@ -460,4 +460,4 @@ Obviously there's a lot that could be improved upon here:
 
   * Add alerting.
 
-The point is that it's a flexible framework, and it doesn't need to just be network stats. It gets much more interesting once you start adding in other data sources.
+The point is that it's a flexible framework, and it doesn't need to just be network stats. It gets much more interesting once you start adding other data sources.
