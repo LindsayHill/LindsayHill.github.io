@@ -19,7 +19,7 @@ Here's something I've been working on recently: Ansible modules for Extreme SLX 
 
 Ansible is an agent-less configuration management system. It uses "playbooks", written in YAML, to define desired configuration state. "modules" written in Python translate this into whatever is needed to configure the system, application, database or network device. 
 
-Ansible has been making great strides in adding network automation capabilities. But we haven't had any modules for working with ~Brocade~ Extreme devices. That is now changing. 
+Ansible has been making great strides in adding network automation capabilities. But we haven't had any modules for working with <s>Brocade</s> Extreme devices. That is now changing. 
 
 [PaulQuack](https://github.com/PaulQuack) has contributed MLXe (Ironware) [modules](http://docs.ansible.com/ansible/devel/modules/list_of_network_modules.html#ironware), which will go GA in Ansible 2.5 (due for release in March 2018). And I've been working on modules for the SLX, with my colleagues. These have not yet been merged upstream, but it's Open Source, so you can grab them and try them out.
 
