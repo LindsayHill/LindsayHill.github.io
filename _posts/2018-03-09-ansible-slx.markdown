@@ -76,7 +76,7 @@ Create the file `~/playbooks/group_vars/slx.yaml` containing this:
 ```yaml
 ---
 ansible_user: admin
-ansible_pass: password
+ansible_ssh_pass: password
 ```
 
 Replace `password` with the password you use to authenticate to your SLX devices. Yes, you should be using `ansible-vault` for this file.
