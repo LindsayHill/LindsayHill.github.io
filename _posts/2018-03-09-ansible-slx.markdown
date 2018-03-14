@@ -42,9 +42,8 @@ Here's how to install Ansible in your home directory, using our latest developme
 > NB in future you will be able to install Ansible using [normal Ansible installation procedures](https://docs.ansible.com/ansible/intro_installation.html). Our modules have not yet been merged upstream.
 
 ```shell
-git clone https://github.com/StackStorm/ansible
+git clone -b slxos_modules https://github.com/StackStorm/ansible
 cd ansible
-git checkout slxos_modules
 virtualenv venv
 .  ./venv/bin/activate
 pip install -r requirements.txt
