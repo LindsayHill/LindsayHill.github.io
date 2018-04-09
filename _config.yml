@@ -6,8 +6,8 @@ permalink:        /:title/
 
 # Setup
 title:            'Lindsay Hill'
-tagline:          'network control, visibility, management'
-description:      'Technical posts on network management, automation, career and worklife'
+tagline:          'automation, networking, product management'
+description:      'Technical posts on automation, network management, career and worklife'
 url:              https://lkhill.com
 baseurl:             /
 
