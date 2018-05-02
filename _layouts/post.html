@@ -12,13 +12,14 @@ layout: default
   </span>
   {% if page.previous %}
     <span class="post-date">
-    <i class="fa fa-arrow-circle-left"></i> Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>
+    <a href="{{ page.previous.url }}"><i class="fas fa-arrow-circle-left"></i> Previous Post: {{ page.previous.title }}</a></span>
   {% endif %}
   {% if page.next %}
     <span class="post-date">
-    Next Post: <a  href="{{ page.next.url }}">{{ page.next.title }}</a> <i class="fa fa-arrow-circle-right"></i></span>
+    <a  href="{{ page.next.url }}">Next Post: {{ page.next.title }} <i class="fas fa-arrow-circle-right"></i></a></span>
   {% endif %}
 
+  {% if jekyll.environment == 'production' %}
   <span class="post-sharing">{% include social_sharing.html %}</span>
   <div id="disqus_thread"></div>
   <script>
@@ -36,6 +37,7 @@ layout: default
       })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% endif %}
 
 </div>
 
