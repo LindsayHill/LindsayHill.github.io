@@ -5,7 +5,7 @@ layout: post
 slug: ansible-slx
 title: Ansible for Extreme Devices
 categories:
-- automation
+- Automation
 tags:
 - networking
 - ansible

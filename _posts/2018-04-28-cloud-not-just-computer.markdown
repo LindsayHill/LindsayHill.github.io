@@ -5,7 +5,7 @@ layout: post
 slug: cloud-not-just-computer
 title: Cloud Not Just Someone Else's Computer
 categories:
-- opinion
+- Opinion
 tags:
 - cloud
 ---
