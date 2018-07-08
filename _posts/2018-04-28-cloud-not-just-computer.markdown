@@ -40,7 +40,7 @@ All the SaaS and FaaS/serverless offerings fit into this category. **Much** more
 
 ## Not Just a Bookseller
 
-Five years ago VMware's President and COO was dismissing VMware as a [bookseller](https://www.crn.com/news/cloud/240149626/vmware-top-execs-lash-out-at-amazon-public-cloud.htm?itc=xbodyjk)
+Five years ago VMware's President and COO was dismissing Amazon as a [bookseller](https://www.crn.com/news/cloud/240149626/vmware-top-execs-lash-out-at-amazon-public-cloud.htm?itc=xbodyjk)
 
 > ...I find it really hard to believe that we cannot collectively beat a company that sells books.
 
