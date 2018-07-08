@@ -21,7 +21,7 @@ Ansible is an agent-less configuration management system. It uses "playbooks", w
 
 Ansible has been making great strides in adding network automation capabilities. But we haven't had any modules for working with <s>Brocade</s> Extreme devices. That is now changing. 
 
-[PaulQuack](https://github.com/PaulQuack) has contributed MLXe (Ironware) [modules](http://docs.ansible.com/ansible/devel/modules/list_of_network_modules.html#ironware), which will go GA in Ansible 2.5 (due for release in March 2018). And I've been working on modules for the SLX, with my colleagues. These have not yet been merged upstream, but it's Open Source, so you can grab them and try them out.
+[PaulQuack](https://github.com/PaulQuack) has contributed MLXe (Ironware) [modules](http://docs.ansible.com/ansible/devel/modules/list_of_network_modules.html#ironware), which were included in Ansible 2.5. I've been working on modules for the SLX, with my colleagues. These have now been released with Ansible 2.6.
 
 Here's the modules available so far:
 
@@ -37,17 +37,7 @@ Here's how to install & use these modules:
 
 ## Installation
 
-Here's how to install Ansible in your home directory, using our latest development branch:
-
-> NB in future you will be able to install Ansible using [normal Ansible installation procedures](https://docs.ansible.com/ansible/intro_installation.html). Our modules have not yet been merged upstream.
-
-```shell
-git clone -b slxos_modules https://github.com/StackStorm/ansible
-cd ansible
-virtualenv venv
-.  ./venv/bin/activate
-pip install -r requirements.txt
-```
+Our modules have been included in the latest Ansible GA release (2.6), so you can follow the [normal Ansible installation procedures](https://docs.ansible.com/ansible/intro_installation.html). Use `pip`, `yum`, or `apt`, whichever suits you best.
 
 ## Configuration
 
@@ -56,7 +46,6 @@ Add entries to `/etc/hosts` file for your switches - e.g. `172.16.10.42 slx01`
 Create `~/.ansible.cfg` containing this:
 ```ini
 [defaults]
-ansible_python_interpreter=~/ansible/venv/bin/python
 host_key_checking = False
 inventory = ~/playbooks/hosts 
 ```
@@ -78,15 +67,7 @@ ansible_user: admin
 ansible_ssh_pass: password
 ```
 
-Replace `password` with the password you use to authenticate to your SLX devices. Yes, you should be using `ansible-vault` for this file.
-
-The above commands only need to be run the first time you do setup. Next time you login, you just need to run these commands:
-
-```shell
-cd ansible
-. ./venv/bin/activate
-. ./hacking/env-setup
-```
+Replace `password` with the password you use to authenticate to your SLX devices. Yes, you really should use `ansible-vault` for this file.
 
 ## Command Module:
 
@@ -120,7 +101,7 @@ Create `slx_command_ver.yaml`, containing this:
 Run it with `ansible-playbook slx_command_ver.yaml`. Here's some example output:
     
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook slx_command_ver.yaml
+lhill@bwc:~/playbooks$ ansible-playbook slx_command_ver.yaml
    
 PLAY [slx01] *************************************************************************************************************************
    
@@ -187,7 +168,7 @@ Create `slx_command_ntp.yaml`:
 ```
 Example output:
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook slx_command_ntp.yaml
+lhill@bwc:~/playbooks$ ansible-playbook slx_command_ntp.yaml
    
 PLAY [slx01] *************************************************************************************************************************
    
@@ -201,7 +182,7 @@ to retry, use: --limit @/home/lhill/playbooks/slx_command_ntp.retry
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=1    changed=0    unreachable=0    failed=1
    
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 Note that this is the expected behavior - that second task **should** fail.
 
@@ -243,7 +224,7 @@ SLX01#
 ```
 Example output (note the added `-vv` here to give us additional information about what's happening):
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook -vv slx_config_set_ntp.yaml
+lhill@bwc:~/playbooks$ ansible-playbook -vv slx_config_set_ntp.yaml
 ansible-playbook 2.6.0 (slxos_modules 2a7acba239) last updated 2018/02/21 02:06:16 (GMT +200)
   config file = /home/lhill/.ansible.cfg
   configured module search path = [u'/home/lhill/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
@@ -267,7 +248,7 @@ META: ran handlers
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=1    changed=1    unreachable=0    failed=0
 
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 Now look at the startup and running configs on the device:
 ```
@@ -283,7 +264,7 @@ We can see our command has been added **and saved**.
 
 Now run the playbook again:
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_set_ntp.yaml
+lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_set_ntp.yaml
 Using /home/lhill/.ansible.cfg as config file
 
 PLAY [slx01] *************************************************************************************************************************
@@ -294,7 +275,7 @@ ok: [slx01] => {"changed": false, "failed": false}
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=1    changed=0    unreachable=0    failed=0
 
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 Note the output: `changed=0`. It sees that the line is already there, and does not need to be changed.
 
@@ -316,7 +297,7 @@ Create `slxos_config_remove_ntp.yaml`:
 
 Output:
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_remove_ntp.yaml
+lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_remove_ntp.yaml
 Using /home/lhill/.ansible.cfg as config file
 
 PLAY [slx01] *************************************************************************************************************************
@@ -327,7 +308,7 @@ changed: [slx01] => {"changed": true, "commands": ["no ntp server 172.16.10.3 us
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=1    changed=1    unreachable=0    failed=0
 
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 
 ### More complex configuration using `parents`
@@ -359,7 +340,7 @@ This example has multiple tasks - first it grabs the running config, and saves i
 ```
 Example output:
 ```shell
-(venv) lhill@bwc:~/playbooks$ ansible-playbook slx_config_parents.yaml
+lhill@bwc:~/playbooks$ ansible-playbook slx_config_parents.yaml
 
 PLAY [slx01] *************************************************************************************************************************
 
@@ -378,11 +359,11 @@ changed: [slx01]
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=4    changed=2    unreachable=0    failed=0
 
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 We can see that we have a backup file saved locally:
 ```shell
-(venv) lhill@bwc:~/playbooks$ head backups/slx01-2018-02-21T06\:55\:58Z.txt
+lhill@bwc:~/playbooks$ head backups/slx01-2018-02-21T06\:55\:58Z.txt
 root enable
 host-table aging-mode conversational
 clock timezone Etc/GMT
@@ -393,7 +374,7 @@ hardware
  system-mode default
 !
 http server use-vrf default-vrf
-(venv) lhill@bwc:~/playbooks$
+lhill@bwc:~/playbooks$
 ```
 And we can see that our `protocol ptp` command was added to one specific interface:
 ```
@@ -419,9 +400,8 @@ For more examples, check out this [repo](https://github.com/ExtremeNetworks/ansi
 
 Current plans are:
 
-* Get initial modules accepted into Ansible upstream.
 * Add more modules - probably banner, VRF, system, users, logging next.
-* Monitor upstream Ansible developments and move to a REST API plugin if that becomes an option for network devices.
+* Monitor upstream Ansible developments and move to the httpapi plugin
 * Create more playbooks and roles for managing SLX switches.
 * Develop modules for other Extreme systems - e.g. EXOS-based systems.
 
