@@ -22,7 +22,6 @@ I originally passed version 4, exam number 350-101. This has been updated to ver
 
 There are some key changes though, such as:
 
-
   * Frame relay gone, DMVPN in
 
   * IS-IS back in - theory only

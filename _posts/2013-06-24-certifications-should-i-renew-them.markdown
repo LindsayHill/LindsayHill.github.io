@@ -21,35 +21,22 @@ Renewal timelines can vary too. 3 years is common. CCIE is only two years, while
 
 When it comes around to re-certification time, these are the sorts of thoughts going through people's heads:
 
-
-
-
-	
   * I can't be bothered, it's too much effort.
 
-	
   * The exam's just pointless trivia questions, it doesn't mean anything in my day-to-day job.
 
-	
   * You only need certs when looking for a new job, and I'm not going anywhere.
 
-	
   * I've got plenty of experience now, I don't need a certificate to prove anything.
 
-	
   * Nothing - i.e. the expiry date passed by without a thought, because you didn't track it, or you used an old work email address, and never received notification of expiry.
 
-	
   * The qualification is no longer relevant (typically stated by Novell cert holders).
 
-	
   * It's no longer relevant to my career, or where I want to go.
-
-
 
 Of those, only the last two are truly valid reasons. If those apply, and you've properly thought it through, then go ahead and let it lapse. But make sure you actually do give it some thought. 
 
 {% include warning.html content="Even if you think you'll stay in your current job until you retire, you can't be sure of what will happen." %}
-
 
 You could get laid off, or your current boss gets replaced by a jerk, and you find yourself needing a new job. Regardless of what you think of the importance of certifications, there are many places that won't even look at you without those pieces of paper. It's a lot easier to maintain a certification, than obtain it in the first place, so do yourself a favour, and renew it. And hey - you never know - you might just learn something while doing it. After all, the vendors want you to update to learn about the latest features, not just to give them some more money.

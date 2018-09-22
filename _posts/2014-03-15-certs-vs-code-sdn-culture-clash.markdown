@@ -13,25 +13,19 @@ tags:
 
 SDN career certifications are starting to emerge. Network engineers are well-used to certifications, and use them as a badge of marking progress. But developers prefer to focus on code, not passing tests. This will be just another way that the different cultures rub up against each other as we change the way our networks work.
 
-
 ## SDN Certifications Emerging
-
 
 HP has developed an SDN Developer certification, [HP ASE - SDN Application Developer v1](http://h10120.www1.hp.com/expertone/data_card/HP_ASE_SDN_Application_Developer_V1.html). This certification is aimed at:
 
-
 > experienced application developers...with some knowledge of networking functions or networking professionals with one or more years of application development experience
 
-
 Amongst other things, it validates that you can do the following:
-
 
   * Understand the SDN environment including SDN application use cases, the OpenFlow standard, the HP VAN SDN Controller, and OpenFlow enabled switches
 
   * Design an application with SDN, including decisions about application type and process of design creation; and understand examples of successful SDN-enabled applications...
 
   * Write, test, and debug an SDN application with the HP VAN SDN Controller and OpenFlow enabled switches
-
 
 Cisco is developing courses for [designing and supporting programmable networks](https://learningnetwork.cisco.com/docs/DOC-22087), and they are working on certification programs. They hype around it last year implied that they should have released this by now, but apparently they're still ironing out a few kinks:
 
@@ -53,7 +47,6 @@ Developers don't go in for certification with nearly the same gusto. They'd rath
 
 
 So what happens when developers and network engineers come together?
-
 
 ## Culture Clash - but we'll get over it
 
