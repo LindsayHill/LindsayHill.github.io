@@ -18,15 +18,10 @@ If you currently hold Cisco CCNA, CCNP or CCIE certification, you can use this a
 You need to submit this:
 
 
-
-
-	
   1. Your full name, company name, contact information and your HP Learner ID;
 
-	
   2. Title of the HP certification or service qualification toward which you are applying the credit;
 
-	
   3. Scanned copy of certificate or exam, showing date of completion.
 
 

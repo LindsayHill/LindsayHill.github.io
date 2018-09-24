@@ -24,21 +24,10 @@ I later followed it up with a [review of the 5.1 SP1 update](http://packetpusher
 > If you’re an existing customer, you should probably upgrade.
 
 
-
-
 ### References:
 
-
-
-
-
-	
   * [Main IMC page](https://www.hpe.com/networking/imc)
 
-	
   * [Review at PacketPushers.net](http://packetpushers.net/review-hp-imc-intelligent-management-center/)
 
-	
   * [5.1 SPI Update review](http://packetpushers.net/hp-imc-5-1-sp1-update/)
-
-

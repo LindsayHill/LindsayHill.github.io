@@ -18,9 +18,6 @@ tags:
 The main goal of Basic is to put [PCM+](http://h17007.www1.hp.com/us/en/networking/products/network-management/HP_PCM_Plus_Network_Management_Software_Series/index.aspx) out to pasture. It comes in two flavours:
 
 
-
-
-	
   * [IMC Basic Software Platform](https://www.hpe.com/us/en/product-catalog/networking/networking-software/pip.hp-intelligent-management-center-basic-software-platform.5333786.html)
 
   * [IMC Basic WLAN Manager Software Platform](https://h17007.www1.hp.com/us/en/networking/products/network-management/IMC_WLANM_Software/index.aspx) - same as Basic, with added Wireless Management capabilities

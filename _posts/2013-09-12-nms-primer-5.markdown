@@ -17,23 +17,15 @@ tags:
 We've covered [what an NMS does]({% post_url 2013-09-08-nms-primer-1 %}), and provided [some]({% post_url 2013-09-10-nms-primer-3 %}) [tips]({% post_url 2013-09-11-nms-primer-4 %}) on selecting one. Now let's assume you've chosen a system, and you're about to start installing it. The exact steps you go through will vary, based upon your network, your goals, and your chosen product sets. Here’s a few things I’ve learned about implementing network management systems:
 
 
-
-
-	
   1. [Start small](#start-small)
 
-	
   2. [Get team buy-in](#get-team-buy-in)
 
-	
   3. [Be aware of the pitfalls - don’t believe all the marketing](#be-aware-pitfalls)
 
-	
   4. [Expect noise, and be ready to deal with it](#expect-noise)
 
-	
   5. [Allocate sufficient time and resources](#allocate-time-resources)
-
 
 
 Let’s go through these.
@@ -43,61 +35,44 @@ Let’s go through these.
 # 1. Start small.   {#start-small}
 
 
-
 Have a few clear, achievable goals in mind. Deliver those first, before getting carried away. Your initial goals might be as simple as:
 
 
-
-
-	
   1. Get all network devices added to the NMS.
 
-	
   2. Get up/down alarming for all devices working, and escalated as required (email, Service Desk, etc)
 
-	
   3. Get regular device backups for all systems
-
 
 
 And that’s it. No, it’s not exciting. But make damn sure you’ve got that level working before you move on to things like performance management, and pretty visualisations. It’s probably going to take you a while to get that stuff done anyway - updating SNMP community strings, ACLs and login credentials can take a while if you don’t have all your devices centrally managed (yet).
 
 
-
 ## 2. Team buy-in   {#get-team-buy-in}
-
 
 
 If your network team doesn’t like the tool, and doesn’t know how to use it, the project will be a disaster. Trust me. Make sure that internal people are involved, and ideally there is at least one internal team member responsible for this project. You want at least one permanent staff member to fully take it on board, and own, love and cherish that system. It can’t just be consultant-driven.
 
 
-
 ## 3. Be Aware of Pitfalls - Don’t Believe the Hype   {#be-aware-pitfalls}
-
 
 
 Be very aware of the potential pitfalls of implementing any new NMS. Everyone gets excited about the new system, and all the wonderful things the marketing material said it can do. But there’s some hard work required to realise those benefits, and some things will just prove too hard (you didn’t believe ALL the marketing, did you?). Be realistic with your goals, and don’t lose heart if it’s not “magical” from day one.
 
 
-
 ## 4. There will be Noise. Be ready to fix things   {#expect-noise}
-
 
 
 One of the main challenges is that you’re going to get a lot of noise from your network. There’s going to be a lot of things that you’ll find out about your network. The new system may be a bit too sensitive, or it may actually be your network that needs fixing. Don’t shy away from it because the noise gets overwhelming. Be prepared for it, and allow time to fix your network issues. Approach them in a “noisiest-first” manner. Soon it will quieten down.
 
 
-
 ## 5. Do the Hard Yards - Allocate Time and Resources   {#allocate-time-resources}
-
 
 
 Finally, don’t underestimate the time required. It’s tempting to get external resources in to help with the initial implementation. Great idea! I know some people who can help! :D But if you do this, the consultant should not work by themselves - they should be working with you, preferably with you driving the mouse and keyboard. This is a valuable investment, as you will learn the skills you need to drive the tools. This will pay off in future, when you have the skills to use your new NMS to reduce the time it takes to detect and repair faults. If you don’t have the time to do this, consider using contractors to take on your regular workload, rather than the NMS implementation work.
 
 
-
 ## Conclusion: It’s not rocket science - just hard work
-
 
 
 Don’t shoot for the moon with your NMS. At least not at first. Start small, ensure all key staff are involved, and steadily expand. Do that, and there’s far less chance of it becoming shelfware.

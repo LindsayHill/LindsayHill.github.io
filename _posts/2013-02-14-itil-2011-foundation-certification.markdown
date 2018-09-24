@@ -35,24 +35,17 @@ The [IT Skeptic](http://www.itskeptic.org/) has a post on [How to Pass ITIL V3 F
 
 
 
-	
   * Flash-Based video/audio course content. This is online-only content, broken up into modules. They estimate that including the time you need to stop and read/digest the content, it will take around 26 and a half hours to get through all this. This is around four times the length of listening to the talking, as sometimes you'll need to stop, take notes, etc.
 
-	
   * Study notes - these are the sorts of notes you might make yourself when going through the content. This is useful for review
 
-	
   * Two Mock Exams of 40 questions each. These were of a similar standard to the real exam.
 
-	
   * Voucher to sit the exam
 
-	
   * Glossary of ITIL Terms
 
-	
   * ITIL Foundation Certificate Syllabus
-
 
 The study content was pretty good, although I'm not a huge fan of video content. The main problem I have is that video only really runs at one pace. I found I would often skip ahead through sections, if I was just waiting for the voice to read out the slide content. I'm better at learning from reading and doing. Other people learn better by listening to the content. It's up to you really. I would like the option to run the video at double-speed at least.
 

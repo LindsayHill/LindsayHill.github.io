@@ -14,18 +14,11 @@ tags:
 I've spent a lot of time on technical and non-technical forums over the last 10+ years. I've written thousands of posts on places like [CPUG](http://cpug.org), [CPshared](http://cpshared.com), [Thorntree](http://thorntree.lonelyplanet.com), [Packetpushers](http://forum.packetpushers.net), [NetOps](http://www.netopscommunity.net), [HP Support Forums](http://h30499.www3.hp.com/t5/Network-Management-Openview-NNM/ct-p/sws-NNM), [IEOC](http://ieoc.com), etc. I've never received any financial gain for it, not even so much as a free T-shirt. No jobs, no promotions, nothing. But I believe that participation in technical forums is an important part of developing your career - you learn something technically, and maybe you'll learn a bit about people along the way. I've also learnt a few things about the "right" way to participate in forums. I think I can sum them up as:
 
 
-
-
-	
   1. We're not mind readers
 
-	
   2. You get what you pay for
 
-	
   3. You get out what you put in
-
-
 
 
 ## We're Not Mind-Readers

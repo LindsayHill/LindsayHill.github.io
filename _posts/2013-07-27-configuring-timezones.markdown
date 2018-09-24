@@ -61,27 +61,19 @@ Cisco#show clock
 A few points to note:
 
 
-
-	
   * The actual timezone name is a free-form text field. You can call it whatever you like. Some people use lower case here. I like consistency and accuracy, so I will always use the official timezone names.
 
-	
   * You can specify partial-hour offsets, but you don't have to enter anything if it's a whole hour offset.
 
-	
   * Summer Time rules can be set as a once-off (using "date"), or they can be recurring. You can't mix these though! Some countries have had once-off changes - e.g. NSW, Australia during the 2000 Summer Olympics. You can specify once-off rules, but IOS will remove the "recurring" line. OSes like Windows and Linux allow much more complex rules, so you can have different rules in each year. With IOS, you'll just need to push out new rules using your config management tools. No big deal, right?
 
-	
   * If you're really keen, your summer time can be an offset of any number of minutes between 1 and 1440. The default is 60. I don't know any timezones that actually implement rules where they change by more than one hour.
-
 
 
 All up, it's pretty simple to configure - you just need to figure out what rules apply to your area. The ability to specify rules like "first Sunday" make it straightforward, as that is usually how it will be written in local legislation.
 
 
-
 ## Procurve Configuration
-
 
 
 HP Procurve systems have a slightly different configuration method. You can specify your location, if you're in the US. The other 6.5 Billion of us need to specify our offset in minutes from UTC. You don't specify the timezone name either, just the offset in minutes. The summer time rules are a little different too - it tries to give you options for various locations, but you can't really trust these. Better to define the rules manually:
@@ -126,9 +118,7 @@ It's a little annoying that "show time" on Procurve doesn't display the local ti
 The really frustrating part of Procurve timezone configuration is its very limited capabilities for defining summer time. You can't specify a rule like "last Sunday" - only an exact date. What the switch then does is look for the "first Sunday on or after that date" - so to be the first Sunday of the month, you can specify 04/01, as I have. To be the last Sunday of the month, you need to specify the date that is "number of days in the month - 6". You can't specify a time of day either - it will always change at 2:00, which is not always correct. Very poor. Note that if you use the predefined rules for the Southern Hemisphere, it will use the last Sunday in October to start, and the first Sunday in March to end. Not much use in New Zealand.
 
 
-
 ## Comware Timezone Configuration
-
 
 
 Comware configuration looks more like Cisco configuration. Surprise, surprise. Here's a typical setup:
@@ -143,7 +133,6 @@ dis cur | inc clock
  clock timezone NZDT add 12:00:00
  clock summer-time NZDT repeating 02:00:00 2012 September last Sunday 03:00:00 April first Sunday 01:00:00
 ```
-
 
 The rules are pretty similar to IOS - you have the same level of flexibility. You can specify one-off rules if required. Note you need to specify a year for the repeating rules, but after that it will apply for every year.
 

@@ -15,7 +15,6 @@ Pricing for Enterprise IT hardware and software can be a strange process, and se
 
 ## List Price and Discounts
 
-
 You will commonly see references to software and hardware list prices. List price is a fiction, and bears little to no reality to the actual price you will pay. **No-one ever pays list price**. Always keep that in mind. List prices can give you an indicative idea, but vendors discount policies vary wildly - some give 20% discount up front, others can knock 90% off the list price. It's hard to compare between vendors- the best you can hope for is to know the normal range that.
 
 Software discounts are also usually far greater than hardware, because the marginal cost of software is near $0. That means that anywhere between $0 and full list price, there's a deal to be done. Even companies that publish prices with links to an online store will do deals - just see what happens if you sign up for a SolarWinds quote/trial, and then don't buy it within a few weeks.
@@ -35,16 +34,11 @@ Occasionally vendors will turn around and massively discount their original quot
 When you purchase Enterprise-level hardware and software, you usually want some sort of support attached to it. This covers things like:
 
 
-
-	
   * Software updates - access to all new versions, including major releases
 
-	
   * Hardware replacement (if relevant) - vendor commitment to provide replacement hardware within an agreed timeframe - e.g. within 4 hours 24x7, or next business day
 
-	
   * Software support - ability to log case for configuration issues, or bugs. Depending on support contract level, this can range from email ticket support through to full 24x7 phone support.
-
 
 Support costs are generally calculated as a percentage of the value of the software or hardware, e.g. 10-20% of the price. Customers like these support contracts, because it gives management somewhere to escalate things to if you're having problems. For expensive hardware, it's much cheaper to pay for a guaranteed response time to replace it, rather than holding spares yourself. For low-end hardware, it might be easier to just chuck a couple of spare switches in the cupboard.
 
@@ -58,7 +52,6 @@ Pay attention. Make sure you know exactly what your costs will look like over th
 
 
 ## Payment Options
-
 
 If you're making a small purchase, then you'll generally pay for that shortly after delivery. But if you're doing a larger deal, or a software and services deal, vendors can give you many different payment options - e.g. you might be able to pay your support costs on a monthly basis, rather than annually. Multi-year support costs can be bundled into the up-front purchase price.
 

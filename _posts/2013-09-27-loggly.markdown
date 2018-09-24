@@ -13,15 +13,12 @@ tags:
 
 Cisco recently announced they have [invested $10M](http://www.informationweek.com/cloud-computing/software/cisco-backs-loggly-watch-out-vmware/240160774) into [Loggly](http://www.loggly.com), a Cloud-based log management service. I had vaguely heard of Loggly before, but never properly investigated it. Let's dive in and find out: What is Loggly, how does it work, why/where would I use it, and what other options do I have?
 
-
 ## What is Loggly?
-
 
 [According to Loggly](http://www.loggly.com/why-loggly/):
 
 
 > Loggly helps cloud-centric organizations—organizations that build and manage cloud-facing applications—to solve operational problems faster. Our solution analyzes log data from virtually any application, system or platform to answer your burning questions
-
 
 Loggly is a cloud-based log management application. Submit your logs via a variety of means to Loggly's systems, and now you can query and view all your logs in one place, in real-time. Sweet. Create graphs from that data, parse out specific events, alert when certain patterns are seen, etc.
 
@@ -113,44 +110,27 @@ After collecting data for a few days, I had a bit more to work with. But Loggly 
 
 Loggly says that anyone who has text-based logs, either structured or unstructured, can use it. They support many methods for submitting data, but they don't have agents, and some of the log submission methods will need application changes. These are the characteristics I see in the target customers:
 
-
-
-	
   * Developed Custom Cloud-based web application
 
-	
   * Allergic to hosting your own systems or applications
 
-	
   * Love OpEx, Hate CapEx
 
-	
   * Need alerting info from application log data
 
-	
   * Don't care about what happened two weeks ago - just care about now
-
 
 When I look at that list, I think: Complete opposite of traditional organisations. There might be some traditional organisations that would benefit from Loggly, but I think the target market is very much hip new Web 3.11 companies. Nothing wrong with that, and you may find a place for it in your staid company. But you should be very clear on what it is, and what it isn't.
 
-
 ## Pricing
-
 
 Loggly is very [upfront with their pricing](http://www.loggly.com/plans-and-pricing/). Pricing is based upon your daily log volumes, and the length of time you want to keep the data. There's also a free tier.
 
-
-
-	
   * Lite: 200MB/day, 7-day data retention. Free
 
-	
   * Development: 1GB -> 10GB/day, 7-day data retention. $49/month -> $374/month
 
-	
   * Production: 7GB -> 150GB/day, 15-day data retention. $349/month -> $7,400/month.
-
-
 
 
 ## Caveats and Alternatives
@@ -165,14 +145,10 @@ Using existing logging applications such as rsyslog or log4net is both good and 
 Some of the alternatives out there:
 
 
-
-	
   * [Splunk](http://www.splunk.com): The Big Daddy in this field. Forwarders, on-site storage, distributed search and indexing, enormous number of pre-written apps, huge capabilities for taking in data, and displaying it in whatever format you want. A fantastic tool, but with a price tag that can best be described as "reassuringly expensive."
 
-	
   * [Splunk Storm](http://www.splunkstorm.com): A cloud-based version of Splunk, with some limitations, but much clearer pricing.
 
-	
   * [vCenter Log Insight](http://www.vmware.com/products/vcenter-log-insight/): VMware's foray into log management. Hard to say if they're committed to it or not. Will they just toss it aside like other things they've tried, or are they serious about this?
 
 
@@ -186,6 +162,5 @@ I haven't quite figured that out yet. Cisco has enormous budgets, so $10M is a s
 
 
 ## Conclusion
-
 
 Loggly looks like a pretty interesting log management solution, particularly if your app is entirely cloud-based. It's not suitable if you need long-term log analysis and storage, or if you need to keep your data on-site. But if you're looking for fast, simple log analysis and alerting for cloud-based services, it's certainly worth a look. It's not cheap, but at least you can see exactly what the costs are going to be, and you can try it for free.
