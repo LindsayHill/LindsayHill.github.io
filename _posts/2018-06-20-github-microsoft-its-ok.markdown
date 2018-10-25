@@ -3,7 +3,7 @@ author: lindsay
 date: 2018-06-20 17:06:41+00:00
 layout: post
 slug: github-microsoft-its-ol
-title: GitHub Microsoft - It's OK
+title: GitHub &amp; Microsoft - It's OK
 categories:
 - Opinion
 - Worklife

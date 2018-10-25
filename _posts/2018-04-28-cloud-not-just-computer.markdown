@@ -3,7 +3,7 @@ author: lindsay
 date: 2018-04-28 16:56:41+00:00
 layout: post
 slug: cloud-not-just-computer
-title: Cloud Not Just Someone Else's Computer
+title: Cloud&#58; Not Just Someone Else's Computer
 categories:
 - Opinion
 tags:
