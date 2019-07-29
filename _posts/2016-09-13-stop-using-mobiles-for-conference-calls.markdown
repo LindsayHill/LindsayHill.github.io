@@ -12,11 +12,7 @@ tags:
 
 Stop using legacy mobile audio, especially for conference calls. There are better alternatives. You’re doing your customers and colleagues a disservice by using mobile audio. It’s time we moved on. PSTN is not much better either - switch to VoIP, and give your ears a break from crappy audio connections.
 
-
-
 ## Refresher: Audio Quality Standards
-
-
 
 There are many different methods of encoding speech for transmission across networks. There are trade-offs with each, balancing bandwidth, voice quality, and endpoint requirements. The interesting point is that there is not a direct relationship between bandwidth and quality. Half the bandwidth does not have to mean half the quality.
 
@@ -24,11 +20,7 @@ The [Mean opinion score](https://en.wikipedia.org/wiki/Mean_opinion_score) test 
 
 But we’re no longer constrained by bandwidth. We don’t need to squeeze that audio call down to only a few kbps. We can use other options such as FaceTime, which [anecdotally](https://networkingnerd.net/2013/10/21/facetime-audio-the-beginning-or-the-end/) has a higher score than G.711 or G.722. We have better options, and we should use them.
 
-
-
 ## Why does it matter?
-
-
 
 I have a congenital hearing loss. I’m not the only one - it affects [1.1 billion people to some degree](https://en.wikipedia.org/wiki/Hearing_loss). I’m already working hard to understand you. That GSM call with a score of 3.5 is maybe OK for those without hearing loss, but it’s like a 2.5 for me. 
 
@@ -38,23 +30,20 @@ Give me the best quality audio you can, and I might pay attention.
 
 This isn’t just about people with hearing loss either. Anyone who has to spend a lot of time on the phone will benefit from better audio quality. It’s like civilised countries using clear distinguishing features on their currency: people with limited eyesight really need it, but we all benefit.
 
-
-
 ## Conferencing systems & clients
-
-
 
 All modern conferencing systems support VoIP, and have iOS and Android clients. There is no excuse for (A) Not allowing VoIP with your conferencing system, or (B) Dialling in use mobile/PSTN. I have a proper audio setup, but if you dial in to a conference call, I get lowered to your level. I understand that you might not be in the office - that’s OK: Use the client on your phone.
 
 {% include note.html content="There’s a special place in hell reserved for those companies that do not enable VoIP with WebEx. very large Silicon Valley companies fall into this bucket. This is a disgrace. You should be ashamed of yourself, trying to save a few pennies by forcing people to dial in. It is 2016, you have vast campuses in Palo Alto, and while your long-term outlook may not be rosy, I know you’re not losing money right now." %}
 
-
-
-
 ## No VoIP option? Don’t invite me
-
-
 
 Please don’t invite me to meetings where your system doesn’t support VoIP, or you’re planning on dialling into an audio bridge using a mobile phone. Get a headset, and get a proper Internet connection. Fix your WebEX configuration if you don’t allow VoIP. 
 
 I’m sure your product is great, but if I get a headache trying to hear you, I’m not interested.
+
+## More Info on Helping Hard-of-Hearing People
+
+It's not just about conference calls. There's a lot of things you can do to homes and offices to make things easier for people with hearing loss. The good news? Like curb cuts, these things also help people with 'normal' hearing levels.
+
+Check out [this page](https://www.yourathometeam.com/deaf-or-hard-of-hearing-home-improvements/) for a wealth of information about modifications you can make.
