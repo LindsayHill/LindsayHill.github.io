@@ -17,27 +17,24 @@ Cisco recently announced they have [invested $10M](http://www.informationweek.co
 
 [According to Loggly](http://www.loggly.com/why-loggly/):
 
-
 > Loggly helps cloud-centric organizations—organizations that build and manage cloud-facing applications—to solve operational problems faster. Our solution analyzes log data from virtually any application, system or platform to answer your burning questions
 
 Loggly is a cloud-based log management application. Submit your logs via a variety of means to Loggly's systems, and now you can query and view all your logs in one place, in real-time. Sweet. Create graphs from that data, parse out specific events, alert when certain patterns are seen, etc.
 
 If you've ever had to log into 10 different devices to find the relevant logs, you'll appreciate the need for centralised log management. If you've ever spent hours crafting massive command lines involving multiple grep. sed & awk statements, you'll love fast powerful searching. If you've had to take CSV files and turn them into charts using Excel, you'll love being able to just send someone a link to run a real-time report.
 
-
 ## How Does it Work?
-
 
 To use Loggly, first sign up for an account, and then start forwarding data to Loggly, from whatever source you've got. You can submit data via various sources such as syslog, TCP/TLS, HTTP calls, etc. When submitting data, you include an access key that associates the data with your account. Here's the steps I went through to get some Apache logs from an AWS EC2 instance submitted to Loggly:
 
-  * **Sign up with Loggly.** Go to loggly.com, and sign up for a free trial. After doing that, I've got a blank slate - no log entries yet: 
+* **Sign up with Loggly.** Go to loggly.com, and sign up for a free trial. After doing that, I've got a blank slate - no log entries yet:
 [![Empty Loggly - no logs yet](/assets/2013/09/loggly_frontpage.png)](/assets/2013/09/loggly_frontpage.png)
 
 {:.image-caption}
 Empty Loggly - no logs yet
 
-  * **Configure rsyslog to send logs to Loggly.** The test EC2 instance I'm using is a Linux box running rsyslog, so I follow the instructions provided for configuring rsyslog:
-  
+* **Configure rsyslog to send logs to Loggly.** The test EC2 instance I'm using is a Linux box running rsyslog, so I follow the instructions provided for configuring rsyslog:
+
 ```bash
 # wget -q -O - https://www.loggly.com/install/configure-syslog.py | python - install
 
@@ -57,7 +54,7 @@ Configuring rsyslog-5.8
 Reading Loggly credentials from user....
 Enter the username that you use to log into your Loggly account.
 Loggly Username [root]: LindsayHill
-Password for LindsayHill: 
+Password for LindsayHill:
 Enter your Loggly account name. This is your subdomain. For example if you login at mycompany.loggly.com,
 your account name is mycompany.
 
@@ -81,11 +78,10 @@ Installation completed
 ```
 
 I had to fix the SELinux permissions on `/etc/rsyslog.d/22-loggly.conf`. I think it is just lazy of the developers to say "Disable SELinux", when all I had to do was set the context to `system_u:object_r:etc_t`. After making those changes, and running `service rsyslog restart`, we were sending logs to Loggly via Syslog over TCP.
-  
-  * **Configure rsyslog to read Apache logs.**
-The previous configuration was only forwarding regular syslogs. I also needed to configure rsyslog to read my Apache access logs. I used these [instructions](http://www.loggly.com/g1-support/gen1-logging-rsyslog/) to get rsyslog to monitor `/var/www/httpd/access_log`. After making those changes, and restarting rsyslog, my web logs were being sent to Loggly.
 
-  * **Profit! View and search my logs in near real-time:** Sure enough, logs started appearing in Loggly, and I could run quick searches:
+* **Configure rsyslog to read Apache logs.** The previous configuration was only forwarding regular syslogs. I also needed to configure rsyslog to read my Apache access logs. I used these [instructions](http://www.loggly.com/g1-support/gen1-logging-rsyslog/) to get rsyslog to monitor `/var/www/httpd/access_log`. After making those changes, and restarting rsyslog, my web logs were being sent to Loggly.
+
+* **Profit! View and search my logs in near real-time:** Sure enough, logs started appearing in Loggly, and I could run quick searches:
 
 [![Loggly - logs starting to come through](/assets/2013/09/loggly_logs.png)](/assets/2013/09/loggly_logs.png)
 
@@ -99,26 +95,23 @@ Loggly - running a search
 
 Note that it automatically picks out various fields in the data, such as apache.status - I didn't configure any of that, it automatically detected the log format.
 
-
 Now I can continue regularly submitting data, and search through it whenever I want, for whatever patterns I want. It starts to get interesting when I can start seeing trends in the data, or set up alerts that tell me when certain patterns are seen.
 
 After collecting data for a few days, I had a bit more to work with. But Loggly was still super-quick at running queries. I could now start trying out a few more of the visualisations - graphs, charts, etc. I haven't dug into the [Query Language](http://www.loggly.com/docs/search-query-language/) deeply enough yet to know if it can do everything I want, but the basics are well covered. Tools like this really come into their own when you build up a complex query, and then save it - next time it's as simple as picking a bookmark, and you can see current results.
 
-
 ## Why/Where Would I Use It?
-
 
 Loggly says that anyone who has text-based logs, either structured or unstructured, can use it. They support many methods for submitting data, but they don't have agents, and some of the log submission methods will need application changes. These are the characteristics I see in the target customers:
 
-  * Developed Custom Cloud-based web application
+* Developed Custom Cloud-based web application
 
-  * Allergic to hosting your own systems or applications
+* Allergic to hosting your own systems or applications
 
-  * Love OpEx, Hate CapEx
+* Love OpEx, Hate CapEx
 
-  * Need alerting info from application log data
+* Need alerting info from application log data
 
-  * Don't care about what happened two weeks ago - just care about now
+* Don't care about what happened two weeks ago - just care about now
 
 When I look at that list, I think: Complete opposite of traditional organisations. There might be some traditional organisations that would benefit from Loggly, but I think the target market is very much hip new Web 3.11 companies. Nothing wrong with that, and you may find a place for it in your staid company. But you should be very clear on what it is, and what it isn't.
 
@@ -126,15 +119,13 @@ When I look at that list, I think: Complete opposite of traditional organisation
 
 Loggly is very [upfront with their pricing](http://www.loggly.com/plans-and-pricing/). Pricing is based upon your daily log volumes, and the length of time you want to keep the data. There's also a free tier.
 
-  * Lite: 200MB/day, 7-day data retention. Free
+* Lite: 200MB/day, 7-day data retention. Free
 
-  * Development: 1GB -> 10GB/day, 7-day data retention. $49/month -> $374/month
+* Development: 1GB -> 10GB/day, 7-day data retention. $49/month -> $374/month
 
-  * Production: 7GB -> 150GB/day, 15-day data retention. $349/month -> $7,400/month.
-
+* Production: 7GB -> 150GB/day, 15-day data retention. $349/month -> $7,400/month.
 
 ## Caveats and Alternatives
-
 
 It's not a perfect solution. Retaining data for a maximum of 15 days means that it's only really useful for near real-time analysis and alerting. It can't be used for long-term capacity planning, or where logs need to be kept for audit purposes. Most people never go back more than a couple of weeks in their logs anyway, so that may not be a big deal. It depends on your application. This will probably be the critical decision in evaluating Loggly: How long do you need to keep your data?
 
@@ -144,22 +135,17 @@ Using existing logging applications such as rsyslog or log4net is both good and 
 
 Some of the alternatives out there:
 
+* [Splunk](http://www.splunk.com): The Big Daddy in this field. Forwarders, on-site storage, distributed search and indexing, enormous number of pre-written apps, huge capabilities for taking in data, and displaying it in whatever format you want. A fantastic tool, but with a price tag that can best be described as "reassuringly expensive."
 
-  * [Splunk](http://www.splunk.com): The Big Daddy in this field. Forwarders, on-site storage, distributed search and indexing, enormous number of pre-written apps, huge capabilities for taking in data, and displaying it in whatever format you want. A fantastic tool, but with a price tag that can best be described as "reassuringly expensive."
+* [Splunk Storm](http://www.splunkstorm.com): A cloud-based version of Splunk, with some limitations, but much clearer pricing.
 
-  * [Splunk Storm](http://www.splunkstorm.com): A cloud-based version of Splunk, with some limitations, but much clearer pricing.
-
-  * [vCenter Log Insight](http://www.vmware.com/products/vcenter-log-insight/): VMware's foray into log management. Hard to say if they're committed to it or not. Will they just toss it aside like other things they've tried, or are they serious about this?
-
+* [vCenter Log Insight](http://www.vmware.com/products/vcenter-log-insight/): VMware's foray into log management. Hard to say if they're committed to it or not. Will they just toss it aside like other things they've tried, or are they serious about this?
 
 Anyone else notice that all of these products have a vaguely similar look and feel? I guess there's some common requirements, and only so many ways of presenting the data.
 
-
 ## Why Did Cisco Invest In Loggly?
 
-
 I haven't quite figured that out yet. Cisco has enormous budgets, so $10M is a small amount for something that may or may not pan out. I don't know what their longer-term plans are, but I do wonder if this could somehow be tied to the [Meraki acquisition?](https://www.google.com/url?q=http://newsroom.cisco.com/press-release-content%3FarticleId%3D1118649&sa=U&ei=pBQwUqqxIsfmqwGT24HoDA&ved=0CAcQFjAA&client=internal-uds-cse&usg=AFQjCNE2jXVGdrixQWKWpXcnMPKSk2EOnw) Combine cloud-based management with cloud-based log management? I don't know.
-
 
 ## Conclusion
 

@@ -12,11 +12,7 @@ tags:
 
 I switched this blog over to using [CloudFlare](http://www.cloudflare.com/) a few days ago. It's all been pretty painless, and I highly recommend it to others.
 
-
-
 ## What is CloudFlare, and Why Use It?
-
-
 
 CloudFlare "[protects and accelerates any website online.](https://www.cloudflare.com/overview)" It does this by acting as a reverse proxy, sitting between end-users and your website. All traffic to your website gets directed through the CloudFlare global network. Because CloudFlare sees all traffic to your site, it can inspect it, dropping malicious traffic, and only passing valid requests on to your site.
 
@@ -26,11 +22,7 @@ The key feature that attracted me was IPv6 - CloudFlare can act as an IPv6 to IP
 
 The other reason I finally got around to moving to CloudFlare was that Tim Hoffman [has recently joined them](http://blog.hoff.geek.nz/2014/05/06/cloudflare-san-francisco-and-the-next-chapter-of-life/) - this was the trigger I needed to complete the setup.
 
-
-
 ## Migration Steps:
-
-
 
 Here's the steps I went through to add my blog to CloudFlare:
 
@@ -44,13 +36,9 @@ Here's the steps I went through to add my blog to CloudFlare:
 
   5. Change CloudFlare settings to enable IPv6 (CloudFlare Settings -> Automatic IPv6 -> Full)
 
-
 Pretty painless really.
 
-
 ## Profit! (?)
-
-
 
 Now I can look at some pretty analytics like this:
 
@@ -70,4 +58,3 @@ I'm looking forward to seeing the stats over a longer timespan. I'd also like t
 If you're running your own website, you should investigate CloudFlare. It will improve your security and availability, and give you IPv6 access, even if your hosting provider is dragging their feet. Recommended.
 
 {% include note.html content="NB: I have no affiliation with CloudFlare. I'm just a happy customer, using the same free tier available to everyone" %}
-

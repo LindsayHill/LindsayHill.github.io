@@ -14,50 +14,29 @@ tags:
 
 [Shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug)) was released a little over a month ago, to wide predictions of doom & gloom. But somehow the Internet survived, and we lurch on towards the next crisis. I recently gave a talk about Shellshock, the fallout, and some thoughts on wider implications and the future. The talk wasn't recorded, so here's a summary of what was discussed.
 
-
-
 ### Background: NZ ISIG: Keeping it Local
-
-
 
 The New Zealand Information Security Interest Group (ISIG) runs monthly meetings in Auckland and Wellington. They're open to all, and are fairly informal affairs. There's usually a presentation, with a wide-ranging discussion about security topics of the day. No, we don't normally discuss 'picking padlocks, debating whose beard or ponytail is better or which martial art/fitness program is cooler.'
 
 Attend enough meetings, and sooner or later you'll be called upon to present. I was 'volunteered' to speak on [Shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug)), about a month after the exploit was made public. I didn't talk about the technical aspects of the exploit itself - instead I explored some of the wider implications, and industry trends. I felt the talk went well, mainly because it wasn't just me talking: everyone got involved and contributed to the discussion. It would be a bit meaningless to just give you the slides. Instead I've written up the talk into a blog post format, and tried to incorporate some of the points that came up during the talk.
 
+1. [Shellshock: Bigger than Heartbleed?](#bigger-heartbleed)
 
+2. [Was it all over-blown?](#all-over-blown)
 
+3. [A new class of attack?](#new-class-attack)
 
-    
-  1. [Shellshock: Bigger than Heartbleed?](#bigger-heartbleed)
+4. [Loss of Diversity vs Centralised Control](#loss-diversity)
 
-    
-  2. [Was it all over-blown?](#all-over-blown)
+5. [What's Next?](#whats-next)
 
-    
-  3. [A new class of attack?](#new-class-attack)
+6. [Have big OSS users been getting a free ride?](#oss-free-ride)
 
-    
-  4. [Loss of Diversity vs Centralised Control](#loss-diversity)
+7. [It will happen again: What can we do?](#will-happen-again)
 
-    
-  5. [What's Next?](#whats-next)
-
-    
-  6. [Have big OSS users been getting a free ride?](#oss-free-ride)
-
-    
-  7. [It will happen again: What can we do?](#will-happen-again)
-
-    
-  8. [Closing thoughts](#closing-thoughts)
-
-
-
-
+8. [Closing thoughts](#closing-thoughts)
 
 ## Shellshock: Bigger than Heartbleed?   {#bigger-heartbleed}
-
-
 
 As is the current style, Shellshock was released to great fanfare, with a catchy name, and Doomsday-style headlines. A representative sample:
 
@@ -89,31 +68,23 @@ It looked like it was going to be carnage. Wide-spread attacks, worms, major mel
 
 > Yahoo says attackers looking for Shellshock found a different bug
 
-
-
 ## Was it all over-blown?   {#all-over-blown}
-
-
 
 So was all the hype over-done? Yes, it probably was. It was certainly a nasty bug, but it had several factors that limited its impact:
 
-    
-  * It was relatively easy to filter via IPS/ADC
- 
-  * It was reasonably simple to patch, without requiring any service restarts
+* It was relatively easy to filter via IPS/ADC
 
-  * Bash isn't actually all that widely used on custom appliances - they tend to use more limited shells
+* It was reasonably simple to patch, without requiring any service restarts
 
-  * Applying a simple code patch is a lot easier than fixing application logic flaws
+* Bash isn't actually all that widely used on custom appliances - they tend to use more limited shells
 
+* Applying a simple code patch is a lot easier than fixing application logic flaws
 
 But perhaps the hype also helped. If bugs are only known as something forgettable like [CVE-2002-0649](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-0649), it doesn't get any attention. Give it a memorable name and a logo, and suddenly the public starts talking about it. Maybe it's like Hurricanes/Cyclones? They all have names, and people take them seriously. We can connect to "Hurricane Lucy" far better than we could to "Tropical Storm 2014-10-482." Perhaps we need to have a policy of naming major exploits, with the first of each year starting with A, the second with B, etc?
 
 This hype helped spread the message, and encouraged people to take action to defend themselves. It's hard getting approval to patch an obscure bug, but if your management is reading about it in the paper, they want to know you're doing something about it.
 
-
 ## A new class of attack?   {#new-class-attack}
-
 
 There was some talk of this being a 'new class of attack.' But it's not really - I see it as just another [Injection Attack](https://www.owasp.org/index.php/Top_10_2013-A1-Injection). The OWASP Project defines this as:
 
@@ -124,7 +95,6 @@ Yep, sounds like what we've got here. The same old story: Don't blindly trust wh
 The good news here is that it's pretty easy to patch a code flaw like this. Fixing SQLi logic flaws across many applications is a lot tougher.
 
 The bad news is that Bash is probably going to be rich source of further exploits, now that some light has been thrown upon 25-year old code.
-
 
 ## Loss of Diversity vs Centralised Control   {#loss-diversity}
 
@@ -140,10 +110,7 @@ Consider [CloudFlare](http://www.cloudflare.com/) as an example. A non-trivial a
 
 What's better: Diversity or Control? No easy answer here, and maybe it depends on your scale.
 
-
-
 ## What's Next?   {#whats-next}
-
 
 I had been going to say that SSL would be the next one to get hit...and then [POODLE](http://en.wikipedia.org/wiki/POODLE) came along.
 
@@ -152,7 +119,6 @@ People used to attack Windows, because it was easy. But when that got tightened 
 It needs to be something in widespread use, and something that probably hasn't had enough eyes looking at it. That means probably something Open Source again. Sorry.
 
 My pick: Compression or image handling libraries. Who's up for a sweepstake?
-
 
 ## Have big OSS users been getting a free ride?   {#oss-free-ride}
 
@@ -166,7 +132,6 @@ Facebook also gives back at [code.facebook.com](https://code.facebook.com/). It
 
 But Amazon? So far as I can tell, Amazon doesn't feel it's necessary to contribute back. I guess the freedom of Open Source Software also includes the freedom to **not** contribute.
 
-
 ## It will happen again: What can we do?   {#will-happen-again}
 
 We can't completely stop these things happening again. We can hope to A) reduce the chances of it affecting us, B) limit the potential damage, and C) responding to events.
@@ -174,7 +139,6 @@ We can't completely stop these things happening again. We can hope to A) reduce
 There's a variety of techniques for trying to minimise risk (configuration, limit attack surface, etc) and limiting damage (containerisation, control inter-system communications, etc).
 
 But the area I want to look at is response. I've seen several articles talking about how we need to ensure our responders aren't burnt out from dealing with POODLE, Heartbleed, Shellshock, etc. The problem is that there's so much manual effort being expended. I'm still seeing people doing this:
-
 
 ```bash
 lhill$ scp bash-4.1.2-15.el6_5.2.x86_64.rpm lhill@server:
@@ -187,9 +151,7 @@ Preparing...                ############################ [100%]
 [lhill@server ~]$ logout
 ```
 
-
 This has to stop. We have to stop [Feeding the Machine with Human Blood](https://www.usenix.org/sites/default/files/conference/protected-files/underwood.pdf). If you're still manually rolling out patches, you have to look at your systems for managing change. You have to figure out how you can quickly and automatically test & deploy changes. This has massive extra benefits: It's not just security.
-
 
 ## Closing thoughts   {#closing-thoughts}
 

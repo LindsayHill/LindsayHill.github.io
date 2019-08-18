@@ -26,7 +26,7 @@ The replacement hardware is the SRX-110H2-VA, which has 2GB of RAM instead of 1G
 Michael Dale has a little more info [here](http://michaeldale.com.au/archive/2014/08/23/junos-121x47-first-gen-srx-devices-are-no-longer-supported/), along with tips for tricking a 240H into [installing 12.1X47](http://michaeldale.com.au/archive/2014/08/23/running-junos-121x47-on-first-gen-srx240h/).
 
 > So I decided to see if I could work around this and trick JunOS into installing on my 240H, I was successful :D
-> 
+>
 > I wouldn't recommend ever using this in production, but I am sure it will work fine for the lab. The only difference between the 240H and the 240H2 is that the H2 has 2GB flash and 2GB ram, CPU is the same.
 
 I was never fully happy with my SRX, with the DHCPv6 support being very poor, and still unstable. I'll probably sell the SRX early in the new year. Might replace it with a TP-Link 7980, or similar. All I really need is ADSL2+, and decent IPv6 support. Doesn't even matter about UFB support any more. They ran the ducts outside my house [earlier this year]({% post_url 2014-03-21-fibre-future %}), but now the [map](http://www.chorus.co.nz/maps) says that service won't be available until "between Jul 2018 and Jun 2019." A block away they already have VDSL, and will have 200Mb UFB by April 2015. Damn.

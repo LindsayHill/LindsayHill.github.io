@@ -13,7 +13,6 @@ tags:
 
 NNMi can use LDAP for authenticating users, with or without SSL. Recently a customer changed the SSL certificate used on their LDAP server, which broke NNMi authentication. NNMi trusts one specific certificate for verifying SSL connectivity to the LDAP server, so changing the certificate broke the chain of trust. To save me time when this comes around again, I've documented the steps for fixing this:
 
-
   1. Get a copy of the public part of the certificate used on the LDAP server. This should be in DER format. Copy it to the NNMi server.
 
   2. NNMi uses Java keystores for storing certificates. Two files are used - `nnm.keystore` for storing keys used for SSL for the NNMi web interface, and `nnm.truststore` for storing trusted certificates. Both are stored in `/var/opt/OV/shared/nnm/certificates`. For LDAP connection verification, NNMi looks in the `nnm.truststore` file for a certificate with an alias of **nnmi_ldap** You must use this alias. Check currently stored certificates with this command:
@@ -46,4 +45,3 @@ ovstart
 LDAP authentication should now be working again. You can use "nnmldap.ovpl -diagnose <username>" to verify this.
 
 {% include warning.html content="It's not enough to update the certificate, and run `nnmldap.ovpl -reload` - you MUST restart NNMi for the new certificate to take effect." %}
-

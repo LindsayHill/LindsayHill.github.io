@@ -13,14 +13,9 @@ tags:
 
 Fortinet makes an email security/anti-spam appliance called [FortiMail](http://www.fortinet.com/products/fortimail/). I wanted to collect spam and virus statistics from it, to integrate with our Network Monitoring Systems. Unfortunately the data is not exposed via SNMP or API, so I had to resort to some ugly code to get it working. Here's what I did:
 
-
-
 ## CLI - 'diagnose statistics get total'
 
-
-
 The only way I could find the statistics I needed was via the CLI. Running the `diagnose statistics get total` command produces output like this:
-
 
 ```text
 mx1 # diagnose statistics get total
@@ -88,17 +83,11 @@ Total(34280790)             | 10667365 18200295 5413130|
 
 ```
 
-
 It's pretty ugly, and they don't seem to document all the fields properly, but I can figure it out. So I need to SSH to the box every collection interval, run that command, and parse the output.
-
-
 
 ## Paramiko to the rescue?
 
-
-
 I'm using ScienceLogic to collect this data. It allows creation of custom Dynamic Applications, which can run Python scripts to collect the data. Normally I'd use the Paramiko module to do the SSH part. The code would look something like this:
-
 
 ```python
 command = 'diagnose statistics get total'
@@ -127,9 +116,7 @@ except:
     self.internal_alerts.append((SNIPPET_MSG, "App:%s, General failure" % (self.app_id)))
 ```
 
-
 After that, the rest of the code could parse the stdout output, and grab the statistics. Unfortunately this didn't work. It seems that FortiMail wants a PTY allocated, otherwise it won't run the command - it just returns nothing:
-
 
 ```bash
 [lkhill@sciencelogic ~]#ssh monitoring@fortimail 'diagnose statistics get total'
@@ -137,15 +124,9 @@ monitoring@fortimail's password:
 [lkhill@sciencelogic ~]#
 ```
 
-
-
-
 ## Paramiko - Lower Level
 
-
-
 Using `SSHClient()` greatly simplifies SSH connection handling in Paramiko, but it wasn't letting me request a PTY. It took me a while of reading through the documentation and hunting around until I came up with this ugly code block:
-
 
 ```python
 try:
@@ -176,6 +157,5 @@ except socket.error, e:
 except:
     self.internal_alerts.append((SNIPPET_MSG, "App:%s, General failure" % (self.app_id)))
 ```
-
 
 It's not pretty, but it works. Later revisions of Paramiko include a `get_pty` argument to `exec_command()`. I believe that this would work, and would much improve my code, but I can't update the Paramiko module on this system. Hopefully later ScienceLogic releases will update it.

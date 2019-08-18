@@ -16,11 +16,7 @@ A few months ago I stayed at a Sheraton hotel in Australia. They swiped my credi
 
 A few weeks later I was processing my expenses, and I realised I'd been charged over $300 NZD. With the exchange rate at the time, it should have been about $275. Looking closer, I realised that they had charged me in New Zealand dollars. They should have charged me in Australian dollars, and let my credit card company sort out the exchange rate.
 
-
-
 ## What's going on?
-
-
 
 Some hotels offer you a choice of currency when paying your bill. This should be an option when you enter your PIN. Do not take this option. It is almost never a good idea. Your credit card company will charge you a fee for currency conversion (1.85% for my New Zealand credit cards, 3% for my US credit cards). But here, the hotel applied a much higher fee, making it cost about 10% more than it should have.
 

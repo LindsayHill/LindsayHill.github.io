@@ -18,7 +18,6 @@ The application I was investigating packaged its own PostgreSQL installation & J
 
 Identify the shell scripts:
 
-
 ```sh
 root@ubuntu: bin# file *|grep shell
 setup.sh:              POSIX shell script, ASCII text executable, with very long lines
@@ -28,9 +27,7 @@ createlinks:           POSIX shell script, ASCII text executable
 createuser:            POSIX shell script, ASCII text executable
 ```
 
-
 Get the filename:
-
 
 ```sh
 root@ubuntu: bin# file *|grep shell|awk '{print $1}'
@@ -41,9 +38,7 @@ createlinks:
 createuser:
 ```
 
-
 Hmmm, need to get rid of that ":"
-
 
 ```sh
 root@ubuntu: bin# file *|grep shell|awk '{print $1}'|tr -d ':'
@@ -54,9 +49,7 @@ createlinks
 createuser
 ```
 
-
 Looking better. Now let's run checkbashisms against each of those files:
-
 
 ```sh
 root@ubuntu: bin# file *|grep shell|awk '{print $1}'|tr -d ':'|xargs -i checkbashisms {}
@@ -68,7 +61,6 @@ possible bashism in createuser line 41 (alternative test command ([[ foo ]] shou
 if [[ ("$VERSION" = "PE") && ("$ARCH" = "i686") ]]
 root@ubuntu: bin#
 ```
-
 
 And now I can see exactly which scripts have problems, and where.
 

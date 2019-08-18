@@ -16,9 +16,9 @@ The extremely irregular War Stories series returns, with an anecdote from 15 yea
 
 ## ISPY With my Little Eye
 
-"ispy" was our custom-built system that archived SMS logs from all our SMSCs, aggregating them to one server for analysis. Message contents were kept for a short period, with CDRs stored for longer (i.e. details of sending and receiving numbers, and timestamps, but no content). 
+"ispy" was our custom-built system that archived SMS logs from all our SMSCs, aggregating them to one server for analysis. Message contents were kept for a short period, with CDRs stored for longer (i.e. details of sending and receiving numbers, and timestamps, but no content).
 
-The system had a web interface that support staff could use to investigate customer reports of SMS issues. They could enter source and/or destination MSISDNs, and see when messages were sent, and potentially contents. Access to contents was restricted, and was typically only used for things like abuse investigations. 
+The system had a web interface that support staff could use to investigate customer reports of SMS issues. They could enter source and/or destination MSISDNs, and see when messages were sent, and potentially contents. Access to contents was restricted, and was typically only used for things like abuse investigations.
 
 This system worked well, usually.
 
@@ -30,7 +30,7 @@ Every few weeks, we'd get reports that L2 support couldn't access the system. We
 
 The system was entirely custom, and completely undocumented. I had previously moved it from one server to another, but that was mainly a case of copying some content and application folders across. I had never had to dig deeply into it.
 
-There was a bunch of scripts that periodically collected data from the SMSCs, and a Perl CGI app, fronted by Apache. 
+There was a bunch of scripts that periodically collected data from the SMSCs, and a Perl CGI app, fronted by Apache.
 
 Anyone who's ever had to debug someone else's Perl knows that it is a ["Write Once, Read Never"](https://news.ycombinator.com/item?id=2834833) language. Even the person who wrote it has a low chance of being able to figure it out.
 

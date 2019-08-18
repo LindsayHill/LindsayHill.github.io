@@ -14,9 +14,7 @@ tags:
 
 When Apple launched the [Mac App Store](http://www.apple.com/osx/apps/app-store.html), I was quite interested in how it would work out. The App Store for iOS has been hugely successful, even if it is at times somewhat [frustrating for developers](http://arstechnica.com/apple/2009/11/respected-developers-fleeing-from-app-store-platform/). I'm also undecided on the censorship aspects - [I should be able to have a wobbly boob app if I want](http://gizmodo.com/5116493/nsfw-boob-app-on-the-iphone-is-obviously-called-iboobs-obviously-not-approved) - but I was prepared to give it a chance.
 
-
 ## The Promise
-
 
 The promise of the App Store is that it makes it easy to find, buy and install applications for OS X. Rather than searching across many different company websites, you can find apps in one place. No need to hand out your credit card details to twenty different companies either - Apple handles all payments.
 
@@ -30,9 +28,7 @@ I come from a RedHat Linux background, so I'm well used to the concept of a pack
 
 So I started moving towards using the App Store. If I can find the app on want via the App Store, my preference has always been to buy it from there. Easy to find, buy, and update. Should be all good right? So why do I think I should start moving away from that model?
 
-
-## So what went wrong?
-
+## So What Went Wrong?
 
 For simple transactions, and cheap applications, the App Store works well. For environments like iPads/iPhones, the App Store is the only way we've ever had for finding, purchasing and managing applications. But in the OS X world, there's a long history of independent developers selling software. Nothing has ever restricted the software you could install, or the locations you could get it from.
 
@@ -46,9 +42,7 @@ I'm also a [DevonThink](http://www.devontechnologies.com/products/devonthink/ove
 
 The delays in new releases can be frustrating - several times I've been aware that bugs have been fixed upstream, and updated versions are available for download if you've purchased direct, but I have to wait for my updates via the App Store. I was particularly annoyed when the [CCIE Flashcards](http://blog.initialdraft.com/flashcards/ccie-flashcards/) program I used on my iPhone was crashing at startup, and the fixed version was being held up because Apple was now unhappy with the look/feel of the app.
 
-
 ## Fixes coming?
-
 
 I'm vaguely hopeful that some of these issues will be resolved at [WWDC](https://developer.apple.com/wwdc/) this year, but I'm not sure I should hold my breath. If they could at least introduce upgrade pricing, I would be happy.
 

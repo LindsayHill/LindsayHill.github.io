@@ -29,8 +29,6 @@ This might have been relevant in the early days, but I just don't see it working
 
 It's just not a big deal any more. Microsoft has invested enormous sums in patch testing systems, and by and large, it seems to be working well. We don't see the wide-scale pandemonium people once forecast from applying patches, and the default position for people now is to patch, rather than leave it.
 
-
 > The monthly patch cycle has become a frequent, repeatable process that everyone's used to, and it's no longer a big drama. Just like all IT changes should be.
-
 
 Maybe it's time for the journalists to start toning down the language, and recognise this is just business as usual?

@@ -15,9 +15,7 @@ tags:
 
 I won't go into the details of how it all works - [Brandon](https://twitter.com/SDNGeek) covers some of it [here](https://ccie31104.wordpress.com/2015/02/16/velocloud-impressions-from-nfd9/), and you can look through [VeloCloud's site](http://www.velocloud.com/products/features/) to understand it more. I want to focus on a few details around data analysis, and information brokerage.
 
-
 ## Internet Quality Monitoring
-
 
 In this video, Kangwarn Chinthammit talks about how VeloCloud is using their devices to monitor Internet quality. Because they're installed in a wide range of locations, with many different WAN connection types, they're building up some interesting data.
 
@@ -25,19 +23,15 @@ In this video, Kangwarn Chinthammit talks about how VeloCloud is using their dev
 
 They've been able to do some deeper analysis of the data, and break down quality measurements by location, circuit type, hour, and day. Some of the interesting results include:
 
-    
-  * A good ISP in one location may not be any good in another. So you can't just pick one ISP.
+* A good ISP in one location may not be any good in another. So you can't just pick one ISP.
 
-  * Quality varies during the day, and across the year. It might be getting worse, then be good for several months, before it gets worse again.
+* Quality varies during the day, and across the year. It might be getting worse, then be good for several months, before it gets worse again.
 
-  * Higher bandwidth links may not deliver better quality.
-
+* Higher bandwidth links may not deliver better quality.
 
 The upshot of all that is that you need multiple links, and you need to be able to move traffic between them, as conditions change. Of course, VeloCloud also thinks they've got the solution to do just that :)
 
-
 ## Two So-So Links == One Good One?
-
 
 VeloCloud has measurements that indicate that Internet links are unsuitable for real-time application delivery up to 25% of the time. If all we do is dynamically redirect traffic between two links, does that mean that we can get down to 6.25% poor performance?
 
@@ -47,9 +41,7 @@ VeloCloud says that if you combine the dynamic redirection with their on-demand 
 
 The use of the cloud gateway is what allows them to apply some more smarts to traffic redirection, FEC, and packet reordering. It's a pretty slick demo, although I have to admit to getting distracted by the action sports they were showing...
 
-
 ## Information Brokerage
-
 
 It's the data collection aspects that interest me the most. Firstly, if I can collect detailed application performance data, I can use that in my other monitoring systems. This helps with understanding what's happening, and alerting on fault conditions.
 
@@ -66,4 +58,3 @@ You can see this play out in other fields too - e.g. [Tail-F](http://www.tail-f.
 I like what VeloCloud is doing in the SD-WAN space. Cheaper & better connectivity with greater visibility - what's not to like? I look forward to seeing how all the players in this space execute over the next few years. I also look forward to seeing just what we can do with this wider view of how networks are performing.
 
 {% include note.html content="Disclaimer: VeloCloud was a paid presenter at [NFD9](http://techfieldday.com/event/nfd9). This means that they indirectly covered my costs to attend. I am not paid or obligated to write anything, and my opinions remain my own. " %}
-

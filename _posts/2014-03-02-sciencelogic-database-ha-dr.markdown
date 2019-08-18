@@ -14,24 +14,19 @@ tags:
 
 Previously I’ve looked at the overall [ScienceLogic architecture]({% post_url 2014-02-06-sciencelogic-architecture-overview %}), and HA options for the [Collectors and UI.]({% post_url 2014-02-27-sciencelogic-collector-ha %}) This post looks at DR and HA options for the core Database layer - the heart of the ScienceLogic system.
 
-
 ## HA vs DR
-
 
 There’s a few different definitions of HA and DR. These definitions are used here:
 
+* _High Availability - HA:_ Automatic synchronisation and failover between systems located at the same site. Automatically handles hardware or software failure on primary system.
 
-  * _High Availability - HA:_ Automatic synchronisation and failover between systems located at the same site. Automatically handles hardware or software failure on primary system.
-
-  * _Disaster Recovery - DR:_ Automatic data synchronisation between systems located at separate data centres. Manual failover required. Handles hardware or software failure of primary system, but requires manual intervention to initiate failover. The advantage of this setup is that it can withstand a total site failure.
-
+* _Disaster Recovery - DR:_ Automatic data synchronisation between systems located at separate data centres. Manual failover required. Handles hardware or software failure of primary system, but requires manual intervention to initiate failover. The advantage of this setup is that it can withstand a total site failure.
 
 ## High Availability
 
 You can configure multiple database servers at the same site, acting as an active/passive cluster. ScienceLogic uses DRBD for block-based replication between the database servers. A heartbeat network must exist between the servers. If ScienceLogic detects a failure, it will switch the secondary system to active, and will swing the virtual IP across to the secondary DB. This means that no re-configuration is required for the Admin Portals in the event of a failover.
 
 ![SL DB HA](/assets/2014/02/SL-DB-HA.png)
-
 
 ## Disaster Recovery
 
@@ -44,7 +39,6 @@ Using DRBD proxy can better handle slower/congested networks between the databas
 DR also changes your backup policy options - you can execute a full backup from the secondary database server. Doing a full backup is an I/O intensive process, so running from the DR system makes sense - it has no impact on the user experience. Doing a full backup of the active system can cause some slow-down for the user.
 
 {% include note.html content="NB: You can combine DR and HA, by having an HA cluster at one site, replicated to a DR database at another site" %}
-
 
 ## Scaling
 

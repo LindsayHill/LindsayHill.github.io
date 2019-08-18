@@ -17,18 +17,11 @@ Fibre (aka UFB, or "Ultra-Fast Broadband") is now being rolled out across New Ze
 
 Obviously it takes time to lay all this fibre. Chorus has an [interactive map](http://www.chorus.co.nz/maps) showing anticipated availability dates. Punch in your address, and you can see what's available, and what is planned. Sadly I got the dreaded:
 
-
 > UFB deployment dates for your area are still being developed
-
-
 
 Or in other words, "We've got no plans to deliver it to you any time soon, and you should be happy with your 14Mbps ADSL2+." Actually my ADSL speeds are OK, but I need greater upload capability. There has been talk that uptake is too low ([5.5% of houses](http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11200833) with UFB available as at Dec 31 2013), but I would sign up the first day that it becomes available. To rub it in, VDSL is one block from my house, and UFB is slated to reach one block away later this year.
 
-
-
 ## Outbreak of Common Sense
-
-
 
 The local council is currently replacing the kerbs and footpaths (sidewalks to my American friends) in my area. In a stunning outbreak of common sense, Chorus and the paving crews somehow talked to each other, and realised that they could save a lot of time and money by putting the fibre in when the footpaths are being re-built.
 

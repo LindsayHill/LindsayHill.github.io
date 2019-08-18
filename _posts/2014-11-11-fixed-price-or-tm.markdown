@@ -12,17 +12,13 @@ tags:
 
 Recently I posted about [Rewarding Effort vs Results]({% post_url 2014-11-07-rewarding-effort-vs-results %}), how different contract structures can have different outcomes. This post covers Time & Materials vs Fixed-Price a little more, looking at pros & cons, and where each one is better suited.
 
-
 ## Definitions:
 
+* **Time & Materials:** Client & supplier agree on the requirements, and an hourly rate. The client is billed based upon the number of hours spent completing the job. Any costs for materials are also passed on. If the job takes 8 hours, the client pays for 8 hours. If it takes 800 hours, the client pays for 800 hours. To prevent bill shock, there will usually be review points to measure progress & time spent. Risk lies with the client.
 
-  * **Time & Materials:** Client & supplier agree on the requirements, and an hourly rate. The client is billed based upon the number of hours spent completing the job. Any costs for materials are also passed on. If the job takes 8 hours, the client pays for 8 hours. If it takes 800 hours, the client pays for 800 hours. To prevent bill shock, there will usually be review points to measure progress & time spent. Risk lies with the client.
-
-  * **Fixed-Price:** Client & Supplier agree beforehand on what outcomes the client needs. It is crucial that this is well-documented, so there are no misunderstandings. The supplier will estimate how long the job will take, allow some extra margin, and quote a figure. The client pays the same amount, regardless of how long the job takes. Risk lies with the supplier.
-
+* **Fixed-Price:** Client & Supplier agree beforehand on what outcomes the client needs. It is crucial that this is well-documented, so there are no misunderstandings. The supplier will estimate how long the job will take, allow some extra margin, and quote a figure. The client pays the same amount, regardless of how long the job takes. Risk lies with the supplier.
 
 ## Comparison:
-
 
 |---+----------------------+-------------|
 |   | Time & Materials | Fixed-Price |

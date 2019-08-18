@@ -16,9 +16,7 @@ tags:
 
 The best way to understand how IMC Compliance Center works is to walk through a simple example. We’re going to start with a simple goal: We want to check that all our Cisco devices include “no ip source-route” in their configuration. Once you see how to work through a basic compliance check, you can start to build up complex policies.
 
-
 ## Pre-Defined Policies and Rules
-
 
 We’re going to create our own custom Policy, and add our own custom rules to it, but first we’ll take a look at the pre-defined Policies and Rules. IMC includes a number of pre-defined policies, covering NSA routing security guidelines, PCI-DSS requirements, STP configuration, etc. These pre-defined rules are useful both as a starting point for your own policies, and to better understand how the syntax works. We can’t modify pre-defined rules, but we’re free to copy them into our own policies, and then tweak them as needed. Go to **Service -> Compliance Center -> Compliance Policy** to take a look at the list:
 
@@ -36,11 +34,7 @@ Things to note here: First the Severity - this is set to Warning. You can choose
 
 There’s also an optional rule Description, and further down the actual rule, which checks for the presence of `no ip http server` in the configuration. You can reverse this check - e.g. you might want to alarm if that pattern IS present.
 
-
-
 ## Adding Our Own Custom Policy
-
-
 
 For our example here, we’re going to create our group of rules - aka a Policy. Go to **Service -> Compliance Center -> Compliance Policy**, and click Add:
 

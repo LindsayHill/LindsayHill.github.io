@@ -18,12 +18,9 @@ A couple of weeks ago I read [this post on theeagerzero](http://theeagerzero.blo
 
 Indeed. Then this week I saw a post on a CCIE study forum from someone trying to configure a Linksys switch, who knew nothing about console cables, and may have tried to plug a serial cable into an Ethernet port. Time to reconsider what I'm doing.
 
-
 ## Why Participate in the First Place?
 
-
 There's a few reasons why I've been a long-time contributor to many forums:
-
 
   1. **Keep abreast of real-world product issues** - forums show the problems people are coming across in real deployments, not just in PowerPoint. By following the forums, I've got a reasonable handle on issues that people are striking, and maybe I get early warning before I install that upgrade that breaks that key feature.
 
@@ -31,15 +28,11 @@ There's a few reasons why I've been a long-time contributor to many forums:
 
   3. **Product updates** - I find out about interesting new releases, CCIE blueprint updates, etc.
 
-
 I've tended to have a product or certification focus with the forums I've followed - they've either been for specific product sets I'm working with, or focused on certifications I'm chasing. I have not spent so much time on "general" forums - e.g. those covering networking as a whole.
-
 
 ## So why stop now?
 
-
 Why do I now feel I've had enough?
-
 
   1. **People 'gaming' forums** - many forums have 'points' and 'status levels', and have now started giving away prizes for top contributors. This has led to many low-quality responses from people apparently desperate to respond to every post, even if they aren't adding any value. [IEOC](http://ieoc.com/) is particularly bad for this right now.
 
@@ -47,15 +40,11 @@ Why do I now feel I've had enough?
 
   3. **Return on investment** - My time is limited, and I need to consider where I should best focus my efforts. I've concluded that researching topics, and writing about them for my blog is better for my learning, and forms a better consolidated set of notes. Plus I'm more in control of my content. Twitter helps me keep up with issues & new releases, provided I carefully manage the list of people I follow. I've also been following forums that are no longer relevant to me, as I don't work in that field any more, and don't see myself returning to it in the short-medium term.
 
-
 The result is that I'm starting to feel burnt out.
-
 
 ## Still keeping my hand in
 
-
 I'm not completely stopping all my forum participation, but I'm now going to limit it to:
-
 
   1. [NetOps](http://www.netopscommunity.net/) - a low-noise forum that focuses on IMC. IMC still has a low number of experienced practitioners, and I like to help where I can.
 
