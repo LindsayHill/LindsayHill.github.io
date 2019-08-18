@@ -3,7 +3,7 @@ author: lindsay
 date: 2015-07-13 04:48:35+00:00
 layout: post
 slug: its-2015-supports-ipv6-should-mean-full-support
-title: 'It''s 2015: "Supports IPv6" should mean full support'
+title: 'It''s 2015: ''Supports IPv6'' should mean full support'
 categories:
 - Routing &amp; Switching
 tags:

@@ -39,7 +39,7 @@ DE-CIX
 {:.image-caption}
 AMS-IX
 
-[![IX.br](https://ix.br/images/pix/agregado_bps1-daily1.png)](https://ix.br)
+[![IX.br](https://old.ix.br/images/pix/agregado_bps1-daily1.png)](https://ix.br)
 
 {:.image-caption}
 IX.br

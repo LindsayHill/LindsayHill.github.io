@@ -1,37 +1,73 @@
-# Dependencies
-markdown:         kramdown
+# Site
+name: "Lindsay Hill"
+title: "Lindsay Hill"
+description: "automation, networking, worklife"
+logo: 'assets/images/logo.jpg'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+google_analytics: 'UA-99113050-1'
+disqus: 'lkhill'
+#mailchimp-list: ''
+include: ["_pages"]
+permalink: /:title/
 
-# Permalinks
-permalink:        /:title/
+# Authors
+authors:
+  lindsay:
+    name: Lindsay
+    display_name: Lindsay
+    gravatar: fc3d5295f7b670886cdbabd7287d0b14
+    github: LindsayHill
+    email: lindsay.k.hill@gmail.com
+    web: https://lkhill.com
+    twitter: https://twitter.com/northlandboy
+    description: "Network engineer, recovering Product Manager, occasional bike tourist."
 
-# Setup
-title:            'Lindsay Hill'
-tagline:          'automation, networking, product management'
-description:      'Technical posts on automation, network management, career and worklife'
-url:              https://lkhill.com
-baseurl:             /
-
-author:
-  name:           'Lindsay Hill'
-  url:            https://twitter.com/northlandboy
-  email:          lindsay.k.hill@gmail.com
-  github:         LindsayHill
-  twitter:        northlandboy
-
-paginate:         10
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://github.com/LindsayHill/lindsayhill.github.io
-
-feed: 
-  path: /feed/index.xml
-
-# Gems
+# Plugins
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-archives
   - jekyll-gist
+
+feed:
+  path: /feed/index.xml
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+    - year
+  layout: archive
+  layouts:
+    year: year-archive
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+    
+# Pagination 
+paginate: 12
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+# adsense-data-ad-client: "ca-pub-3412143450191416"
+# adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
