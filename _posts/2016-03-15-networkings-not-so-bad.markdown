@@ -30,7 +30,7 @@ Oh. You mean like this single text file that defines the configuration of my net
 > Why do you networking people have so many different ways of configuring systems? Why don’t you just have one common API?
 
 
-Oh. You mean like the way that there’s a [Universal install script](http://xkcd.com/1654/) Linux systems?
+Oh. You mean like the way that there’s a [Universal install script](https://xkcd.com/1654/) Linux systems?
 
 
 > SNMP sucks. The data format is terrible, implementations are inconsistent. Why don’t you switch to gRPC?

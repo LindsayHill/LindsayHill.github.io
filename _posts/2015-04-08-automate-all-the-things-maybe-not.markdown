@@ -14,7 +14,7 @@ I’m fundamentally lazy. That’s why automation appeals: less work for me. Get
 
 Automating tasks carries some overhead. If you’re really unlucky, you’ll end up spending more time on the automation than doing it manually:
 
-![](http://imgs.xkcd.com/comics/automation.png)
+![](https://imgs.xkcd.com/comics/automation.png)
 
 So if you can eliminate tasks, you’re in a much better position. Here’s a few contrived examples, based around a fictitious email provider:
 
