@@ -18,7 +18,6 @@ I've long disliked the term "[non-functional requirements](http://en.wikipedia.o
 
 > Rather than the term “operational requirements,” some organizations use the term “non-functional requirements.” We consider this term misleading. While these features are not directly responsible for the function of the application or service, the term “non-functional” implies that these features do not have a function. A service cannot exist without the support of these features; they are essential.
 
-
 It is all the fashion today to separate requirements into 'functional' and 'non-functional,' but the authors are right to point out that this can be misleading. Perhaps it's the old Operations Engineer in me, but if a product doesn't have things like Backup & Restore, or Configuration Management, then it's a non-functioning product to me.
 
 Maybe I should read the term "non-functional requirements" as "The product has to meet these requirements, otherwise it's non-functioning."

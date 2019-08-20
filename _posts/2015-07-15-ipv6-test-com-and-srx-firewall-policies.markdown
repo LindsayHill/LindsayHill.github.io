@@ -18,16 +18,15 @@ The site runs a suite of tests and gives you a score out of 20. Most dual-stack 
 [![icmp-test-fail](/assets/2015/07/icmp-test-fail.jpg)](/assets/2015/07/icmp-test-fail.jpg)
 
 > How can you improve your score ?
-> 
+>
 > 1. Reconfigure your firewall
 > Your router or firewall is filtering ICMPv6 messages sent to your computer. An IPv6 host that cannot receive ICMP messages may encounter problems like some web pages loading partially or not at all.
-> 
+>
 > 2. Get a reverse DNS record
 
 The first one is fine, but the second issue is a worry. [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_version_6) is a critical part of IPv6. It's needed for things like Neighbor Discovery, and [Packet Too Big](https://en.wikipedia.org/wiki/IPv6_packet#Fragmentation) messages.
 
 Most home user firewall setups will be fairly simple. Basically 'Allow everything out, and allow related traffic back in. Drop everything else.' Surely the default policy on the SRX should be allowing related ICMPv6 messages back in? Let's check some tcpdump output on our client:
-
 
 ```sh
 ~ lhill$ sudo tcpdump -ni en0 icmp6 and not net fe80::/10
@@ -37,20 +36,18 @@ listening on en0, link-type EN10MB (Ethernet), capture size 65535 bytes
 11:38:04.398471 IP6 2001:41d0::b1c > 2406:e007:aaaa:1111:cccc:dddd:eeee:e0ce: ICMP6, destination unreachable, unreachable address 2001:41d0:8:e8ad::fa11:bac, length 92
 ```
 
-
 We can see the destination unreachable message returned. So why does the test fail?
 
 It's because that page is just doing a simple echo-request. It assumes that if it can ping you, then all ICMPv6 must be allowed. This is wrong, but it was probably the simplest test to code.
 
 If you want that test to pass, you'll need to make some changes to your local firewall. Here's what I added to my SRX:
 
-
 ```text
-lhill@srx01# set security policies from-zone untrust to-zone trust policy icmpv6 match source-address any-ipv6 destination-address any-ipv6 application junos-icmp6-echo-request     
+lhill@srx01# set security policies from-zone untrust to-zone trust policy icmpv6 match source-address any-ipv6 destination-address any-ipv6 application junos-icmp6-echo-request
 
 [edit]
 lhill@srx01# set security policies from-zone untrust to-zone trust policy icmpv6 then permit
-lhill@srx01# show security policies from-zone untrust to-zone trust 
+lhill@srx01# show security policies from-zone untrust to-zone trust
 policy icmpv6 {
     match {
         source-address any-ipv6;
@@ -66,15 +63,13 @@ policy icmpv6 {
 lhill@srx01#
 ```
 
-
 My trusted zone is the internal network, and untrusted is outside the WAN interface. I didn't have any policy in place for that direction. You can see I've added a new policy that matches the ICMPv6 echo-request. Now reload the IPv6-test page:
 
 [![icmp-test-pass](/assets/2015/07/icmp-test-pass.jpg)](/assets/2015/07/icmp-test-pass.jpg)
 
 And now check the tcpdump output:
 
-
-```text
+```shell
 ~ lhill$ sudo tcpdump -ni en0 icmp6 and not net fe80::/10
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on en0, link-type EN10MB (Ethernet), capture size 65535 bytes
@@ -82,7 +77,6 @@ listening on en0, link-type EN10MB (Ethernet), capture size 65535 bytes
 11:38:03.872865 IP6 2406:e007:aaaa:1111:cccc:dddd:eeee:e0ce > 2001:41d0:8:e8ad::1: ICMP6, echo reply, seq 0, length 64
 11:38:04.398471 IP6 2001:41d0::b1c > 2406:e007:aaaa:1111:cccc:dddd:eeee:e0ce: ICMP6, destination unreachable, unreachable address 2001:41d0:8:e8ad::fa11:bac, length 92
 ```
-
 
 Now we can see the echo request/reply traffic.
 

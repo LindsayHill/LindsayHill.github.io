@@ -16,9 +16,7 @@ tags:
 
 [Greg Ferro](http://etherealmind.com/) recently participated in an "[Ask Me Anything](http://www.reddit.com/r/networking/comments/31ak1b/ama_greg_ferro_from_packet_pushers_podcast_25/?sort=new)" thread on [Reddit](http://reddit.com/). In that thread, user "[1DumbQuestion](http://www.reddit.com/user/1DumbQuestion)" made this [comment](http://www.reddit.com/r/networking/comments/31ak1b/ama_greg_ferro_from_packet_pushers_podcast_25/cq01cih):
 
-
 > Last, never finished my CCIE because of what I perceive will happen with SDN in the next coming years.
-
 
 I've seen similar comments from others over the last couple of years. This concerns me because it seems that people are saying "There's too much change going on here, and I don't know how it will all work out. So I'll just do nothing."
 

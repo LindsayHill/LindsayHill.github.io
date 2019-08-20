@@ -22,7 +22,7 @@ But we’re no longer constrained by bandwidth. We don’t need to squeeze that 
 
 ## Why does it matter?
 
-I have a congenital hearing loss. I’m not the only one - it affects [1.1 billion people to some degree](https://en.wikipedia.org/wiki/Hearing_loss). I’m already working hard to understand you. That GSM call with a score of 3.5 is maybe OK for those without hearing loss, but it’s like a 2.5 for me. 
+I have a congenital hearing loss. I’m not the only one - it affects [1.1 billion people to some degree](https://en.wikipedia.org/wiki/Hearing_loss). I’m already working hard to understand you. That GSM call with a score of 3.5 is maybe OK for those without hearing loss, but it’s like a 2.5 for me.
 
 Any additional barriers make it extra difficult for me. I also spend a large part of my day on the phone. If the audio quality is poor, I need to turn up the volume to attempt to understand you. Result: ringing ears, or worse: I give up. Raise the required concentration level too high, and I won’t bother. I’ll drift off. It’s hard enough to deal with the many different accents we encounter every day. Add poor quality audio, and I’m not paying attention to you.
 
@@ -38,7 +38,7 @@ All modern conferencing systems support VoIP, and have iOS and Android clients. 
 
 ## No VoIP option? Don’t invite me
 
-Please don’t invite me to meetings where your system doesn’t support VoIP, or you’re planning on dialling into an audio bridge using a mobile phone. Get a headset, and get a proper Internet connection. Fix your WebEX configuration if you don’t allow VoIP. 
+Please don’t invite me to meetings where your system doesn’t support VoIP, or you’re planning on dialling into an audio bridge using a mobile phone. Get a headset, and get a proper Internet connection. Fix your WebEX configuration if you don’t allow VoIP.
 
 I’m sure your product is great, but if I get a headache trying to hear you, I’m not interested.
 

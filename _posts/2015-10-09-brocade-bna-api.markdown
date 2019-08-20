@@ -13,7 +13,6 @@ tags:
 
 [Brocade Network Advisor](http://www.brocade.com/en/products-services/network-management/brocade-network-advisor.html) (BNA) has a [REST API](http://www1.brocade.com/downloads/documents/html_product_manuals/NA_1240_RESTAPI/wwhelp/wwhimpl/js/html/wwhelp.htm) for accessing Fibre Channel-related data. The documentation includes a sample Python script showing how to connect to the API to retrieve Fabric info. The script given only works with Python 3.x. It's also a pain to copy out of the documentation as you end up with a few extra characters in there. Here's a version that will work with Python 2.7. I've also made a few other modifications - in this one, you can set the BNA IP, Username & Password at the top of the script.  I've also made it PEP8-compliant.
 
-
 ```python
 #!/usr/bin/env python
 
@@ -187,9 +186,7 @@ connection.close()
 
 ```
 
-
 Save that, edit the server IP & username/password, then run it. You should get output that looks something like this:
-
 
 ```text
 bna-api lhill$ ./na_client.py
@@ -354,6 +351,5 @@ List of switches:
     "itemsPerPage": null
 }
 ```
-
 
 Hope this helps someone trying to get started with the API.

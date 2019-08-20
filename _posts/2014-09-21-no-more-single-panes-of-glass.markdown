@@ -17,7 +17,6 @@ According to [TechTarget](http://searchservervirtualization.techtarget.com/defin
 
 > A single pane of glass is a phrase used by information technology (IT) marketers to describe a management console that integrates information from multiple components into a unified display.
 
-
 All my information in one place? Sounds good, right? I like Single Panes of Glass. I like them a lot. In fact, I like them so much, I have several. Vendors like them too, so they’ve all got one.
 
 And there’s the rub. The term is over-loaded, with every vendor using the term to describe their management console that can be used for managing all of their systems. The problem is that most vendors only see things from the perspective of their products. They don’t see things from the wider perspective of an organisation that is trying to use many different products to achieve business outcomes.

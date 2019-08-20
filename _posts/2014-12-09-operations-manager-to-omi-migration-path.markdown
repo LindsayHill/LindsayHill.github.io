@@ -20,9 +20,7 @@ The writing's been on the wall for a while. HP has stopped investment in Operati
 Well, HP has finally announced the [OM2OMi Evolution program](http://h30499.www3.hp.com/t5/Business-Service-Management-BAC/The-perfect-pass-The-evolution-of-Operations-Manager-to-OMi/ba-p/6680508). Key points:
 
 * License entitlement - OM servers can get equivalent licenses for OpsBridge Premium
-
 * Operations Agent 11 works with both OM and OMi, so you don't have to do the Agent migration at the same time
-
 * Migration tools to assist with switching over
 
 They do include this quote:

@@ -14,9 +14,7 @@ All frequent flyers strive to the top tier of their program. Qantas Platinum, BA
 
 But a former manager said:
 
-
 > You don't really want to be on the top tier. You want to be on the tier just below, where you get most of the useful benefits like priority check-in, priority luggage, and lounge access. The top tier is actually a badge of shame, because it says you travel too much."
-
 
 Well...
 

@@ -14,34 +14,18 @@ A reader asked "What can I do if my boss won't let me automate my tasks?" Sadly
 
 You need to prepare for change. Continuing to do repetitive tasks manually does not have a future. Either your boss will have a change of heart, or you're going to change jobs. You have to prepare yourself for either eventuality. Here's some thoughts on what to do.
 
-
-
 ## Just Do It
-
-
 
 First option: Just do it. Don't bother asking, just get on with automating things you do often. You should be doing this anyway.
 
 Last year we heard the story of a Russian hacker that had taken automation a little further [than usual](https://github.com/narkoz/hacker-scripts), with gems such as:
 
-
-
-
-    
-  * **kumar-asshole.sh** - scans the inbox for emails from "Kumar" (a DBA at our clients). Looks for keywords like "help", "trouble", "sorry" etc. If keywords are found - the script SSHes into the clients server and rolls back the staging database to the latest backup. Then sends a reply "no worries mate, be careful next time".
-
-    
-  * **hangover.sh** - another cron-job that is set to specific dates. Sends automated emails like "not feeling well/gonna work from home" etc. Adds a random "reason" from another predefined array of strings. Fires if there are no interactive sessions on the server at 8:45am.
-
-
+* **kumar-asshole.sh** - scans the inbox for emails from "Kumar" (a DBA at our clients). Looks for keywords like "help", "trouble", "sorry" etc. If keywords are found - the script SSHes into the clients server and rolls back the staging database to the latest backup. Then sends a reply "no worries mate, be careful next time".
+* **hangover.sh** - another cron-job that is set to specific dates. Sends automated emails like "not feeling well/gonna work from home" etc. Adds a random "reason" from another predefined array of strings. Fires if there are no interactive sessions on the server at 8:45am.
 
 Did he ask permission? No, of course not. No-one even knew those scripts existed until he left. But they automated common tasks, and made his life easier. You can do the same.
 
-
-
 ## Start with Low-risk/Low-fear items
-
-
 
 Some people assume that automation means automating changes. But it doesn't have to just be for making changes. It can be for running reports, checking compliance, etc. A large percentage of an engineer's time is spent running 'investigation' commands, not making changes.
 
@@ -49,11 +33,7 @@ Look for good candidates for automation. That might be a 'bulk' task - e.g. "Fin
 
 Start out with those, building up your experience with writing scripts, getting comfortable with the concepts.
 
-
-
 ## Script your changes (but manually run them)
-
-
 
 Planning a middle of the night config change? Script all your steps, including your pre- and post-change checks. Don't worry about making an all-singing, all-dancing magical thing. It's fine to just prepare your commands in Notepad++, ready for pasting into the terminal. You're going to do _exactly_ the same thing as if you were doing it manually, it's just that your typing it out in advance. No problems with the boss.
 

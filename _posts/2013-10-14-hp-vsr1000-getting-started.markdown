@@ -13,11 +13,7 @@ tags:
 
 HP's "[VSR1000 Virtual Services Router](http://h17007.www1.hp.com/us/en/networking/products/routers/HP_VSR1000_Virtual_Services_Router_Series/index.aspx#tab=TAB1)" is now generally available. This was first [announced at Interop Las Vegas in May](http://blog.ipspace.net/2013/05/interop-product-launch-craze.html), but it wasn't until Interop NYC in September that it started shipping. This post will give a quick introduction to the VSR, and show how to get it up and running using VMware Fusion on Mac OS X.
 
-
-
 ## VSR1K - What is it?
-
-
 
 The VSR1000, aka VSR1K, is a software router that runs as a Virtual Machine on VMware ESXi or KVM. It will probably also run on other hypervisors. It supports a broad range of services and protocols - e.g. OSPF, BGP, IS-IS, IPv6, MPLS (VPNs and TE), GRE, IPsec, QoS, etc. It runs Comware v7 - the latest major branch of the software that runs on the HP routers and switches that came from the 3Com acquisition (i.e. not ProCurve). It supports a maximum of 16 vNICs. It is conceptually similar to [Cisco's CSR 1000v](http://www.cisco.com/en/US/products/ps12559/index.html).
 
@@ -39,17 +35,12 @@ Don't ask me why the IPv4 packet forwarding rate is lower for 8 cores than 4. So
 
 Pricing seems to be ~$400 for 1 core, $650 for 4 cores, and ~$1,000 for 8 cores. These prices were from a quick web search - don't take them as gospel. Ask your reseller.
 
-
-
 ## Deploying the VSR
-
-
 
 First, download the VSR1k from [here](https://h10145.www1.hp.com/downloads/SoftwareReleases.aspx?ProductNumber=JG811AAE). You'll have to sign in with an HP Passport account - this is free to create, if you don't already have one. Unpack the ZIP file. It contains three files, plus the Release Notes:
 
-
 ```bash
-$ unzip VSR_7.10.E0101P01.zip 
+$ unzip VSR_7.10.E0101P01.zip
 Archive:  VSR_7.10.E0101P01.zip
   inflating: VSR1000_HP-CMW710-E0101P01-X64.ova  
   inflating: HP VSR1000_HP-CMW710-E0101P01-X64 Release Notes.pdf  
@@ -57,7 +48,6 @@ Archive:  VSR_7.10.E0101P01.zip
   inflating: VSR1000_HP-CMW710-E0101P01-X64.iso  
 $
 ```
-
 
 We're going to deploy the OVA file into VMware Fusion 5. You could also do the install by creating a VM, and then attaching the ISO image, and installing from there. Open VMware Fusion, and go **File -> Import. **Browse to the file `VSR1000_HP-CMW710-E0101P01-X64.ova` and click Open. You'll be asked for a location to save the imported file. The default location (`~/Documents/Virtual Machines`) is probably OK. Click Import. You'll get a pop-up window that looks like this:
 
@@ -77,7 +67,6 @@ It's currently set to 1 CPU Core, with 1GB of RAM. The hard disk is 8GB, thin-pr
 
 All the other options are OK for now, so let's power this VM on, and see what happens. You'll see some boot messages scrolling across the screen, then you'll probably see it hit this point:
 
-
 ```bash
 Startup configuration file does not exist.
 Started automatic configuration, press CTRL_D to break.
@@ -91,9 +80,7 @@ Interface used: GigabitEthernet1/0.
 Enable DHCP client on GigabitEthernet1/0.
 ```
 
-
 Enter Ctrl+D, then Enter, and you should see something like this:
-
 
 ```bash
 Automatic configuration is aborted.
@@ -105,17 +92,11 @@ Press ENTER to get started.
 _
 ```
 
-
 We now have a working router! Well sort of, we need to put some configuration on it to make it do something first.
-
-
 
 ## Configuring for use
 
-
-
 If you're familiar with HP Comware Configuration, you can now start setting up the router however you like. If you haven't used it before, let's run through some basic setup. First we're going to put DHCP addresses on the Ethernet interfaces:
-
 
 ```bash
 display interface brief
@@ -148,9 +129,7 @@ Null0              UP    UP(s)    --
 REG0               DOWN  --       --
 ```
 
-
 Your exact IP addresses will vary. But now you should be able to ping those addresses from your host system:
-
 
 ```bash
 lhill$ ping 192.168.2.121
@@ -172,9 +151,7 @@ round-trip min/avg/max/stddev = 0.500/1.236/1.972/0.736 ms
 lhill$
 ```
 
-
 Great! Now we want to set up SSH, and add a local user so we can login:
-
 
 ```text
 sys
@@ -182,7 +159,7 @@ sys
 [HP]public-key local create rsa
 
 The range of public key size is (512 ~ 2048).
-NOTES: If the key modulus is greater than 512, 
+NOTES: If the key modulus is greater than 512,
 It will take a few minutes
 Press CTRL+C to abort.
 Input the bits of the modulus[default = 1024]
@@ -204,11 +181,9 @@ New local user added.
 [HP]quit
 ```
 
-
 Don't worry if you didn't quite follow all of that. Basically we enabled SSH, generated a key, configured the VTYs to only allow SSH, and to use password authentication. We then created a new user, and assigned them the role "network-admin" - this gives full access to the switch.
 
 Now to test it out:
-
 
 ```bash
 lhill$ ssh admin@192.168.225.131
@@ -227,13 +202,8 @@ Connection to 192.168.225.131 closed.
 lhill$
 ```
 
-
 Thanks to [techworldwookie](http://techworldwookie.com/?p=60) for some of the basic Comware setup notes. Configuration Guides and Command references are available [here](http://h20566.www2.hp.com/portal/site/hpsc/public/psi/manualsResults/?sp4ts.oid=5443163), if you want to learn more. You can now configure static addresses, routing, VPN tunnels, whatever you need. You can also configure SNMP, and add it to your NMS. In future I might add some more posts about configuring these devices, and trying out the auto-deployment functionality.
 
-
-
 ## Conclusion
-
-
 
 I wouldn't rush into deploying this into production just yet. I would be cautiously testing it out, and making sure that it does what you want. I would definitely be running it in a lab, using it as a learning exercise, and seeing if it will work for you. I think that for many routing applications, virtual routers like this are the future. They offer far greater flexibility and speed of deployment. Crucially, we can add resources like memory and CPU quickly and easy, without a large financial penalty. Get your hands on it, and try it out now!

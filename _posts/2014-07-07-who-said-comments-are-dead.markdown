@@ -16,7 +16,6 @@ We don't see as many comments on blog posts these days, as most discussion has m
 
 In his [book on Technical Blogging](https://leanpub.com/Technical-Blogging-Writing-Arse-First), [Greg Ferro](http://etherealmind.com/) says that comment volumes have dropped over the last few years:
 
-
 > Five years ago I loved the comments from the readers who could point out my mistakes (which I would fix) and discuss ideas and ask questions. Today I get very few comments as most people who might have left comments have moved to Twitter.
 
 Robert Scoble is more forthright, [declaring comments dead](http://scobleizer.com/blog-comments-are-dead-discuss/).

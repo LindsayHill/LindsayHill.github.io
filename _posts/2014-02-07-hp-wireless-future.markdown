@@ -15,9 +15,7 @@ tags:
 
 Recently I [posted some speculation]({% post_url 2014-02-06-hp-comware-vs-procurve-reading-the-tea-leaves %}) about where HP is going with their Comware and ProCurve networking lines. But what about the wireless gear? Where's that going? As before, I have no inside information on this, and I'm just speculating based upon public information: Do your own research and thinking before making major purchasing decisions.
 
-
 ## Colubris or Comware?
-
 
 HP [acquired Colubris](http://www.networkworld.com/news/2008/081108-hp-buys-colubris.html) in August 2008, greatly expanding its ProCurve division wireless networking capabilities. This gave HP their "MSM" Wireless controllers. But the 3Com acquisition introduced its own APs and Controllers - the WX series of controllers. Since then, HP has been selling both ranges of controllers and access points. The MSM controllers use their own OS, which is neither Comware nor ProCurve.
 
@@ -27,16 +25,11 @@ Take a look at the [HP Wireless Selector](http://h17007.www1.hp.com/us/en/networ
 
 So what do our data points tell us?
 
-
-  1. Engineering resources are going into Comware-based controllers (that's where we see new products coming from)
-
-  2. New APs can be switched between controller types, giving customers a clear migration path, no need to rip & replace
-
-  3. Therefore the long-term path is towards Comware-based controllers, using most of the already deployed APs.
-
+1. Engineering resources are going into Comware-based controllers (that's where we see new products coming from)
+2. New APs can be switched between controller types, giving customers a clear migration path, no need to rip & replace
+3. Therefore the long-term path is towards Comware-based controllers, using most of the already deployed APs.
 
 But what about those existing MSM controllers people have deployed? Would they run Comware on that hardware? My guess is not. Given where HP is going with their [VSR 1000](http://h17007.www1.hp.com/us/en/networking/products/routers/HP_VSR1000_Virtual_Services_Router_Series/#.UvMePUKSym0) virtual router, my guess is that a purely virtual controller will be made available, and customers can migrate to that. What about those APs not supported by Comware controllers? They're only single-radio APs, so they'll probably age out of customer networks reasonably quickly. We would need to see a replacement for the [MSM317](http://h17007.www1.hp.com/us/en/products/wireless/HP_MSM317_Access_Device_Series/index.aspx) though, it is an elegant solution for hotel-room wireless.
-
 
 ## Conclusions
 

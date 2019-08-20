@@ -18,9 +18,7 @@ Firewalls are usually deployed as a cluster, to provide failover capabilities. P
 
 This works pretty well - I spent years looking after a lot of Check Point clusters, predominantly on Nokia IPSO, later on SecurePlatform. Don't hate me for it. Occasionally we'd have a power supply or disk drive failure, and traffic would seamlessly switch over to the standby node. It also worked well during upgrades - demote the node to secondary, patch it, promote to primary, test, switch back if needed.
 
-
 ## It's not true redundancy
-
 
 All good. But there's a problem - you don't have TRUE redundancy. You're protected against hardware failure, and you've also got some mitigation strategies to deal with problems related to software upgrades. But what happens if you have a software problem? Normally you're running exactly the same code and configuration, so if a problem affects one node, it might affect both nodes. Check Point configuration is managed on a per-cluster basis too - when making firewall policy changes, you push the policy to both firewalls at once. You don't do them in sequence.
 
@@ -28,9 +26,7 @@ That's what happened to me - we had a software bug that took out the whole clust
 
 {% include note.html content="Note: This story is about a Check Point cluster, but it's not a specific attack on Check Point - this is a general problem that applies to any system that has shared code/configuration across a cluster" %}
 
-
 ## Meltdown
-
 
 Check Point used to have a feature called "Smart Defense". These days it's known as IPS. It's an integrated intrusion detection/prevention system within the firewall. It's had a chequered history, with engineers heard to mutter "If it makes no sense, it must be Smart Defense." Certainly I've seen some odd behaviour in the past, where it would drop specific sessions without bothering to log any indication of why it dropped them, or even admitting that it had dropped the session.
 
@@ -48,15 +44,10 @@ Oh and did I mention that the company had a major launch about to happen, within
 
 I knew that I needed to get back to the configuration I had installed yesterday. How to do it? I had backups for all systems - the management server & the firewalls. With Check Point systems, the backup from the firewall doesn't really matter much anyway - you can just re-build the firewall, and push out policy again. So I ended up doing a restore on the management server to yesterday's configuration, rebuilding the firewall from scratch, and pushing a working policy out to it. Service working again! All done within an hour too, I might add.
 
-
 ## Lessons Learned
 
-
-  1. Have backups, know where they are, and how to restore from them. I'd had enough system failures over the years to know I needed to have that scripted up. You'd be surprised how many people don't do have backups of network devices.
-
-  2. Have a good team around you, and trust them. I was lucky that I had a good group of people around me, and we'd spent years doing Operations work together. We knew how to handle those sorts of situations. One person ran interference, and cleared out space around the people working on the problem. This got rid of all the noise, and gave us time and space to figure out what had happened, and how we were going to recover. The worst thing you can do is stand over the engineer's shoulder, and ask "Is it fixed yet?" every 5 minutes.
-
-  3. Redundancy is more than just hardware. Understand what the failure domains are. This is partly why I don't like stretched L2 designs - you're providing some redundancy against hardware failure, but you still have a shared component that could take out everything. Ideal scenario would have been to have another data center that we could run all services out of, but at the time we didn't have the budget.
-
+1. Have backups, know where they are, and how to restore from them. I'd had enough system failures over the years to know I needed to have that scripted up. You'd be surprised how many people don't do have backups of network devices.
+2. Have a good team around you, and trust them. I was lucky that I had a good group of people around me, and we'd spent years doing Operations work together. We knew how to handle those sorts of situations. One person ran interference, and cleared out space around the people working on the problem. This got rid of all the noise, and gave us time and space to figure out what had happened, and how we were going to recover. The worst thing you can do is stand over the engineer's shoulder, and ask "Is it fixed yet?" every 5 minutes.
+3. Redundancy is more than just hardware. Understand what the failure domains are. This is partly why I don't like stretched L2 designs - you're providing some redundancy against hardware failure, but you still have a shared component that could take out everything. Ideal scenario would have been to have another data center that we could run all services out of, but at the time we didn't have the budget.
 
 It was a rather "interesting" morning all around, but we were able to recover, and life goes on. That's the good thing about networking - once you've fixed the problem, stuff starts flowing again. It's a lot more entertaining dealing with outages that involve lost data. Sometimes that stuff can never come back.

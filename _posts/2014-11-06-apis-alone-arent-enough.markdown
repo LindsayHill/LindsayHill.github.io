@@ -18,14 +18,11 @@ Because sure, an API lets me integrate my various systems however I want. Theore
 
 {% include note.html content="Random aside: If your 'open API' requires signing an NDA to view details, then maybe it's not so open after all? " %}
 
-
 If I'm running a small company staffed by developers, then just giving me an API is acceptable. But in a larger company, or one without developer resources, an API alone isn't enough. I want to see standard, obvious integrations already available, and supported by the vendor.
 
 In this spirit, I'm very pleased to see that [ThousandEyes](http://thousandeyes.com/) now has a [standard integration](https://blog.thousandeyes.com/thousandeyes-pagerduty-integration/) with [PagerDuty](http://www.pagerduty.com/):
 
-
 > ThousandEyes appears as a partner integration from which you can receive notifications; and, within ThousandEyes we now have a link to easily add alerts to your PagerDuty account.
-
 
 You can read more at the [ThousandEyes blog](https://blog.thousandeyes.com/thousandeyes-pagerduty-integration/).
 

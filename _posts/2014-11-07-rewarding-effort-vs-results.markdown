@@ -18,18 +18,13 @@ As a consultant, you're normally measured on your utilisation, and the amount yo
 
 Look at it from the perspective of two different consultants, Alice & Bob:
 
-  * **Alice** is a diligent worker, who gets through her work as quickly as possible. Repeatable tasks are scripted. She doesn't muck around.
-
-  * **Bob** is a bit more relaxed. He still gets the job done, but is in no rush. Faced with a list of boring tasks, he doesn't mind plodding through them, manually entering details.
-
+* **Alice** is a diligent worker, who gets through her work as quickly as possible. Repeatable tasks are scripted. She doesn't muck around.
+* **Bob** is a bit more relaxed. He still gets the job done, but is in no rush. Faced with a list of boring tasks, he doesn't mind plodding through them, manually entering details.
 
 So what's the outcome for Alice & Bob?
 
-
-  * **Alice** ends up being under-utilised, and bills less. So she gets assigned more work. Now she's working flat out all week, getting through a lot of work, but only just billing the same as everyone else. Increased stress levels, for no personal benefit.
-
-  * **Bob** has good utilisation and billing numbers, but he's not under any real pressure. He's relaxed, and happy with his job.
-
+* **Alice** ends up being under-utilised, and bills less. So she gets assigned more work. Now she's working flat out all week, getting through a lot of work, but only just billing the same as everyone else. Increased stress levels, for no personal benefit.
+* **Bob** has good utilisation and billing numbers, but he's not under any real pressure. He's relaxed, and happy with his job.
 
 Which consultant would you rather be?
 

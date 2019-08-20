@@ -23,16 +23,13 @@ This is normally OK for simple tests, but if you need to do it a few times, or f
 
 Turns out we can, by SSHing to the collector, and running:
 
-
 ```sh
 /usr/local/silo/proc/dynamic_single.py did aid
 ```
 
-
 This will immediately run and report the results. You need to know what the device ID is, and the ID of the specific dynamic application. These are circled in the earlier diagram.
 
 Here’s some example output from one of my systems:
-
 
 ```sh
 [root@collector ~]# /usr/local/silo/proc/dynamic_single.py 368 250
@@ -81,11 +78,8 @@ Done!
 [root@collector ~]#
 ```
 
-
 I haven’t seen any public documentation for this command, so I don’t know if there are any other options you can select when running it. Note that you have to run it from the collector that is currently assigned for that device. If you have multiple Data Collectors in a Collector Group, and try to run it from a different collector to that currently assigned, it will report back that:
-
 
 ```sh
 Device <X> is not aligned with dynamic app <y>
 ```
-

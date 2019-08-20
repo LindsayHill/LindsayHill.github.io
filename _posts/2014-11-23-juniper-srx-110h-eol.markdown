@@ -19,7 +19,7 @@ End of Life announcement is [here](http://kb.juniper.net/InfoCenter/index?page=c
 This is now starting to take effect, with 12.1X47 [not supported on this platform](http://www.juniper.net/techpubs/en_US/junos12.1x47/information-products/topic-collections/release-notes/12.1x47/index.html):
 
 > Note: Upgrading to Junos OS Release 12.1X47-D10 or later is not supported on the J Series devices or on the low-memory versions of the SRX100 and SRX200 lines. If you attempt to upgrade one of these devices to Junos OS 12.1X47-D10, installation will be aborted with the following error message:
-> "ERROR: Unsupported platform <platform-name >for 12.1X47 and higher."
+> "ERROR: Unsupported platform `<platform-name>` for 12.1X47 and higher."
 
 The replacement hardware is the SRX-110H2-VA, which has 2GB of RAM instead of 1GB. Otherwise it's exactly the same, which seems a missed opportunity to at least update to local 1Gb switching.
 

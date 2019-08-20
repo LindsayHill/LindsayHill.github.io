@@ -19,16 +19,15 @@ Development for HP Operations Manager appears to have stalled recently. The last
 
 HP OM has not adapted well to modern demands. It does not deal well with VMs being deployed at a high rate. It does not offer service monitoring capabilities. It does not offer any way to connect to cloud provider APIs. The agents have continued to be unstable. The administrative interface for OML/OMU looks like something I wrote over a weekend, based on a dodgy PHP shopping cart. It does not look like a piece of software that costs tens of thousands of dollars. Or actually maybe it does - Enterprise software in general tends to be ugly. HP didn't even develop it themselves - they licensed the admin interface from [Blue Elephant Systems](https://blue-elephant-systems.com/). The Java GUI for OML/OMU was a disgrace in 2002 - and it hasn't changed since.
 
-[![](/assets/2013/07/JavaGUI.jpg)](/assets/2013/07/JavaGUI.jpg)
+[![Java GUI 2002](/assets/2013/07/JavaGUI.jpg)](/assets/2013/07/JavaGUI.jpg)
 
 {:.image-caption}
 Java GUI circa 2002
 
-[![](/assets/2013/07/JavaGUI1.jpg)](/assets/2013/07/JavaGUI1.jpg)
+[![Java GUI 2012](/assets/2013/07/JavaGUI1.jpg)](/assets/2013/07/JavaGUI1.jpg)
 
 {:.image-caption}
 Java GUI circa 2012
-
 
 (OK, so I cheated, those images are the same - but that's because it hasn't changed).
 
@@ -52,5 +51,5 @@ To the HP people reading this: Obviously you can't publicly confirm any of this.
 **[UPDATE 2015/05/21]** If you're still running HP OM, you should actively be migrating to OMi - [HP recommends it](http://h30499.www3.hp.com/t5/Business-Service-Management-BAC/HPOM-users-here-is-why-and-how-to-move-to-OMi/ba-p/6746769), and has plans in place to help:
 
 > But now with the introduction of OMi 10, HP has released the first version intended to replace HPOM for Windows, HP-UX, Solaris or Linux.
-> 
+>
 > Although there is no need to immediately move to OMi, it can be considered the successor of HPOM and I think the benefits of its additional features make a compelling case to make the move.

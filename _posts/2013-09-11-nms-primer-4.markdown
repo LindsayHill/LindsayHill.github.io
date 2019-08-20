@@ -21,11 +21,8 @@ There are many different NMS products on the market, and it is difficult trying 
 The four groupings I see are:
 
 * Big Iron (Service Provider/Large Enterprise)
-
 * Mid-Market (The rest of us)
-
 * Open Source (Could be used at any level, if you've got the right people)
-
 * Cloud-Based (For those allergic to running their own kit)
 
 ## Big Iron

@@ -14,7 +14,7 @@ Cloud computing is a lot more than "someone else's computer" and it annoys the h
 
 A few years ago it was fashionable to dismiss cloud as "just someone else's computer", e.g.:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There is no cloud. It&#39;s just someone else&#39;s computer. <a href="https://t.co/9d3S5chWQq">pic.twitter.com/9d3S5chWQq</a></p>&mdash; David Whittaker (@rundavidrun) <a href="https://twitter.com/rundavidrun/status/698398875581751296?ref_src=twsrc%5Etfw">February 13, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There is no cloud. It&#39;s just someone else&#39;s computer. <a href="https://t.co/9d3S5chWQq">pic.twitter.com/9d3S5chWQq</a></p>&mdash; David Whittaker (@rundavidrun) <a href="https://twitter.com/rundavidrun/status/698398875581751296?ref_src=twsrc%5Etfw">February 13, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 There's T-shirts:
 
@@ -26,11 +26,11 @@ In a time when most cloud computing was Infrastructure as a Service, there was a
 
 ## Times Change
 
-The problem is that there's still people thinking this. Check these [recent tweets](https://twitter.com/search?q=someone%20else%27s%20computer&src=typd). 
+The problem is that there's still people thinking this. Check these [recent tweets](https://twitter.com/search?q=someone%20else%27s%20computer&src=typd).
 
 These people don't realize that the world has moved on a **long** way. There is **much** more to cloud computing than just "someone else's computer."
 
-Consider a simple example, like email. To provide email services from "my computer" I also need power, cooling, rack space, servers, storage, networking, operating system, software, application configuration and maintenance, etc...not to mention the operational expertise to keep it all going. 
+Consider a simple example, like email. To provide email services from "my computer" I also need power, cooling, rack space, servers, storage, networking, operating system, software, application configuration and maintenance, etc...not to mention the operational expertise to keep it all going.
 
 If someone else provided just the computer part of that, I would still have an enormous amount of work to do. But if I buy this service through Office 365 or something similar, I don't have to care about any of that. I provision users on demand, and don't care about anything else about **how** it gets provisioned. I even get a clear bill.
 
@@ -44,7 +44,7 @@ Five years ago VMware's President and COO was dismissing Amazon as a [bookseller
 
 > ...I find it really hard to believe that we cannot collectively beat a company that sells books.
 
-Fast-forward a few years, and VMware now has a [partnership with AWS](https://aws.amazon.com/vmware/). And what's happened to their share prices over the last 5 years?VMware has gone from around $70 to $133, with a market cap of $54B. Amazon has gone from $269 to $1,572, with a market cap of $762B. 
+Fast-forward a few years, and VMware now has a [partnership with AWS](https://aws.amazon.com/vmware/). And what's happened to their share prices over the last 5 years?VMware has gone from around $70 to $133, with a market cap of $54B. Amazon has gone from $269 to $1,572, with a market cap of $762B.
 
 But yeah, they're just a bookseller, Cloud is a fad, and it's just "someone else's computer."
 

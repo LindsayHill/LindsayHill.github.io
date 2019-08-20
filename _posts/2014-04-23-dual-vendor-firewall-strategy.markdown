@@ -16,11 +16,9 @@ tags:
 
 Networks of the early 2000s often used multiple firewall vendors. This was done with the best of intentions, but it could make troubleshooting far more complicated. Here's a weird bug we came across with one firewall, that was obscured by data we saw on another firewall.
 
-
 ## Dual-Vendor Good, Right? Maybe Not
 
-
-Years ago, we used to believe in a "dual-vendor" firewall strategy. We were told to use two different brands of firewalls in front of our systems, the assumption being that if there were flaws in one, the other would protect us. The problem with this approach was that it assumed that the issues would be with the firewall software itself, not the configuration, or that the attacks were happening at a higher layer, and the firewall policy would make no difference. I believe it stemmed from some[ Check Point FTP handling flaws from the late 90s/early 2000s](http://www.cvedetails.com/product/230/Checkpoint-Firewall-1.html?vendor_id=136). We haven't seen any really good firewall bypasses for a while, but this "best practice" persisted.
+Years ago, we used to believe in a "dual-vendor" firewall strategy. We were told to use two different brands of firewalls in front of our systems, the assumption being that if there were flaws in one, the other would protect us. The problem with this approach was that it assumed that the issues would be with the firewall software itself, not the configuration, or that the attacks were happening at a higher layer, and the firewall policy would make no difference. I believe it stemmed from some [Check Point FTP handling flaws from the late 90s/early 2000s](http://www.cvedetails.com/product/230/Checkpoint-Firewall-1.html?vendor_id=136). We haven't seen any really good firewall bypasses for a while, but this "best practice" persisted.
 
 The problem with the dual-vendor approach is that inevitably the local staff will prefer one platform over the other, and will end up applying a simple policy to one firewall, and doing most enforcement on the other. One platform will get care, love and feeding, while the other will only have the minimum done to it. This really shows itself up when bugs strike - the unloved platform doesn't have a good body of knowledge around detailed troubleshooting.
 
@@ -28,9 +26,7 @@ Thankfully these days are behind us, and we now tend to use one brand of firewa
 
 Here's a story where the dual-firewall strategy tripped us up, because we were so used to focusing on one platform, and ignoring the other.
 
-
 ## Can't Connect? Blame the Firewall
-
 
 We were getting reports that an internal server couldn't make HTTPS connections to an external server. It could make HTTP connections, but not HTTPS to some specific sites. Some worked, some didn't. Surely it's not a firewall problem? We used to tell admins "try using Telnet to connect to a remote port. If you get an immediate Reject, then it's your app, not our firewall." They tried, and they were finding their were quickly rejected, not suffering a slow timeout (as they would if our firewall dropped it). Case closed, right?
 
@@ -46,9 +42,7 @@ I've simplified the network, but the key parts are that there were two policy en
 
 They say the packets don't lie, so we turned to tcpdump. Running that on FW-A was pretty convincing. It showed a SYN leaving our server, NAT policies applied, a short delay, then a RST from the remote server. Case closed, surely? Don't blame the firewall.
 
-
 ## Investigating Deeper
-
 
 It was now 6pm on Friday, and I wanted to go home. Hadn't I proved it wasn't the firewall? Can't I go home now? Make the remote server team fix it.
 
@@ -58,9 +52,7 @@ Management made us dig deeper, so we kept looking. This time I grabbed a packet 
 
 What was FW-B doing? It was from a different vendor, and had a coarser policy applied. It didn't change much, and it had never given us much trouble. Its outbound policy was pretty simple - allow everything outbound, and dynamically allow the reply traffic. That was working fine for lots of other HTTP & HTTPS sites, surely it couldn't be causing a problem?
 
-
 ## Timing is Everything
-
 
 I started looking closer at the exact sequence of timings. I realised that there was a 350ms gap between the SYN being sent, and the RST being received. Other successful connections had a shorter time between the SYN and SYN/ACK. Hmmm.
 
@@ -70,16 +62,10 @@ The documentation said we could change the timeouts, but that made no differenc
 
 We had to get it working somehow, so we ended up completely working around that feature. Instead of dynamically adding rules to allow reply traffic, we just changed it to allow all inbound established traffic. Not a stateful firewall anymore, but then we were doing that on FW-A - what value was FW-B adding, if it was only enforcing the same policy?
 
-
 ## Wrap-up
-
 
 A few lessons were learned, including:
 
-
-
-  * More systems means more complexity. More complexity means troubleshooting takes far longer.
-
-  * Don't always be too sure of yourself. Be gracious when suggesting that it's another team's issue - it might turn out to actually be your fault.
-
-  * The packets don't lie. But they're like CCTV: They don't always tell the WHOLE truth. Sometimes you need to capture packets from multiple locations to work out what's really going on.
+* More systems means more complexity. More complexity means troubleshooting takes far longer.
+* Don't always be too sure of yourself. Be gracious when suggesting that it's another team's issue - it might turn out to actually be your fault.
+* The packets don't lie. But they're like CCTV: They don't always tell the WHOLE truth. Sometimes you need to capture packets from multiple locations to work out what's really going on.

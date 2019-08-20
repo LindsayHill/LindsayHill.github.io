@@ -16,12 +16,10 @@ Recently I was involved in a discussion on [HP's IMC Forum](https://community.hp
 
 This logfile is a bit tricky to read, but there is a huge amount of information on the processes that IMC has gone through when trying to back up a device. In this case, we came across these lines in the logfile:
 
-
 ```text
 2013-02-04 08:14:10.344 [INFO (0)] [THREAD(2580)] [CTclExecutor::exec_impl()] Begin to exec: spawn telnet 192.168.0.17
 2013-02-04 08:14:10.361 [ERROR (1)] [THREAD(2580)] [CTclExecutor::exec_impl()] Failed to exec cmd: spawn telnet 192.168.0.17, error message: The system cannot find the file specified.
 ```
-
 
 This is a problem that I've come across a couple of times, where IMC can't find the `telnet.exe` binary it uses for device backup. IMC should use its own copy, located at `<IMC install dir>\server\bin\`. But what I've seen is that if Telnet Client is disabled on Windows 2008 R2 (as it is by default), then IMC never installs its own copy of `telnet.exe`. Enabling the Windows Telnet Client, and manually copying that binary over doesn't work either - you must use the version that IMC expects.
 

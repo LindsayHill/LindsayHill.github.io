@@ -19,4 +19,3 @@ The lab gives you full CLI & GUI access to a sandboxed environment, with control
 If you're interested in what they're doing, I recommend [signing up](http://labs.bigswitch.com/users/sign_up).
 
 {% include note.html content="NB: Big Switch was a sponsor of [NFD8](http://techfieldday.com/events/nfd8). Usual disclaimer applies" %}
-

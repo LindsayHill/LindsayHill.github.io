@@ -14,9 +14,7 @@ Network monitoring systems poll devices periodically, and then calculate average
 
 We have a number of values being polled, across a number of devices, with varying frequency. How do you design your collection processes? Do you dynamically spread the polling to even out the load? After all, the users are only specifying the frequency (every _x_ minutes), not the exact time when the poll runs. Or do you use "round" numbers, and run all your 5-minute polls at 5, 10, 15... minutes past the hour, and your 15-minute polls at 00, 15, 30, 45 minutes past the hour? Won't that cause peaks and troughs? Does it really matter?
 
-
 ## Let's look at the Network Data
-
 
 Take a look at these two images. They show network utilisation for a couple of different network monitoring systems, recorded over 1 day. Both are monitoring small-medium networks - a few hundred systems. The first one is from a [ScienceLogic](http://www.sciencelogic.com/) Data Collector. Note the regular peaks? So far as I can tell, these are from some of the less-frequently polled metrics overlapping with regularly polled metrics. There's also a couple of larger peaks, from some daily discovery processes:
 
@@ -32,17 +30,13 @@ Now look at this graph, showing bandwidth utilisation for an [HP SIM](http://www
 {:.image-caption}
 HP SIM Network Usage over 1d
 
-
 ## Does it Matter?
-
 
 If you're trying to build an ultra high-performance network monitoring system, you will do everything you can to spread the polling load as evenly as possible. You will also ensure you are collecting only the bare minimum required. I haven't shown the CPU load here, but clearly there will be collector system disk + CPU peaks associated with those network peaks, as it processes the returned data. If we are aiming to poll large amounts of devices from a single collector, we will need to spread the load as evenly as possible.
 
 But what if your application architecture allows the easy deployment of multiple collectors, so you can spread the load? And in an age of cheap memory, who cares if we need to allocate a bit of extra RAM? If you look really closely at the graphs, you'll see that we've still only got a few hundred kbps of network traffic, so that's pretty much irrelevant.
 
-
 ## But isn't it just lazy?
-
 
 Clearly there are advantages to spreading your polling load evenly. It does come with a development overhead, and you may need to be able to handle adjusting for small changes in polling windows - e.g. 295s one time, 305s the next. But what about the advantages of polling at set times (not just set intervals)? It turns out that it's actually kind of handy to know exactly when the 15-minute poll will run. If you're debugging a polling problem, or you're monitoring some performance graphs closely to see if a problem is resolved, it's actually really useful to be able to look at the clock and think "ah, the next 15-minute poll is due in 10 minutes." It also makes your graphs much nicer - when comparing multiple metrics, the data points will line up nicely.
 

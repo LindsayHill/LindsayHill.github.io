@@ -46,5 +46,4 @@ It already had me thinking about a long haul trip with Anna, working out if we c
 
 Oh and the most random out of context quote from Narbik during the week:
 
-
 > Don't run like that man, it makes it look like you shit your pants

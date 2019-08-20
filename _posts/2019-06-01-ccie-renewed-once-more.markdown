@@ -10,7 +10,7 @@ tags:
 - CCIE
 ---
 
-I've given in to the [Sunk Cost Fallacy](https://en.wikipedia.org/wiki/Sunk_cost) once more: I've renewed my CCIE. There was a lot of foot dragging this time around, and I only had four months to spare. But it's done, for another year. Here's some quick notes on my prep, and thoughts on the exam. 
+I've given in to the [Sunk Cost Fallacy](https://en.wikipedia.org/wiki/Sunk_cost) once more: I've renewed my CCIE. There was a lot of foot dragging this time around, and I only had four months to spare. But it's done, for another year. Here's some quick notes on my prep, and thoughts on the exam.
 
 ## Preparation
 
@@ -24,7 +24,7 @@ The key thing with online quizzes or flashcards is to not just learn the answer 
 
 ## Exam Impressions
 
-I think I've done this exam four or five times now. This was probably the hardest, and my score wasn't pretty. But it was enough. I passed. I think the difficulty level was similar to previous times, it's just that I'm getting further & further away from the core material. 
+I think I've done this exam four or five times now. This was probably the hardest, and my score wasn't pretty. But it was enough. I passed. I think the difficulty level was similar to previous times, it's just that I'm getting further & further away from the core material.
 
 _Most_ of the questions were fair. There were a couple that had awkward wording, but I think that was uninintentional. I don't think they were trying to catch me out in that way. There was one that had very clear typos - when the diagram refers to `192.168.1.0`, and multiple possible answers refer to `192.168.10.0`, I'm 99% certain that's a typo. I added comments to those questions, so it should get fixed.
 

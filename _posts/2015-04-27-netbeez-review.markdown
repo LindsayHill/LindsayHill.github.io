@@ -12,11 +12,7 @@ tags:
 
 [NetBeez](http://netbeez.net/) presented at [Network Field Day 9](http://techfieldday.com/event/nfd9/), where they showed us their solution for distributed [network performance monitoring](http://datanetworkingtalk.com/what-it-is-and-what-it-beez-like/). They gave the delegates a NetBeez agent to take home and test. I've run it for the last two months, and I've been happy with how it has performed.
 
-
-
 ## Physical Install
-
-
 
 The unit was supplied with a US power plug. I was contemplating using an adapter, but I didn't have any spare power points near where I wanted to install it. Hmmm. Then I realised that the power connection is just a USB port anyway. The Ethernet cable needed to go into my [SRX-110](http://www.juniper.net/us/en/products-services/security/srx-series/srx110/), so I wonder if...
 
@@ -24,31 +20,19 @@ The unit was supplied with a US power plug. I was contemplating using an adapte
 
 Yup! Powers from the USB port on the SRX. Perfect.
 
-
-
 ## Monitoring Setup
-
-
 
 The device powered on, and it soon showed up on the NetBeez web dashboard. This is where you can configure your agents, define what tests you want them to run, and see the results.
 
 I added a few simple monitors:
 
-
-  * HTTP monitoring to this [website]({{ site.baseurl }})
-
-  * HTTP monitoring to [www.netopscommunity.net](http://www.netopscommunity.net/)
-
-  * PING monitoring to [www.netopscommunity.net](http://www.netopscommunity.net/)
-
+* HTTP monitoring to this [website]({{ site.baseurl }})
+* HTTP monitoring to [www.netopscommunity.net](http://www.netopscommunity.net/)
+* PING monitoring to [www.netopscommunity.net](http://www.netopscommunity.net/)
 
 All very straightforward to add the monitors, and pick which agents to run them from. Running the same tests from multiple agents gives you a distributed status view. This can help you figure out if it's a network, server or user problem. I've got tests running from my agent, and from [@mrtugs'](http://www.movingpackets.net/) agent.
 
-
-
 ## Results
-
-
 
 I now have a few months of data, and I've been happy with what it's giving me. Here's some stats for Saturday evening:
 
@@ -69,4 +53,3 @@ You can also see the red bars for failures, and orange bars for alerts. Note th
 All very easy to configure, and it does what it says it will. No ongoing management hassles either. NetBeez have rolled out updates to the dashboard & the agents during the last few weeks, and I haven't had to touch them.
 
 {% include note.html content="NetBeez were a sponsor of NFD9. This meant that they indirectly covered my costs to attend." %}
-

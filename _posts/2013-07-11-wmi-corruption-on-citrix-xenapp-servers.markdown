@@ -20,18 +20,8 @@ The problem occurs on systems that have many people logging into them, and hence
 
 You can check to see if WMI is working properly by running `wbemtest.exe`. Click "Connect", leave everything at default, and hit Enter. Click Query, and enter `Select * from Win32_Process` Run that, and you should get a list of all processes running. If that doesn't work, you've probably got an issue with WMI. If you think it's caused by GPO logging, here's how to disable it:
 
-
-
-
-  
-  * Edit a GPO that gets applied to this server.
-
-  
-  * Go to Computer -> Administrative -> System -> Group Policy. Enable the setting "Turn off Resultant Set of Policy Logging."
-
-  
-  * Apply that, and you should get no corruption in future.
-
-
+* Edit a GPO that gets applied to this server.
+* Go to Computer -> Administrative -> System -> Group Policy. Enable the setting "Turn off Resultant Set of Policy Logging."
+* Apply that, and you should get no corruption in future.
 
 This won't fix any existing corruption though - I'd be inclined to just rebuild the server if you can, but an alternative is to rebuild the repository by stopping the WMI service, renaming `C:\Windows\System32\wbem\repository` to something else, and restarting WMI. You can also try running `winmgmt /repairrepository`. Note you can also check your repository state with `winmgmt /verifyrepository` This won't make any changes, but will tell you if there are any known issues.

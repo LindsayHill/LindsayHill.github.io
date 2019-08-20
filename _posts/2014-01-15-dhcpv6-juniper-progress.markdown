@@ -13,9 +13,8 @@ tags:
 
 Last year I posted about my frustrations with getting the [DHCPv6 client working]({% post_url 2013-08-07-dhcpv6-client-srx %}) on a Juniper SRX-110. I am pleased to report that Juniper has now released [12.1X46-D10.2](http://www.juniper.net/support/downloads/?p=srx110#sw), which resolves at least some of my issues. I couldn't find it documented in the [Release Notes](http://www.juniper.net/techpubs/en_US/junos12.1x46/information-products/topic-collections/release-notes/12.1x46/index.html) anywhere, but the parser now allows you to have `client-ia-type ia-pd` without also requiring `client-ia-type ia-na`
 
-
 ```text
-root@srx01> show configuration interfaces at-1/0/0 unit 0 family inet6 dhcpv6-client 
+root@srx01> show configuration interfaces at-1/0/0 unit 0 family inet6 dhcpv6-client
 client-type statefull;
 client-ia-type ia-pd;
 rapid-commit;
@@ -29,7 +28,6 @@ update-server;
 
 root@srx01>
 ```
-
 
 It might not seem like much, but this is real progress for me - now my router can successfully reboot, without needing either a console cable, or resetting to a rescue configuration.
 

@@ -12,11 +12,8 @@ tags:
 
 Years ago a wise engineer gave me these rules for meetings:
 
-
-  1. Never go into a meeting unless you know what the outcome will be.
-
-  2. Plan to leave the meeting with less work than when you went in.
-
+1. Never go into a meeting unless you know what the outcome will be.
+2. Plan to leave the meeting with less work than when you went in.
 
 Stick to those rules, and you'll do well.
 

@@ -16,7 +16,6 @@ It's pretty common practice to 'comment out' lines in scripts. The code stays i
 
 Normally it's pretty simple to comment out a line. Here's a quick Bash example:
 
-
 ```bash
 #!/bin/bash
 
@@ -30,9 +29,7 @@ fi
 ...
 ```
 
-
 When I'm testing the script, I might not want to actually run that command. So I'll quickly comment it out like this:
-
 
 ```bash
 #!/bin/bash
@@ -47,20 +44,16 @@ fi
 ...
 ```
 
-
 The `#` tells the shell to ignore anything else on that line. All pretty straightforward.
 
 Today I was debugging an F5 synchronisation issue, where I got this message on synchronisation:
-
 
 ```text
 BIGpipe parsing error (/config/bigip.conf Line 333):
    012e0054:3: The braced list of attributes is not closed for 'rule'.
 ```
 
-
 The offending section looked like this:
-
 
 ```tcl
 when HTTP_REQUEST {
@@ -79,11 +72,9 @@ when HTTP_REQUEST {
 }
 ```
 
-
 Editing this iRule through the GUI didn't have any errors, so what was broken?
 
 Looking at the 'log' lines a bit more closely, I saw the problem:
-
 
 ```tcl
         "/special/uri/path/*" {
@@ -94,11 +85,9 @@ Looking at the 'log' lines a bit more closely, I saw the problem:
           #log local0. "Default pool used" }
 ```
 
-
 By commenting out the log line, it included commenting out the closing '}'. Whoops. Fixed now. How come it didn't get picked up in the iRule Editor? Looks like it's this bug: [SOL15363](https://support.f5.com/kb/en-us/solutions/public/15000/300/sol15363.html) "An iRule may erroneously pass syntax validation"
 
 Oh and of course I know someone out there is saying "Why the hell did he use that stupid formatting for his code? My preferred style would be to have the closing brace vertically aligned with the opening statement, like this:
-
 
 ```tcl
 when HTTP_REQUEST {
@@ -118,6 +107,5 @@ when HTTP_REQUEST {
   }
 }
 ```
-
 
 But it wasn't my code - I was fixing someone else's code.

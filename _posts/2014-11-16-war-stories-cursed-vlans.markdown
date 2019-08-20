@@ -16,9 +16,7 @@ tags:
 
 I’ve written before about switch ports being [permanently disabled]({% post_url 2014-02-03-war-stories-loop-network-meltdown %}). This time it’s something new to me: VLANs that refuse to forward frames.
 
-
 ## A Simple Network
-
 
 The network was pretty straightforward. A pair of firewalls connecting through a pair of switches to a pair of routers:
 
@@ -28,9 +26,7 @@ Sub-interfaces were used on the routers and firewalls, with trunks to the switch
 
 All was working as expected. All devices could see each other on all VLANs.
 
-
 ## Until it stopped
-
 
 We received reports that we’d lost reachability to Router A’s VLAN 200 sub-interface. After doing some investigation, we could see that Firewall-A could no longer see Router A’s MAC address on G0.200. But everything else was fine - the VLAN 100 interface worked perfectly. So we knew it couldn’t be a physical interface issue.
 
@@ -40,9 +36,7 @@ Spanning-tree? Nope, all ports in forwarding state. VLAN still there in the VLAN
 
 Why didn’t it work?
 
-
 ## Workaround: Move to a new VLAN
-
 
 We re-configured the Firewall & Router sub-interfaces to use VLAN 300 instead. We added that VLAN to the associated trunk ports, and everything started working. Full connectivity restored. But VLAN 200? It seems to be cursed.
 

@@ -22,9 +22,8 @@ There's a few moving parts here. One is that the CPE needs to request, and recei
 
 First, let's look at the relevant bits of the config:
 
-
 ```text
-root@srx01> show configuration interfaces at-1/0/0 unit 0 family inet6 dhcpv6-client 
+root@srx01> show configuration interfaces at-1/0/0 unit 0 family inet6 dhcpv6-client
 client-type statefull;
 ##
 ## Warning: IA-NA identity association is required for ia-pd
@@ -65,12 +64,10 @@ dhcpv6;
 root@srx01>
 ```
 
-
 Couple of things to note here: Firstly, note the warning about not enabling "client-ia-type ia-na". At first, I was unable to get the config to commit without that option. While it now lets me commit that config, I have heard that it may not successfully reboot. Yikes. The problem was that if I did enable it, then my DHCPv6 client session never completed, because my ISP does not hand out IA_NA responses. So the SRX would stay stuck in INIT:
 
-
 ```text
-root@srx01> show dhcpv6 client binding detail 
+root@srx01> show dhcpv6 client binding detail
 
 Client Interface: at-1/0/0.0
      Hardware Address:             54:e0:32:d0:b3:3f
@@ -87,9 +84,7 @@ Client Interface: at-1/0/0.0
 root@srx01>
 ```
 
-
 Support suggested using `client-type autoconfig` but you must use `client-type statefull` if you want to do PD. Probably the other key point here is ensuring that you allow inbound dhcpv6. Otherwise it won't get anywhere. Now, we can see the prefix successfully delegated to us:
-
 
 ```text
 root@srx01> show dhcpv6 client binding detail
@@ -114,17 +109,13 @@ Name: server-identifier, Value: VENDOR0x00000a4c-0x4531b33f
 root@srx01>
 ```
 
-
 OK, so how do we hand that out to internal clients?  Here's what I've done, using RA:
-
 
 ```text
 set interfaces at-1/0/0 unit 0 family inet6 dhcpv6-client update-router-advertisement interface vlan.0
 ```
 
-
 That tells the SRX to advertise the received prefix out vlan.0, using RAs. Note that if I had any configuration at all under `protocols router-advertisement` the configuration would not pass commit check. Let's take a look at my Mac, and see if it's worked:
-
 
 ```bash
 lhill$ ifconfig en0
@@ -138,8 +129,6 @@ media: autoselect
 status: active
 ```
 
-
 So it works! With that setup, I'm able to access IPv6-only content. Running Wireshark and looking for IPv6 traffic, sadly most of it seems to be web banner ads. But it's a start. I would like to make this work with the DHCPv6 server functionality on the SRX, but I have been unable to get it working. The clients send DHCPv6 SOLICIT messages, but the SRX drops them all pre-authentication, without really telling me WHY it drops them. I am still dealing with support on this. I will post a follow-up if I can get that working.
 
 **[UPDATE 2013-01-15]** Juniper released 12.1X46-D10.2 in December 2013. This now allows `client-ia-type ia-pd` without requiring `client-ia-type ia-na`. See more [here]({% post_url 2014-01-15-dhcpv6-juniper-progress %}).
-

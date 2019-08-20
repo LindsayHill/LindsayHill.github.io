@@ -16,7 +16,7 @@ Why is it that people will pay a lot of money for a consultant's time and expert
 Chris Wahl has written about [learning to cope](http://wahlnetwork.com/2014/02/07/leveraging-tools-go-consultants-perspective/) with the default tools and settings:
 
 > It’s almost a given that anything I own – personally or via my employer – will not be allowed to touch any piece of software or hardware in the average client environment. It causes too many headaches with compliance rule sets like Sarbanes-Oxley (SOX)...
-> 
+>
 > This means that I’ve come to rely on whatever tools are universally available. Let’s take PowerShell for example. I have an entire library of scripts that I’ve written over the past several years. More often than not I end up using the vSphere Client or ESXi Shell instead because I can’t get to my scripts. If it’s a highly repetitious task I may just re-create a script by hand, but more often than not, it’s not worth the effort.
 
 I've posted similar things to IEOC about the use of [aliases on network gear](http://ieoc.com/forums/p/26387/219349.aspx#219349):

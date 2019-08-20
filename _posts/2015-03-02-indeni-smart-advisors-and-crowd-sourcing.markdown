@@ -13,21 +13,13 @@ tags:
 
 Monitoring needs to move on from traditional fault and performance polling. It should include identifying common misconfigurations and known faults. We're all using the same technologies, so we've all got the same problems. I like the look of Indeni, a new approach to this problem. It uses a form of crowd-sourcing to act as a smart advisor.
 
-
-
 ## Precious Snowflakes?
-
-
 
 We all think we’re precious snowflakes. But we’re not. We use the same technologies, glued together in the same ways. That means we all have the same problems, and make the same misconfigurations.
 
 Vendors frequently publish new bug fixes, KB articles, EOS notices, etc. Some of these apply to products/versions/features we’re using. We struggle to keep up with the volume, and we miss these - so maybe our network is running with a known issue. Striking an unknown bug is bad. Getting caught out by a published issue is worse. Having an outage because we didn’t make sure the routing tables were in sync on our firewall cluster is unforgivable.
 
-
-
 ## Vendors Need Help Too
-
-
 
 Information flow is a two-way problem. The vendors can’t always see how customers deploy their products in the real world. They think they know. They write manuals, they write white papers. But they don't know for sure what we do, and how their systems perform. They lack the hard data.
 
@@ -35,11 +27,7 @@ They can’t see problems such as slow memory leaks, because their tests don’t
 
 We need to be able to A) feed anonymous data back to the vendors, and B) get recommendations on how to make our network run better.
 
-
-
 ## Monitoring to the rescue?
-
-
 
 In theory, current monitoring tools should be able to help us. They’re collecting state information from our network, and now they’re also collecting configuration information. But they have focused on fault detection, not configuration issues, or software faults.
 
@@ -51,11 +39,7 @@ I would periodically check the vendor KBs for new articles, and skim over them t
 
 Traditional monitoring tools aren’t helping us with those problems. And they’re not helping the vendors either, because the info only goes one way. There is some hope with the cloud-managed platforms, such as [Meraki](http://meraki.cisco.com/). They’ve got a complete view of how customers use Meraki products, and how they’re performing. But most vendors don’t.
 
-
-
 ## Indeni - a Trusted Advisor?
-
-
 
 That’s why I like [Indeni](http://www.indeni.com)’s approach. Indeni is a sort of trusted advisor for Check Point, F5 & Cisco systems.  It connects to your systems, grabs the configuration and state, and compares this against a list of known issues. It’s a form of monitoring tool, although it does not replace a traditional NMS.
 

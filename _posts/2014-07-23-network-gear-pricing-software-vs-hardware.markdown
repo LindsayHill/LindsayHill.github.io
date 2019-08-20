@@ -23,7 +23,6 @@ But when I thought about some recent quotes I've seen, software licensing was a 
 
 ## Example Pricing Mix
 
-
 The quotes I had were from a company we'll call "Cadillac," covering routing and switching. I can't publish the exact prices - you'd laugh at how much we have to pay. But I can show the hardware vs software percentages:
 
 |---------+----------+----------|
@@ -43,20 +42,15 @@ If you're using low-end switches, and only running the base feature set, then ye
 
 Even with those features broken out, we can still see that much of the software investment is hidden in the hardware price. Then again, we're not buying just hardware: We're buying a solution, and we expect it to have some switching & routing capabilities out of the box. I would not be impressed if you wanted to sell me some custom hardware that couldn't do ANYTHING without paying extra software licensing costs. Open hardware is obviously different - you can sell me a blank Intel server, since I have a wide choice of software I can install on it.
 
-
 ## Other Vendors
-
 
 This will look very different if you're ordering equipment from "Jeep", or "Studebaker-Packard." They use different licensing structures. They may license all features by default, hiding the software cost in hardware pricing. Data-center gear is priced quite differently to SP gear too. Some vendors offer "pay as you grow" options, unlocking hardware capabilities as traffic volumes grow. Sadly, 2x traffic doesn't mean 2x revenue these days.
 
-
 ## SDN/Bare-Metal to Complicate Matters?
-
 
 I expect to see a good uptake of bare metal switching in larger companies, although I think it will be slow amongst small-medium Enterprises. When the cost of the hardware is clearly broken out from the software, we should get significant margin pressure.
 
 But networking companies won't want to miss out on the margin. I expect to see flat pricing for hardware, and complex schemes for pricing the SDN applications that we perceive as being further up the value chain.
-
 
 > Where there's mystery, there's margin.
 

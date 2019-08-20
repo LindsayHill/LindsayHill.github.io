@@ -15,17 +15,13 @@ tags:
 
 I am happy to announce that I am now a Product Manager at [Brocade.](http://www.brocade.com/) This is a big move for me, and one I am very excited about. I will get to work on the future of networking with a lot of smart people .
 
-
-
 ## Why Brocade?
-
-
 
 It's simple really:
 
 > He aha te mea nui o te ao?
 > He tangata! He tangata! He tangata!
-> 
+>
 > What is the most important thing in the world?
 > It is people! It is people! It is people!
 
@@ -35,11 +31,7 @@ Of course there's more to it than just people. The problem with attending events
 
 Then you return to a job where you're working with networks that haven't changed operation in over a decade. Adding VLANs to a 3750 and editing Check Point firewall rules just isn't that exciting anymore.
 
-
-
 ## The Future
-
-
 
 Working in Product Management for an SDN vendor will be very different. Less of the past, more of the future. That previous operational experience isn't wasted though. You need to understand the current problems to help shape future solutions.
 

@@ -23,28 +23,13 @@ I had thought that the key part was the mapping in the `adapter-index.xml` file.
 
 So if you're adding a new adapter to IMC, follow these steps:
 
-
-
-
-    
-  1. Go to Settings -> Device Vendor. Make sure the vendor is there. Same with Device Series
-
-    
-  2. Add a mapping for the specific Device Model - e.g. 1.3.6.1.4.1.2636.1.1.1.2.64 is a Juniper SRX-110
-
-    
-  3. Create the new adapter folder under `conf/adapters/ICC/`. This folder name must match the vendor as defined in the UI.
-
-    
-  4. Create your new adapter files, including the correct mappings in `adapter-index.xml`
-
-    
-  5. Restart IMC. Re-synchronise your device. Check that it displays the right model name in IMC. It should now try and use your new adapter for backups, etc.
-
-
+1. Go to Settings -> Device Vendor. Make sure the vendor is there. Same with Device Series
+2. Add a mapping for the specific Device Model - e.g. 1.3.6.1.4.1.2636.1.1.1.2.64 is a Juniper SRX-110
+3. Create the new adapter folder under `conf/adapters/ICC/`. This folder name must match the vendor as defined in the UI.
+4. Create your new adapter files, including the correct mappings in `adapter-index.xml`
+5. Restart IMC. Re-synchronise your device. Check that it displays the right model name in IMC. It should now try and use your new adapter for backups, etc.
 
 Sometimes you're having problems figuring out which adapter IMC is using, or if it's even been able to figure out any adapter at all. I've found these tables in the database are helpful:
-
 
 ```sql
 mysql> use config_db;
@@ -72,7 +57,6 @@ mysql> select * from tbl_dev_adapter where dev_id=13;
 
 mysql>
 ```
-
 
 There I'm looking up the device ID, then checking the `tbl_dev_adapter` table to see what it's using. The key there is **DlinkGeneric**. If you don't get any results here, IMC can't figure out the device adapter mapping.
 

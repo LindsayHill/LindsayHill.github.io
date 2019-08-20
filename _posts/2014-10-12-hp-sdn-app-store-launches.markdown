@@ -13,13 +13,9 @@ tags:
 
 HP's [SDN App Store](https://hpn.hpwsportal.com/catalog.html#/Home/Show) has finally seen the [light of day.](http://www8.hp.com/us/en/hp-news/press-release.html?id=1798074#.VDo0NymSyWE) This is intended to be a common platform for users and developers, to find and distributed real-world, practical SDN applications. Some of the launch apps include:
 
-
-  * [Network Optimizer](http://h17007.www1.hp.com/us/en/networking/products/network-management/Network_Optimizer_SDN_Application_Series/), for automated QoS for Lync
-
-  * [Network Protector](http://h17007.www1.hp.com/us/en/networking/products/network-management/Network_Protector_SDN_Application_Series/#.VDo2FymSyWE), for security & posture assessment
-
-  * [LoadMaster](http://kemptechnologies.com/au/sdn-adaptive-load-balancing/) - Load balancing
-
+* [Network Optimizer](http://h17007.www1.hp.com/us/en/networking/products/network-management/Network_Optimizer_SDN_Application_Series/), for automated QoS for Lync
+* [Network Protector](http://h17007.www1.hp.com/us/en/networking/products/network-management/Network_Protector_SDN_Application_Series/#.VDo2FymSyWE), for security & posture assessment
+* [LoadMaster](http://kemptechnologies.com/au/sdn-adaptive-load-balancing/) - Load balancing
 
 It's interesting to look at the price points for applications. They are certainly not $0.99 apps, but they are still cheaper than typical 'Enterprise' software. I think it will take us a while to figure out what the right level of 'value' is.
 

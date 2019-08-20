@@ -13,9 +13,7 @@ tags:
 
 Cumulus Networks gave a great presentation at [Network Field Day 9](http://techfieldday.com/event/nfd9). They presented their vision of how they’re working to improve networking. But they were also clear about what they don’t do, and where they will instead enable others.
 
-
 ## Linux on a switch? Seems natural to me
-
 
 Many network engineers started out running cables, and doing low-level networking. They build up to designing & running more complex networks. I came at it from a different direction. I first ran Linux systems in 1999. My first professional job was working with HP-UX in 2000, and I later moved into running Check Point firewalls on [Nokia IPSO](https://en.wikipedia.org/wiki/Nokia_IPSO). I was well-used to working with Unix-like systems, and it was completely natural to me to run tcpdump on a network device.
 
@@ -23,9 +21,7 @@ To become an effective network security engineer, I had to learn more about rout
 
 So when I first heard about Cumulus, it made a lot of sense to me. Run Linux on a switch? Install custom packages to do whatever I wanted? Sign me up!
 
-
 ## Network Disaggregation
-
 
 The more important implication of what Cumulus is doing is that it separates the hardware from the software. Pick your hardware, and then run your choice of software on it. Exactly like we've been doing with servers since we started moved away from Big Iron Unix to Linux/Microsoft.
 
@@ -33,9 +29,7 @@ This has significant implications, because the cost of software development can'
 
 They're already shaking up the market - look at what's happening with [Dell](http://www.dell.com/learn/us/en/uscorp1/secure/2014-01-28-dell-open-networking-cumulus), [Juniper](http://www.networkworld.com/article/2855056/sdn/juniper-unbundles-switch-hardware-software.html) and now [HP](http://www.networkworld.com/article/2884208/sdn/hp-latest-to-unbundle-switch-hardware-software.html). Vendors are changing their models, and we can all benefit from that.
 
-
 ## A Turtle-Powered Rocket? Wait, maybe I misinterpreted that :D
-
 
 The Cumulus Mascot is the “Rocket Turtle” - a Turtle with a Rocket strapped to its back.
 
@@ -43,9 +37,7 @@ The Cumulus Mascot is the “Rocket Turtle” - a Turtle with a Rocket strapped 
 
 cf [RFC1925](https://tools.ietf.org/html/rfc1925):
 
-
 > “With sufficient thrust, pigs fly just fine.”
-
 
 Cumulus have assured me there is no particular symbolism to their mascot:
 
@@ -59,9 +51,7 @@ What if I could change the code for the BGP daemon myself? Or write a Bash or Py
 
 That’s where Cumulus is trying to strap a rocket to a turtle. They’re giving you the tools to change the network faster.
 
-
 ## A Different Operational Model
-
 
 The flexibility offered comes at a price though. With traditional network devices, all configuration is in one place, through one consistent interface. Cumulus doesn’t work like that at all. It’s like a Linux-based server, where configurations are spread around different files. It is possible to make changes to the running state of some services, without it appearing in any configuration file.
 
@@ -74,7 +64,6 @@ I highly recommend watching [the videos](http://techfieldday.com/appearance/cumu
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B7aaX2wItPg?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 {% include note.html content="Aside: The attitude of the Cumulus Networks staff impressed me. They sought out opinions on what they’re doing, and where they should go. Some companies are too sure of themselves, and believe they’ve discovered the One True Way. If only." %}
-
 
 The grumpy Unix beardy-type in me loves what Cumulus is up to. I don’t know how it’s going to work out, but I do think that their approach and attitude can change our industry. I recommend trying out their [demo workbench](http://cumulusnetworks.com/get-started/test-drive-open-networking-in-our-remote-lab/), to see if it works for you.
 

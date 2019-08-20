@@ -27,7 +27,6 @@ I have the lined version. They also have grid/blank/music/mixed versions. I'd pr
 
 {% include note.html content="A note for those ordering from outside Canada or the USA - postage is very expensive. Shipping to New Zealand is around $51 - i.e. 25% more than the price of the book plus a pack of pens. [YouShop](https://www.nzpost.co.nz/tools/youshop), a re-mailer service, brought the shipping cost down to ~$15. I also recommend buying the pens at the same time, as they're difficult to obtain in New Zealand." %}
 
-
 It will be interesting to look back in a year or so, to see if it's changed my habits.
 
 So far I've only had one real problem: I want to change the cover to this:

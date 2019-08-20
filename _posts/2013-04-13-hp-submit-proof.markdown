@@ -17,13 +17,9 @@ If you currently hold Cisco CCNA, CCNP or CCIE certification, you can use this a
 
 You need to submit this:
 
-
-  1. Your full name, company name, contact information and your HP Learner ID;
-
-  2. Title of the HP certification or service qualification toward which you are applying the credit;
-
-  3. Scanned copy of certificate or exam, showing date of completion.
-
+1. Your full name, company name, contact information and your HP Learner ID;
+2. Title of the HP certification or service qualification toward which you are applying the credit;
+3. Scanned copy of certificate or exam, showing date of completion.
 
 See [this page](http://www.hp.com/certification/third_party_achievements.html) for more details, and email contact addresses. For some reason, you have to click on a PDF for each region, which then just reiterates the information above, and gives you an email address to use. I cannot understand why they don't just show the email addresses on the page. This is a consistent failing of the HP website, where they repeatedly use PDFs when a simple HTML page would have sufficed.
 

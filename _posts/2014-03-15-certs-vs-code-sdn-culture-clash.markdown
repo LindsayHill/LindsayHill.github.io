@@ -21,11 +21,9 @@ HP has developed an SDN Developer certification, [HP ASE - SDN Application Devel
 
 Amongst other things, it validates that you can do the following:
 
-  * Understand the SDN environment including SDN application use cases, the OpenFlow standard, the HP VAN SDN Controller, and OpenFlow enabled switches
-
-  * Design an application with SDN, including decisions about application type and process of design creation; and understand examples of successful SDN-enabled applications...
-
-  * Write, test, and debug an SDN application with the HP VAN SDN Controller and OpenFlow enabled switches
+* Understand the SDN environment including SDN application use cases, the OpenFlow standard, the HP VAN SDN Controller, and OpenFlow enabled switches
+* Design an application with SDN, including decisions about application type and process of design creation; and understand examples of successful SDN-enabled applications...
+* Write, test, and debug an SDN application with the HP VAN SDN Controller and OpenFlow enabled switches
 
 Cisco is developing courses for [designing and supporting programmable networks](https://learningnetwork.cisco.com/docs/DOC-22087), and they are working on certification programs. They hype around it last year implied that they should have released this by now, but apparently they're still ironing out a few kinks:
 
@@ -33,9 +31,7 @@ Cisco is developing courses for [designing and supporting programmable networks]
 
 Cisco's certification program has been enormously successful over the last 20 years, providing a clear pathway and goals for network engineer career development. Obtaining a certification is a popular way of showing your development level to potential employers. It has become a form of shorthand to identify a network engineer as being at CCNA-, CCNP- or CCIE-level.
 
-
 ## Running Code is King
-
 
 Developers don't go in for certification with nearly the same gusto. They'd rather show off some code, or point to an application they built.
 
@@ -45,11 +41,9 @@ Developers don't go in for certification with nearly the same gusto. They'd rath
 
 {% include note.html content="Aside: What if your employer [doesn't let you put code on GitHub](http://www.theregister.co.uk/2014/01/22/amazon_open_source_investigation/)? How do you demonstrate value then?" %}
 
-
 So what happens when developers and network engineers come together?
 
 ## Culture Clash - but we'll get over it
-
 
 Changing the way we design, build and operate networks is going to involve many challenges, large and small. Someone who grew up writing code has a fundamentally different way of thinking about the network than someone who started out making patch leads. This goes beyond the network - it's about the type of person, how they solve problems, how they operate in a business environment, how they validate technical experience. There will be many other cultural clashes, and this is just a very small one that we'll get over.
 

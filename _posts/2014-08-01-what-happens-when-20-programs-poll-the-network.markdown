@@ -13,9 +13,7 @@ tags:
 
 Packetpushers [show 198](http://packetpushers.net/show-198-kirk-byers-network-automation-python-ansible/) was a great episode about Network Automation. At one point, Greg asks:
 
-
 > What happens when you've got 20 apps polling one device?
-
 
 Well, you might hit the same problem I did:
 

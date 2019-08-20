@@ -27,7 +27,7 @@ Some commands produce more than one screen's worth of output - for example, `sho
 
 This is all very useful if you're a human looking at the CLI output.
 
-But as a machine, it's a pain. If you have a script interacting with the CLI, it has to detect the `--More--` prompt, and respond appropriately. Slows things down, is annoying. 
+But as a machine, it's a pain. If you have a script interacting with the CLI, it has to detect the `--More--` prompt, and respond appropriately. Slows things down, is annoying.
 
 That's why almost all network operating systems support some form of the [terminal length](https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/fund/terminal-length.html) command. This lets you over-ride the auto-detected terminal length. More importantly, if you enter `terminal length 0`, it will ignore any length, and just display all output in one long stream. That's the simplest for any CLI expect-style automation to deal with. Almost all automation tools will use this.
 
@@ -39,10 +39,9 @@ The `eos_config` module supports the `replace: config` option. The default is to
 
 The `config` option is not documented. But it will push the entire config if any one line needs to be changed. I don't know exactly why you'd do this, but hey, it's an option.
 
-
 ## Combination == Problem. Why?
 
-The user reported that they were unable to use Ansible with `replace:config`. Ansible reported a timeout - exactly the sort of thing I would expect it to do if it had not matched the prompt properly, or it was stuck at a `--More--` prompt. 
+The user reported that they were unable to use Ansible with `replace:config`. Ansible reported a timeout - exactly the sort of thing I would expect it to do if it had not matched the prompt properly, or it was stuck at a `--More--` prompt.
 
 But why? How could that be happening when Ansible modules are widely used with Arista? There's nothing unusual, no reason why it shouldn't work when many, many other people successfully use these.
 
@@ -58,7 +57,7 @@ Hang on a second. On most devices I've used, `terminal length` is only used at t
 
 Arista EOS supports `terminal length` as a global **configuration** command. This system had `terminal length 20` in the configuration. On initial login, Ansible ran `terminal length 0` for that session, and all was well.
 
-**BUT** When `replace: config` was used, and it detected a change, it re-entered the **entire** configuration, including the `terminal length 20` command. At that point, the system went back to enforcing a page length of 20. This confused Ansible, because it started seeing `--More--` prompts, and didn't know what to do with it. 
+**BUT** When `replace: config` was used, and it detected a change, it re-entered the **entire** configuration, including the `terminal length 20` command. At that point, the system went back to enforcing a page length of 20. This confused Ansible, because it started seeing `--More--` prompts, and didn't know what to do with it.
 
 ## The Fix
 

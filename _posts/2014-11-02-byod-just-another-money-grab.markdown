@@ -17,15 +17,10 @@ In my teens I spent many years working in the produce & butchery departments at 
 
 I think we'll see the same thing with BYOD programs. I think it will go like this:
 
-
-  1. Announce BYOD program, employees to be paid non-taxable monthly allowance
-
-  2. New policy: Wage rise to cover BYOD, now incorporated into your wages
-
-  3. BYOD line item disappears for new employees
-
-  4. BYOD line item disappears for existing employees
-
+1. Announce BYOD program, employees to be paid non-taxable monthly allowance
+2. New policy: Wage rise to cover BYOD, now incorporated into your wages
+3. BYOD line item disappears for new employees
+4. BYOD line item disappears for existing employees
 
 After a few years, employees will be expected to provide their own devices. Just the same as the way you pay for your own clothes, and your own transport to work.
 

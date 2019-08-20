@@ -22,9 +22,7 @@ That does pretty much everything I want - many, many options for both input and 
 
 Installation was pretty simple. Install the MSI package, and then edit the configuration file at `C:\Program Files (x86)\nxlog\conf\nxlog.conf`. There's three key sections - **Input**, where you define the input data sources, **Output**, where you define the possible output methods/destinations, and **Route**, where you define the mapping between inputs and outputs.
 
-
 ```xml
-
 define ROOT C:\Program Files (x86)\nxlog
 Moduledir %ROOT%\modules
 CacheDir %ROOT%\data
@@ -62,10 +60,7 @@ LogFile %ROOT%\data\nxlog.log
 <Route 1>
  Path in => out1, out2
 </Route>
-
-
 ```
-
 
 That's reasonably easy to follow - you can see we set some global settings, load some required modules, then define the input type, location and handling. You can specify how often to read the file, whether to re-read on startup, etc. You can set syslog facilities and values. The Output sections then define each of my syslog servers. Finally the routing section maps from **in** to both of the **out** locations. You could have separate handling for various input files, Eventlogs, etc. You can also add all kinds of complex pattern matching, parsing, external programs, etc.
 

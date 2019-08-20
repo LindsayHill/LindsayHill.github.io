@@ -17,9 +17,7 @@ I’ve had a couple of questions come up about how I organise my life around wor
 
 First piece of advice: Find a partner that will support you in everything you do, and make sure that you discuss your plans with them. If you’re going to invest a lot of time in something, you need to make sure that those around you understand when you will be busy, and when you will be available. Without their support, it doesn’t matter what else you do – it will end in tears.
 
-
 ## Task Management - OmniFocus
-
 
 Now for some specifics around managing tasks. I worked out that my challenges came down to keeping track of all the things I promised I would do, and making sure I was getting through my study plans. So I started looking around to see what was out there in terms of A) Strategies, and B) Software that could help.
 
@@ -35,17 +33,13 @@ An example of the way I use these systems is that I have recurring tasks set up,
 
 It does sound like a bit of work, and it is a bit, but you can do the steps pretty quickly. It’s no more time than would be spent on managing paper lists, but this is far more flexible, since I can assign dates to things, re-categorise them, shuffle them about, etc. And since it’s synchronised across my iDevices, it means I can almost always readily access my list of things to do.
 
-
 ## Using OmniFocus for Study
-
 
 When studying, I would add separate tasks for each of the sections I wanted to study. I would also have daily tasks set up for reviewing flashcards. This made it far less likely that things would slip. By having everything written down, it also takes it out of your head, and means you’ve got one less thing to worry about.
 
 I guess it’s just another one of those ways that CCIE study has changed me – it’s not about the technologies, it’s about the methods, the strategies, the techniques – these are things I can apply to anything else I do in life.
 
-
 ## More Efficiency Overall?
-
 
 Am I an Efficient Asian? Perhaps not yet, but it’s a work in progress, and I continually aim for better. I actually need to sit down and see how far my current practices have diverged from the recommended ways of doing things. Anyone have any thoughts they’d like to share on how they manage their life?
 

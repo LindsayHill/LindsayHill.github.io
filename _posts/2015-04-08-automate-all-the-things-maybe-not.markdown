@@ -14,15 +14,11 @@ I’m fundamentally lazy. That’s why automation appeals: less work for me. Get
 
 Automating tasks carries some overhead. If you’re really unlucky, you’ll end up spending more time on the automation than doing it manually:
 
-![](https://imgs.xkcd.com/comics/automation.png)
+![XKCD Automation](https://imgs.xkcd.com/comics/automation.png)
 
 So if you can eliminate tasks, you’re in a much better position. Here’s a few contrived examples, based around a fictitious email provider:
 
-
-
 ## Eliminating Tasks: Maximum Email Size for ‘Special’ Users
-
-
 
 15-20 years ago we had limited bandwidth, and limited storage. It seemed reasonable to limit the maximum email message size. Otherwise people would send monstrous 2MB attachments. Of course, there were always ’special’ cases that needed to be able to send enormous 5MB AVI files. So we had special groups of users defined that could send large emails.
 
@@ -32,11 +28,7 @@ But times have changed. Bandwidth & storage have increased exponentially. Those 
 
 Time to re-evaluate. Time to just have a standard limit for everyone, set to some reasonably high value. Rather than simplify/automate the task, get rid of it altogether. Better for everyone.
 
-
-
 ## Eliminating more tasks: Profanity Filters
-
-
 
 Some businesses still apply profanity filters to email. These block emails that contain words considered “profane.” For some reason HR departments didn’t want people to use any swearwords in email.
 
@@ -46,20 +38,12 @@ You also see problems with people with legitimate names such as “John Cocks.�
 
 Again, time to move on. Get rid of the filter altogether, rather than figuring out how to automate tweaking your whitelists.
 
-
-
 ## Get other people to do the work: Email whitelists
-
-
 
 Sometimes you can’t eliminate the task. It still needs to be done. Maybe you need to manually update spam whitelists/blacklists in response to false positives/negatives.
 
 If your current procedure is that end-users have to log a call to get this done, then re-think your procedures. Give users the tools to manage these whitelists/blacklists themselves. Give them an interface they can use. You support the platform, and the users do the work. Perfect.
 
-
-
 ## Still have to do the work
-
-
 
 You can't eliminate all your tasks. You'll still have to figure out how to automate some things. Some stuff you'll still need to do manually. But it's always worth asking the question: Do I need to do this task at all?

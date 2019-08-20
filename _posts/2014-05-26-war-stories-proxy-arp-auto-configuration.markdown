@@ -17,9 +17,7 @@ Back to Networking War Stories: This time it’s proxy ARP, Check Point, and mor
 
 (Before starting, if you don’t understand the use of Proxy ARP and NAT, it might be worth reading this post first: [Proxy ARP sucks]({% post_url 2014-05-24-proxy-arp-sucks %})).
 
-
 ## The Network
-
 
 We had a router (R1) sitting in front of a Check Point cluster (FW1-A and FW1-B), running on Nokia IPSO. VRRP was used for failover between the firewalls:
 
@@ -27,17 +25,13 @@ We had a router (R1) sitting in front of a Check Point cluster (FW1-A and FW1-B)
 
 Most servers were statically NATted, in the range 200.200.200.0/24. There was a static route on R1 for that range that looked like this:
 
-
 ```text
 ip route 200.200.200.0 255.255.255.0 100.100.100.100
 ```
 
-
 This was all working as expected. No proxy ARP required, because routing took care of it.
 
-
 ## The Problem
-
 
 When configuring NAT on objects in Check Point, there’s a few different ways of doing it. One method is to configure manual NAT rules. These rules are configured as a table, mapping original to NATted IPs (and/or ports). Another method is to configure Automatic NAT rules, on the object itself. There you configure it to statically NAT, to hide NAT behind a specific IP, or to hide NAT behind the firewall.
 
@@ -53,12 +47,9 @@ Ah crap. After using VRRP to switch traffic across to FW1-B, rebooting FW1-A, an
 
 When you’re always trying to defend the firewalls, it’s quite galling to have it proven that the problem is indeed the firewall.
 
-
 ## What Was Going On?
 
-
 Looking around, I saw some “Packet out of state” messages in the FW1-B logs. Why would that firewall be processing packets? Shouldn’t they all be going via FW1-A? Then when I dug further, I found this on the R1 ARP table:
-
 
 ```text
 R1#sh ip arp
@@ -69,16 +60,13 @@ Internet 100.100.100.102 0 bbbb.bbbb.bbbb ARPA FastEthernet0/0
 R1#
 ```
 
-
 What the hell’s going on there? Why is traffic for the virtual IP being forwarded to the real MAC of the standby firewall? Why isn’t R1 getting the VRRP MAC via ARP? It should be using 0000.5e00.0101.
 
 Checking on FW1-B, the ARP table showed that it was publishing a proxy ARP entry for the VRRP IP. But why? It wasn’t configured anywhere in the IPSO configuration. And here’s where it got stranger: If we switched VRRP priorities, so FW1-B went to master, then went back to backup, the proxy ARP entry disappeared. That’s why things started working when we restarted FW1-A.
 
 At that point it was all OK…until the next time policy was installed. Then the proxy ARP entry showed up again. It seemed that Check Point was automatically configuring proxy ARP entries that it thought the firewall needed. Why?
 
-
 ## The Fix
-
 
 Check Point has a global option for “Automatic Proxy ARP configuration.” This option will automatically add any proxy ARP entries that it thinks are required. It looks at all NAT entries, works out which ones are for attached networks, where no ARP entry currently exists. It then adds a proxy ARP entry for those IPs.
 

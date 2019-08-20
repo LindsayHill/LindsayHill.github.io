@@ -80,7 +80,6 @@ FortiGuard Phishing         |                     |
 AntiVirus                   |        29236  104   |
 Sender Address Rate Control |                     |
 Total(34280790)             | 10667365 18200295 5413130|
-
 ```
 
 It's pretty ugly, and they don't seem to document all the fields properly, but I can figure it out. So I need to SSH to the box every collection interval, run that command, and parse the output.

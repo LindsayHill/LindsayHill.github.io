@@ -24,28 +24,18 @@ But sometimes the boss decrees that All Staff Shall Receive The ITIL Blessing! W
 
 > ...enables people to understand the terminology used within ITIL. It focuses on foundation knowledge with regard to the ITIL Service Support and Service Delivery sets as well as generic ITIL philosophy and background.
 
-
 So it's just about understand terminology, and getting a handle on the processes. This is actually not a bad thing, as it ensures some consistency of terminology across different organisations.
-
 
 ## Exam Preparation
 
-
 The [IT Skeptic](http://www.itskeptic.org/) has a post on [How to Pass ITIL V3 Foundation](http://www.itskeptic.org/pass-itil-v3-foundation-exam-six-easy-and-free-ste). This post covers free study and testing resources, and the steps you should go through. He's updated it to list new options and pricing, and to cover the ITIL 2011 Update. The main resource I used was the training + exam package from  [Thought Rock](http://www.thoughtrock.com/theitilexam/?utm_source=TR&utm_medium=Homepage&utm_campaign=NewOnTR/). For $175USD, I got:
 
-
-
-  * Flash-Based video/audio course content. This is online-only content, broken up into modules. They estimate that including the time you need to stop and read/digest the content, it will take around 26 and a half hours to get through all this. This is around four times the length of listening to the talking, as sometimes you'll need to stop, take notes, etc.
-
-  * Study notes - these are the sorts of notes you might make yourself when going through the content. This is useful for review
-
-  * Two Mock Exams of 40 questions each. These were of a similar standard to the real exam.
-
-  * Voucher to sit the exam
-
-  * Glossary of ITIL Terms
-
-  * ITIL Foundation Certificate Syllabus
+* Flash-Based video/audio course content. This is online-only content, broken up into modules. They estimate that including the time you need to stop and read/digest the content, it will take around 26 and a half hours to get through all this. This is around four times the length of listening to the talking, as sometimes you'll need to stop, take notes, etc.
+* Study notes - these are the sorts of notes you might make yourself when going through the content. This is useful for review
+* Two Mock Exams of 40 questions each. These were of a similar standard to the real exam.
+* Voucher to sit the exam
+* Glossary of ITIL Terms
+* ITIL Foundation Certificate Syllabus
 
 The study content was pretty good, although I'm not a huge fan of video content. The main problem I have is that video only really runs at one pace. I found I would often skip ahead through sections, if I was just waiting for the voice to read out the slide content. I'm better at learning from reading and doing. Other people learn better by listening to the content. It's up to you really. I would like the option to run the video at double-speed at least.
 
@@ -55,9 +45,7 @@ The other thing I did was to download some Flashcards from flashcardexchange.com
 
 I didn't put a huge amount of time into this - a couple of nights, a bit of time during a long weekend, and then I decided I wasn't too far off passing, so I might as well give the exam a go. I felt I could have done a bit more review, but it's that cheap, that it would be no big deal to sit it again.
 
-
 ## Exam Impressions
-
 
 The first, most obvious difference for me was that I could schedule and sit this exam at home. I've always had to go into an official testing centre in the past. But for this exam, you just book a time that suits, any time of day or night. Then when you go to take the exam, you connect to a proctor somewhere, and they take over your computer. They enable the webcam, and make you show them that the desk around you is clear. They then supposedly monitor you during the exam. The webcam keeps recording the entire time. Nothing special needed on your end, just a computer with a webcam and microphone, and a browser that runs Flash. I used my MacBook Air, and this was fully supported, with no problems.
 
@@ -65,9 +53,7 @@ The real exam has 40 multi-choice questions, and you only need to get 26 right -
 
 The questions were almost all quite straightforward, as long as you understand ITIL terminology. No tricky language, nothing difficult trying to trip you up. This was a far easier exam than most I do - that's probably why there is such a high pass rate of around 90%. No need to spend a lot of time studying. Anyone who has worked in an IT Operations environment will probably know the answers to half the questions without any study.
 
-
 ## Conclusions
-
 
 A few days of watching some videos, go over some practice exams, and you'll easily pass the exam. It won't take too much effort from you, and you'll be able to tick that box.
 

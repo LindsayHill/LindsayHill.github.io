@@ -23,7 +23,6 @@ Next copy the _RouterOS_Cleanup_Parser_Script.pl_ file to a temporary location. 
 
 Now create a little test Perl script called _imcParser.pl_ that looks like this:
 
-
 ```perl
 #!/usr/bin/perl -w
 use strict;
@@ -44,14 +43,11 @@ my $cleanedConfig = cleanupConfiguration($config);
 print $cleanedConfig;
 ```
 
-
 The `require` line must specify the name of the Parser script you want to test. The rest of the script reads in your sample file from stdin, runs it through the parser subroutine, and prints the output. You can call it like this:
-
 
 ```shell
 perl imcParser.pl mikrotik.txt
 ```
-
 
 (where `miktrotik.txt` is the saved output from step 1).
 

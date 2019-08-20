@@ -14,7 +14,7 @@ It came around again: CCIE renewal. [Last time I renewed]({% post_url 2015-02-01
 
 ## Renewal Cycle
 
-Cisco certifications below Expert level have a 3-year renewal cycle. You can renew your CCNA or CCNP certifications at any time by sitting an exam at the same level. Your 3-year cycle restarts from the day you pass that exam. 
+Cisco certifications below Expert level have a 3-year renewal cycle. You can renew your CCNA or CCNP certifications at any time by sitting an exam at the same level. Your 3-year cycle restarts from the day you pass that exam.
 
 CCIE is a little different. A CCIE certification remains valid for two years from your lab date. You can sit any CCIE-level written exam to renew your CCIE certification. At that point your validity date gets extended for another two years - note that it is another two years based upon your lab date, not the date you passed your most recent re-cert exam.
 
@@ -48,17 +48,15 @@ The key point is that the written exam does not go into detail on those new topi
 
 ## Preparation
 
-
 I took a slightly different approach this time. Previously I had used the [Cisco Press](http://www.ciscopress.com/) book "CCIE Routing & Switching v5.0 Official Cert Guide," [Volume 1](http://www.ciscopress.com/store/ccie-routing-and-switching-v5.0-official-cert-guide-9781587143960) and [Volume 2](http://www.ciscopress.com/store/ccie-routing-and-switching-v5.0-official-cert-guide-9781587144912). I have a [Safari Books](http://www.safaribooksonline.com/) subscription, so didn't have to directly buy the books (or lug them around).
 
 I wasn't that happy with the quality and depth of those books. So I revived my old [CCIE flashcards](http://www.mentalcaseapp.com/), and signed up for ["CCIE in 8 Weeks"](https://cciein8weeks.com). Ignore the silly name. They publish a set of study notes, which are frequently updated, and track much closer to the current blueprint. I used that set of notes to give my study some structure. I worked through that, updating my flashcards as required.
 
-The other key point is that whenever I came across something that I didn't feel comfortable with, I followed the links to Cisco docs, and read through the details. 
+The other key point is that whenever I came across something that I didn't feel comfortable with, I followed the links to Cisco docs, and read through the details.
 
 When you sign up for the "CCIE in 8 Weeks" program, you get 3 months of access to updates, and online practice questions. I spent some time with these practice questions near the end of my study.
 
 I did a few very small IOU labs for some things where I didn't trust the documentation, but did very little actual labbing.
-
 
 ## Exam Impressions
 

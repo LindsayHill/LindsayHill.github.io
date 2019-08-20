@@ -22,7 +22,6 @@ Can we broadly separate Networking into Pioneers, Settlers, and Town Planners? I
 
 (Image from [blog.gardeviance.org](http://blog.gardeviance.org/2012/06/pioneers-settlers-and-town-planners.html), used under [Creative Commons License](http://creativecommons.org/licenses/by-sa/3.0/))
 
-
 ## Applying PST to networking
 
 The model is a helpful way of thinking about the role of different groups across a business. It also helps us understand why teams need to evolve over time, as their area evolves. But what about networking? Can we apply this model to networking? I’ve been thinking about the different areas of networking are, how to identify them, and how to encourage evolution of ideas.
@@ -31,10 +30,9 @@ Wardley’s model is aimed at organisations trying to group their internal team
 
 Here’s my first attempt at classifying networking into Pioneers, Settlers & Town Planners:
 
-[![](/assets/2015/06/nw_pst.png)](/assets/2015/06/nw_pst.png)
+[![Network PST](/assets/2015/06/nw_pst.png)](/assets/2015/06/nw_pst.png)
 
 (No, it doesn’t directly map to the broader PST model. Suggestions for enhancements welcome.)
-
 
 ## Sometimes Stealing is OK
 
@@ -44,16 +42,15 @@ Here’s my first attempt at classifying networking into Pioneers, Settlers & To
 
 What does this mean in the context of networking? What does this ‘theft’ look like? Here’s some examples:
 
-
-  * **_Settlers stealing from pioneers_**: Pioneers will think about Machine Learning, and develop some of the pieces for collecting & processing data. Settlers steal those ideas, and put them into a usable package for solving a specific networking problem.
-  * **_Town planners stealing from pioneers_**: Town Planners see how the Settlers solved a specific problem, and made Machine Learning 'real.' Town Planners take that and expand the scope to cover more general problem sets.
-  * **_Pioneers learning from Town Planners_**: Pioneers will look at the information gained by applying Machine Learning to network data. They will then go further with that information, using it to drive the development of higher order systems.
+* **_Settlers stealing from pioneers_**: Pioneers will think about Machine Learning, and develop some of the pieces for collecting & processing data. Settlers steal those ideas, and put them into a usable package for solving a specific networking problem.
+* **_Town planners stealing from pioneers_**: Town Planners see how the Settlers solved a specific problem, and made Machine Learning 'real.' Town Planners take that and expand the scope to cover more general problem sets.
+* **_Pioneers learning from Town Planners_**: Pioneers will look at the information gained by applying Machine Learning to network data. They will then go further with that information, using it to drive the development of higher order systems.
 
 This sort of ‘theft’ is critical for evolution. Yes, I work for a [vendor](http://www.brocade.com), but I want to improve networking as a whole. What can we do to enable this theft?
 
-  * Recognise the role each group plays. None are better or worse, they are simply different roles.
-  * Make sure the other groups know what's going on - so that could mean that the Pioneers hold regular sessions with the Settlers, showing them what they're up to. On an industry-wide basis, we see some of this at conferences - e.g. Google talking about their challenges and requirements at the recent [ONS conference](http://opennetsummit.org).
-  * Don't just dump things on the other groups - recognise their challenges. So products coming out of vendors need to provide a way to transition from current networking models.
+* Recognise the role each group plays. None are better or worse, they are simply different roles.
+* Make sure the other groups know what's going on - so that could mean that the Pioneers hold regular sessions with the Settlers, showing them what they're up to. On an industry-wide basis, we see some of this at conferences - e.g. Google talking about their challenges and requirements at the recent [ONS conference](http://opennetsummit.org).
+* Don't just dump things on the other groups - recognise their challenges. So products coming out of vendors need to provide a way to transition from current networking models.
 
 This is where we can all play a part - blue-sky thinkers, network vendors, network operators.
 

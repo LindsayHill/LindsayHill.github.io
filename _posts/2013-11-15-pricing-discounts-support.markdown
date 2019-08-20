@@ -12,7 +12,6 @@ tags:
 
 Pricing for Enterprise IT hardware and software can be a strange process, and settling on a vendor quote is a complicated dance. Junior engineers normally are more focused on technology, and don't see everything that goes on with pricing. When they do first get exposed to it, the whole thing can be a bit of a shock. Recently I was talking to some new engineers about some of the things I've learned over the years over pricing, discounts, support costs and payment models.
 
-
 ## List Price and Discounts
 
 You will commonly see references to software and hardware list prices. List price is a fiction, and bears little to no reality to the actual price you will pay. **No-one ever pays list price**. Always keep that in mind. List prices can give you an indicative idea, but vendors discount policies vary wildly - some give 20% discount up front, others can knock 90% off the list price. It's hard to compare between vendors- the best you can hope for is to know the normal range that.
@@ -27,18 +26,13 @@ If you balk at the initial quote, don't throw it away, unless the price is astro
 
 Occasionally vendors will turn around and massively discount their original quote, without changing any other terms. I believe this is extremely dishonest practice, and I refuse to do business with people like that - they would have been quite happy to bank the extra commission. Any increase in discount should be nominal, unless there are significant changes to the terms of the contract.
 
-
 ## Support Costs
-
 
 When you purchase Enterprise-level hardware and software, you usually want some sort of support attached to it. This covers things like:
 
-
-  * Software updates - access to all new versions, including major releases
-
-  * Hardware replacement (if relevant) - vendor commitment to provide replacement hardware within an agreed timeframe - e.g. within 4 hours 24x7, or next business day
-
-  * Software support - ability to log case for configuration issues, or bugs. Depending on support contract level, this can range from email ticket support through to full 24x7 phone support.
+* Software updates - access to all new versions, including major releases
+* Hardware replacement (if relevant) - vendor commitment to provide replacement hardware within an agreed timeframe - e.g. within 4 hours 24x7, or next business day
+* Software support - ability to log case for configuration issues, or bugs. Depending on support contract level, this can range from email ticket support through to full 24x7 phone support.
 
 Support costs are generally calculated as a percentage of the value of the software or hardware, e.g. 10-20% of the price. Customers like these support contracts, because it gives management somewhere to escalate things to if you're having problems. For expensive hardware, it's much cheaper to pay for a guaranteed response time to replace it, rather than holding spares yourself. For low-end hardware, it might be easier to just chuck a couple of spare switches in the cupboard.
 
@@ -50,7 +44,6 @@ Vendor policies will vary here - some will discount their support costs as they 
 
 Pay attention. Make sure you know exactly what your costs will look like over the expected product lifecycle. You don't want to find yourself effectively paying for the product twice within 3 years.
 
-
 ## Payment Options
 
 If you're making a small purchase, then you'll generally pay for that shortly after delivery. But if you're doing a larger deal, or a software and services deal, vendors can give you many different payment options - e.g. you might be able to pay your support costs on a monthly basis, rather than annually. Multi-year support costs can be bundled into the up-front purchase price.
@@ -61,8 +54,6 @@ Some large software vendors will also have plans where you pay them an enormous 
 
 Products like ScienceLogic offer both perpetual and subscription-based licensing, so you can find the mix that works for your revenue streams and your accounting policies.
 
-
 ## It's all a Game
-
 
 Remember, this is all a game. If you've got money, and vendors have product, then a deal can be reached. Don't be afraid to ask them to structure the deal differently, or add in a few extras such as free training or product add-ons. A good sales rep can actually help a lot here, as they will help you craft things in just the right way to make it acceptable to you and your upper management. But never fully trust people in sales. Their goals are not your goals, no matter what they say. Someone has to pay for their shiny suits and flashy cars.

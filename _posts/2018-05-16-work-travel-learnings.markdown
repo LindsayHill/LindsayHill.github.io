@@ -11,7 +11,7 @@ tags:
 - worklife
 ---
 
-I've seen a few Twitter threads recently about learning to live with the sudden plenty of working for tech companies. If you didn't grow up that way, the adjustment takes time. It made me think about a few things I've learnt about corporate travel, and mistakes I've made along the way. People who grew in the corporate world instinctively know stuff I had to learn. Here's some of the mistakes, and learnings: 
+I've seen a few Twitter threads recently about learning to live with the sudden plenty of working for tech companies. If you didn't grow up that way, the adjustment takes time. It made me think about a few things I've learnt about corporate travel, and mistakes I've made along the way. People who grew in the corporate world instinctively know stuff I had to learn. Here's some of the mistakes, and learnings:
 
 ## Sudden Change of Scene
 
@@ -19,21 +19,21 @@ There's been a few threads recently on Twitter related to the concept of "growin
 
 Here's an example thread:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Starting a conference for people that work in tech but grew up poor. Talks:<br><br>* Low fee ways to send money to family.<br><br>* Making yourself feel ok about spending $50 on brunch.<br><br>* Where people with money store their extra money instead of just leaving it in your checking account.</p>&mdash; Mikeal Rogers (@mikeal) <a href="https://twitter.com/mikeal/status/991379251063484416?ref_src=twsrc%5Etfw">May 1, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Starting a conference for people that work in tech but grew up poor. Talks:<br><br>* Low fee ways to send money to family.<br><br>* Making yourself feel ok about spending $50 on brunch.<br><br>* Where people with money store their extra money instead of just leaving it in your checking account.</p>&mdash; Mikeal Rogers (@mikeal) <a href="https://twitter.com/mikeal/status/991379251063484416?ref_src=twsrc%5Etfw">May 1, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Read the thread - there's some gems in there. Stuff like these hit home for me:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">my first week at my job i spent $30 at the safeway to feed myself all week until they explained i could spend $100 a day on food. i couldnt parse it. looking forward to this</p>&mdash; ΜΟΛΩΝ ΛΑΒO (@jonny290) <a href="https://twitter.com/jonny290/status/991490386374754304?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">my first week at my job i spent $30 at the safeway to feed myself all week until they explained i could spend $100 a day on food. i couldnt parse it. looking forward to this</p>&mdash; ΜΟΛΩΝ ΛΑΒO (@jonny290) <a href="https://twitter.com/jonny290/status/991490386374754304?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I was on business travel for 2 weeks. Got a note back on my expense report, and was bracing to remove a bunch of stuff. They wanted to know *why it was so low*. I had to admit to eating microwave food in my hotel room while colleagues were out to fancy dinners.</p>&mdash; Laura (@ContextSans) <a href="https://twitter.com/ContextSans/status/991568423900467200?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I was on business travel for 2 weeks. Got a note back on my expense report, and was bracing to remove a bunch of stuff. They wanted to know *why it was so low*. I had to admit to eating microwave food in my hotel room while colleagues were out to fancy dinners.</p>&mdash; Laura (@ContextSans) <a href="https://twitter.com/ContextSans/status/991568423900467200?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I didn't grow up poor, but we weren't rich. My father was self-employed. My first job was working in a supermarket. I had no exposure to the business world and company travel, and there was so much I didn't know. 
+I didn't grow up poor, but we weren't rich. My father was self-employed. My first job was working in a supermarket. I had no exposure to the business world and company travel, and there was so much I didn't know.
 
 ## Early Business Travel: Mistakes I've made
 
 My first business trip was to Australia. I was 22 years old, and it was my first time leaving the country. It was only my 2nd or 3rd ever flight. I had been a university student, and had been living in debt for years, scrimping to get by.
 
-My flight departed at 8AM, on a Sunday. Mistake #1: Don't let someone else book your flights. 8AM international flight means you need to be at the airport at 6AM. On a Sunday. 
+My flight departed at 8AM, on a Sunday. Mistake #1: Don't let someone else book your flights. 8AM international flight means you need to be at the airport at 6AM. On a Sunday.
 
 I lived in the central city. For some reason I decided to take the airport bus to get to the airport, because it was much cheaper than a taxi. Due to timetables, this meant getting up at 4AM. Moron. Mistake #2: Travel by whichever means is the best combination of speed & convenience. Don't skimp to save a few $$. In the context of a company trip, a few dollars is irrelevant. Take a taxi or Lyft, or public transport if that's faster (e.g. the [Arlanda Express](https://www.arlandaexpress.com)).
 
@@ -57,10 +57,10 @@ Here's a summary of what I've learned:
 
 3/ **Make your own bookings**: Do not rely on someone else to select flights for you. Use an agent if it makes life easier to handle the mechanics, but be specific: tell them exactly what times you want to travel. Travel at times that are convenient for you. Don't get the 6AM flights. Know the policies: you may be able to book something other than steerage under very specific circumstances. The travel agent won't tell you this, you need to tell them what you want.
 
-4/ **Hotels**: Book for interest, not company convenience. Don't book the hotel closest to the office or client site. Book hotels down town. Talk to the regional sales teams - they will know the most interesting hotels. Knowledge of policies helps: you don't have to book the 'official' hotels if you stay below the city limit. Your corporate travel agent is not your friend here, they get kickbacks if you book from their 'official' list. 
+4/ **Hotels**: Book for interest, not company convenience. Don't book the hotel closest to the office or client site. Book hotels down town. Talk to the regional sales teams - they will know the most interesting hotels. Knowledge of policies helps: you don't have to book the 'official' hotels if you stay below the city limit. Your corporate travel agent is not your friend here, they get kickbacks if you book from their 'official' list.
 
 5/ **Personal Travel**: Going to a city you've never been to before? Stay a few days before or after. Pay for your own hotels & food during that time, no-one cares. There is an exception to this - if you're traveling long haul economy, get flights arriving a few days early. Play tourist, and charge all your expenses during that time to the company. If they want you to get somewhere and work, then either you travel business class, or they pay for recovery time.
 
 ## Work Travel Sucks: Minimize the Pain
 
-There's a lot of stuff about the well-paid business world that I didn't get exposed to growing up. But I've learnt a few things along the way, some things from watching others, some things from taking the time to read up on policies. Make sure you do the same: if you don't, your boss isn't going to tell you to spend more money. 
+There's a lot of stuff about the well-paid business world that I didn't get exposed to growing up. But I've learnt a few things along the way, some things from watching others, some things from taking the time to read up on policies. Make sure you do the same: if you don't, your boss isn't going to tell you to spend more money.
