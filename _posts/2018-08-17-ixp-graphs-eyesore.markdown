@@ -11,7 +11,7 @@ tags:
 - IXP
 ---
 
-Too many IXPs (and networkers in general) are using horrible outdated methods of graphing data. These are an ugly eyesore, and should be updated to something from this century. Big IXPs in particular have no excuse: they have the resources to do better. 
+Too many IXPs (and networkers in general) are using horrible outdated methods of graphing data. These are an ugly eyesore, and should be updated to something from this century. Big IXPs in particular have no excuse: they have the resources to do better.
 
 ## IXPs: Invest, Spend, Drop Prices?
 
@@ -65,10 +65,10 @@ LINX (Using Chart.js)
 {:.image-caption}
 IX-Australia (Using Grafana)
 
-These graphs are much more pleasing to the eye, and are interactive. Users can easily zoom in or out, add details, etc. So much nicer. 
+These graphs are much more pleasing to the eye, and are interactive. Users can easily zoom in or out, add details, etc. So much nicer.
 
 ## Time to Update
 
-`rrdtool` is old and ugly. It was fine 20 years ago, when that was all we had. But the world has moved on, and there are many good Free, Open Source options for visualizing time-series data. 
+`rrdtool` is old and ugly. It was fine 20 years ago, when that was all we had. But the world has moved on, and there are many good Free, Open Source options for visualizing time-series data.
 
 Maybe IXPs could go to one less conference this year, and fund an intern to fix up their data? Give us beautiful graphs, and publish the data in a format we can consume it ourselves if we wish.

@@ -20,7 +20,6 @@ Network Management has always been a large part of my career too, so I'm looking
 
 There's some old faces and new attending. I'm looking forward to meeting people who I've only interacted with online, and catching up with people I've met before.
 
-I'll be in the Silicon Valley area for a couple of days before and after the event. I'd love to meet up with other people to talk nerdy while I'm there  - [get in touch](mailto:lindsay@lkhill.com)!
+I'll be in the Silicon Valley area for a couple of days before and after the event. I'd love to meet up with other people to talk nerdy while I'm there  - [get in touch](mailto:lindsay.k.hill@gmail.com)!
 
 {% include note.html content="Disclaimer: Tech Field Day is covering my travel and miscellaneous costs for this event. They in turn are paid by their sponsors. I am under no obligation to write anything about any of the presentations, favourable or otherwise." %}
-

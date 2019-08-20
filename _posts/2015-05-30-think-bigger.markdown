@@ -14,11 +14,7 @@ I get frustrated by those who take a narrow view of technology, and progress in 
 
 I made the mistake of reading the comments on a recent [El Reg](http://www.theregister.co.uk/2015/05/26/public_cloud_domination_game_aws_microsoft/) article (I know, I know: Never read the comments). I came across [this comment about the IoT](http://forums.theregister.co.uk/forum/1/2015/05/26/public_cloud_domination_game_aws_microsoft/#c_2525380):
 
-
-
 > ...The innocent child asked "but why would the toaster need to talk to the 'fridge?" The marketing gurus had no answer and a few years later the outfit went bankrupt. In all the time since, no one has been able to answer that question.
-
-
 
 From there the comments devolved into a rather pointless discussion about milk, bread, spam on toast and Twitter. This is a fairly common theme on El Reg articles (along with "cloud has [little appeal](http://forums.theregister.co.uk/forum/containing/2521751) for 90% of SM server/computing requirements", but that's another issue).
 
@@ -30,19 +26,9 @@ To carry on with the IoT example, think what it could mean to have cheap sensors
 
 Here's a few random examples:
 
-
-
-
-    
-  * Lots of soil moisture and chemical composition sensors spread throughout an orchard, rather than just a few. Then irrigation and fertilising could be better targeted, reducing costs and improving crop yields. There are similar applications here for better targeting of frost-prevention measures.
-
-    
-  * High detail pedestrian traffic analysis in busy environments such as airports, stadiums and public transit systems. This could be used to tweak layouts to improve flow and safety. Sadly it would probably be used to figure out where to best place the shops to sell me crap I don't want, but I guess you can't win them all.
-
-    
-  * Water utility companies with thousands of sensors across their network. With enough data & the right analysis, we should be able to quickly identify anomalies. That should lead to faster leak identification, rather than waiting for the puddle to form.
-
-
+* Lots of soil moisture and chemical composition sensors spread throughout an orchard, rather than just a few. Then irrigation and fertilising could be better targeted, reducing costs and improving crop yields. There are similar applications here for better targeting of frost-prevention measures.
+* High detail pedestrian traffic analysis in busy environments such as airports, stadiums and public transit systems. This could be used to tweak layouts to improve flow and safety. Sadly it would probably be used to figure out where to best place the shops to sell me crap I don't want, but I guess you can't win them all.
+* Water utility companies with thousands of sensors across their network. With enough data & the right analysis, we should be able to quickly identify anomalies. That should lead to faster leak identification, rather than waiting for the puddle to form.
 
 Not an Internet-connected fridge in sight.
 

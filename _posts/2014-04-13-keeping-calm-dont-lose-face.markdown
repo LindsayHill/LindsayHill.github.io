@@ -16,11 +16,9 @@ When I stub my toe, I swear and shout a bit, and I feel better. This isn’t jus
 
 > Research into the hypoalgesic effect of swearing has shown that the use of profanity can help reduce the sensation of pain. This phenomenon is particularly strong in people who do not use such words on a regular basis.
 
-
 But swearing and shouting doesn’t always make us feel better. It can make us feel worse. In Chinese culture, it is considered a loss of face to get [angry](http://hongtu-chinabusinessservices.com/learn-chinese/how-to-manage-face-in-china/):
 
 > It’s relatively easy to lose face in China. You lose face when you lose your temper. You also lose face when you make a mistake or do something that makes you look foolish in front of others.
-
 
 Depending on the situation, both parties may lose face if a shouting argument erupts. While Western business culture is more tolerant of dissent, it is still a poor look when you swear and stamp your feet. It shows a lack of professionalism.
 
@@ -33,4 +31,3 @@ So I will do my best to not let it happen again. I will not let myself be drawn 
 And hey - it’s only work. There are far more important things in this life.
 
 {% include note.html content="Post image from [here](https://www.flickr.com/photos/demibrooke/2336528544/in/photostream/). Licensed under Creative Commons License." %}
-

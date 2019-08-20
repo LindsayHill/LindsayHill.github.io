@@ -19,11 +19,7 @@ Riding into headwinds is a [different story](http://northlandboyandhisgirl.com/2
 
 They’re both hard. But one of them has an end, and a reward. The other one can just keep on sucking away your will to live.
 
-
-
 ## Applying it to Life
-
-
 
 This applies to the rest of your life. The tricky bit is that sometimes you don’t know if you’re going uphill, or into the wind. Both of them feel hard, and you can’t always see the end in sight.
 

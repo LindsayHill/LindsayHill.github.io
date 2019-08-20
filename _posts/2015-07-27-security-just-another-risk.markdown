@@ -14,9 +14,7 @@ I made a conscious decision to move away from full-time information security wor
 
 The most frustrating part was the inability to properly classify risk. [Robert Graham](https://twitter.com/erratarob) put this eloquently [here](http://blog.erratasec.com/2015/07/infosecs-inability-to-quantify-risk.html):
 
-
 > Infosec isn't a real profession. Among the things missing is proper "risk analysis". Instead of quantifying risk, we treat it as an absolute. Risk is binary, either there is risk or there isn't. We respond to risk emotionally rather than rationally, claiming all risk needs to be removed. This is why nobody listens to us. Business leaders quantify and prioritize risk, but we don't, so our useless advice is ignored.
-
 
 Security folk often forget that they are just another risk. Yes, it's a risk shipping the product with that bug. But not shipping at all might be a larger risk to the business. Even complete data breach may or may not be catastrophic to the business - RSA is still around.
 

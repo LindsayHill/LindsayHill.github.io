@@ -16,12 +16,9 @@ tags:
 
 ## What Are Recovery Commands?
 
-
 Recovery Commands let us define the required configuration to fix any identified problems. When configuring a Compliance rule, you have the option to define Recovery Commands. If a system is non-compliant, you then have the option to automatically fix it, by running the defined Recovery Commands. This is great from a workflow perspective - define rules, identify non-compliant systems, then automate the fix. It’s not quite fully automated though - after identifying non-compliant systems, you need to tell IMC to go and apply the fixes. It also gives you a chance to review fixes before pushing them out.
 
-
 ## Walk-through Example
-
 
 Let’s go through a fairly simple example. We want to check that our Cisco devices have an NTP server defined. If they don’t, the recovery command will be to add an NTP server. Straightforward, right? We first need to add a rule to one of our Compliance policies. Make sure the “Recover” radio button is set to Yes, and then we can add some recovery commands:
 
@@ -51,8 +48,6 @@ If we drill into the task result, we can see the results per device. Clicking on
 
 [![View Execution Result](/assets/2013/10/view_execution_result.jpg)](/assets/2013/10/view_execution_result.jpg)
 
-
 ## Conclusion
-
 
 This was a somewhat contrived example. But imagine if we had to do this across 500 devices - that’s when this feature would really come into its own. For easily fixed configuration compliance issues, I highly recommend defining Recovery Commands.

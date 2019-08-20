@@ -11,14 +11,9 @@ tags:
 
 Most Network Management Systems are built to make it easy to poll data via SNMP. But 'interesting' data is not always available via SNMP. Sometimes it's in another format, such as XML. I'm working with [ScienceLogic](http://www.sciencelogic.com/) quite a lot recently, and it makes it easy to poll that data, alert on it, and integrate it with all the other sources of data, into dashboards, reports, etc. Here's a quick walk-through of polling data in XML format, and adding it to ScienceLogic.
 
-
-
 ## Portland Temperature
 
-
-
 I'm going to use the [NOAA](http://www.noaa.gov/) weather data as an example of data in XML format. Let's assume we wanted to poll the temperature for Portland, Oregon, and display it on a graph. Here's what our [data source](http://w1.weather.gov/xml/current_obs/KPDX.xml) looks like:
-
 
 ```xml
 <xml version="1.0" encoding="ISO-8859-1"?>
@@ -73,28 +68,19 @@ I'm going to use the [NOAA](http://www.noaa.gov/) weather data as an example of 
 
 ```
 
-
 The key part is between the <temp_c> tags. We need to extract that value, and poll it. To do this in ScienceLogic, we need to define a Credential, which will include the URL, and then we need to create a 'Dynamic Application' that tells ScienceLogic which tags to extract, and how to present the data.
 
 Once that's done, we'll assign the credential and Dynamic Application to a device, and it should start collecting data.
 
-
-
 ## XML Credentials
-
-
 
 Go to System -> Manage -> Credentials, and go Create -> SOAP/XML Credential. You'll get a pop-up like this:
 
 [![xml_credential](/assets/2014/05/xml_credential.png)](/assets/2014/05/xml_credential.png)
 
-Give it a name - in this case we'll use "PortlandWeather", and set the URL to http://w1.weather.gov/xml/current_obs/KPDX.xml. You'll see there's a heap of other settings we could set for authentication, headers, etc, but in this case we can leave them all at default. Note that ScienceLogic takes cURL options. So if you've done your testing with [cURL](http://curl.haxx.se/), and you've been using some custom options, it should be very easy to transfer.
-
-
+Give it a name - in this case we'll use "PortlandWeather", and set the URL to `http://w1.weather.gov/xml/current_obs/KPDX.xml`. You'll see there's a heap of other settings we could set for authentication, headers, etc, but in this case we can leave them all at default. Note that ScienceLogic takes cURL options. So if you've done your testing with [cURL](http://curl.haxx.se/), and you've been using some custom options, it should be very easy to transfer.
 
 ## Dynamic Application
-
-
 
 Now we need to set up the XML tag parsing, and how to present the data. Go to System -> Manage -> Applications. Click on Actions -> Create New Dynamic Application. On the first page, set the Application Type to "XML Performance", set the name, and set the Poll Frequency (5 minutes in this case). Then click Save, and it should look like this:
 
@@ -110,11 +96,7 @@ Save that, then go to the Presentations tab. This defines which values get displ
 
 We won't worry about Thresholds or Alerts yet. Save that, and let's put it together.
 
-
-
 ## Pulling it Together - Devices, Applications and Credentials
-
-
 
 We've created the pieces, now we need to pull it together, so it starts collecting data.
 

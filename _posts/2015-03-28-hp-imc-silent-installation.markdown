@@ -20,15 +20,9 @@ To install IMC silently, create an `install.cfg` file to define your settings. 
 
 {% include note.html content="I am using CentOS 6.x plus MySQL 5.6. With a few tweaks, this will probably work with Windows and/or other DBs. Also remember that this does not seem to be publicly documented anywhere. I've figured out how to do it through a bit of trial & error, but I wouldn't go asking HP for support." %}
 
-
-
-
 ## install.cfg
 
-
-
-The key file is `install.cfg`. Create this file in the same directory as the IMC install.sh` script. Here's what my `install.cfg` looks like:
-
+The key file is `install.cfg`. Create this file in the same directory as the IMC `install.sh` script. Here's what my `install.cfg` looks like:
 
 ```ini
 install.dir=/opt/iMC
@@ -43,60 +37,29 @@ http.port=80
 https.port=443
 ```
 
-
 Most of that should be pretty self-explanatory. Here's a breakdown of what they do, as far as I can figure out:
 
-
-
-
-    
-  * **install.dir** - the location where IMC is installed.
-
-    
-  * **data.dir** - location for the DB. This is more important for SQL Server installation.
-
-    
-  * **db.type** - choices are SQLServer, Oracle, MySQL, PostgreSQL. If you use Oracle, you also need to define "db.addinfo" (i.e. additional DB info). I don't know the exact syntax required for that, but I suspect it is the network service name.
-
-    
-  * **db.adminusername** - A user with SA-level privileges. This user needs to be able to do pretty much everything - create new databases, users, etc. Typically this will be root, or sa.
-
-    
-  * **db.adminpwd** - the password for the above user. Note that if you're using MySQL on the localhost, with user root, you must set a password for root. IMC won't let you have a blank password.
-
-    
-  * **db.port** - port the DB listens on.
-
-    
-  * **install.locale** - the [locale](https://en.wikipedia.org/wiki/Locale) in use. Unsurprisingly, I'm using English - New Zealand.
-
-    
-  * **deploy.components** - the IMC components to deploy. This is a comma or semi-colon separated list. This is the full list of components installed with IMC Standard. If you're installing Enterprise, there's a couple more you can add. If you find out what those other component codenames are, let me know.
-
-    
-  * **http.port** - port for IMC to listen on. Default is 8080, but I don't like that.
-
-    
-  * **https.port** - port for IMC to listen on for HTTPS. Default is 8443.
-
-
+* **install.dir** - the location where IMC is installed.
+* **data.dir** - location for the DB. This is more important for SQL Server installation.
+* **db.type** - choices are SQLServer, Oracle, MySQL, PostgreSQL. If you use Oracle, you also need to define "db.addinfo" (i.e. additional DB info). I don't know the exact syntax required for that, but I suspect it is the network service name.
+* **db.adminusername** - A user with SA-level privileges. This user needs to be able to do pretty much everything - create new databases, users, etc. Typically this will be root, or sa.
+* **db.adminpwd** - the password for the above user. Note that if you're using MySQL on the localhost, with user root, you must set a password for root. IMC won't let you have a blank password.
+* **db.port** - port the DB listens on.
+* **install.locale** - the [locale](https://en.wikipedia.org/wiki/Locale) in use. Unsurprisingly, I'm using English - New Zealand.
+* **deploy.components** - the IMC components to deploy. This is a comma or semi-colon separated list. This is the full list of components installed with IMC Standard. If you're installing Enterprise, there's a couple more you can add. If you find out what those other component codenames are, let me know.
+* **http.port** - port for IMC to listen on. Default is 8080, but I don't like that.
+* **https.port** - port for IMC to listen on for HTTPS. Default is 8443.
 
 All pretty self-explanatory, right?
 
 {% include note.html content="There's one small issue: you can't define the database server. From my analysis of the InstallSilence Java class, it will always use 127.0.0.1 for the DB IP. That's OK for a lab system, but in production you'd probably rather have an external DB. It's a pity you can't define it, because it wouldn't take much to extend the silent installer to handle it." %}
 
-
-
-
 ## install.sh
-
-
 
 The default install script is `install.sh`. This needs a few changes for a silent install. This will tell the installer to call a different Java class, and to send its output to Xvfb. This way you don't need an X11 server running. I've created a new script `installsilence.sh` that contains these differences:
 
-
 ```bash
-[root@imc ~]# diff install.sh installsilence.sh 
+[root@imc ~]# diff install.sh installsilence.sh
 6c6
 < MAIN_CLASS=com.h3c.imc.deploy.InstallLauncher
 ---
@@ -111,11 +74,10 @@ The default install script is `install.sh`. This needs a few changes for a sile
 > # Set up Xvfb so that progress scrollbars get sent to "virtual" X11 server
 > /usr/bin/Xvfb >/dev/null 2>&1 &
 > export DISPLAY=:0
-> 
+>
 > "$JAVA_HOME/bin/java" -Xmx256m -Dinstaller.dir="$CURRENT_DIR" -DsupportedLocales="$INSTALL_LANG" -Dedition=STANDARD -Dcompany.flag=HP -D3CProductNumber=JG747AAE -DskipVmCheck=true -cp "$JAVA_CLASSPATH" "$MAIN_CLASS" -y
 [root@imc ~]#
 ```
-
 
 The first change is to call the `InstallSilence` class, rather than `InstallLauncher`. This tells IMC to look for `install.cfg`, and read its settings from there.
 
@@ -125,9 +87,8 @@ The last change is to add `-y` to the install command. If you don't do this, t
 
 So far, this is all working well for me. I now have a completely repeatable process for installing IMC, and it should work with new versions too. Output during installation looks like this:
 
-
 ```bash
-[root@imc ~]# ./installsilence.sh 
+[root@imc ~]# ./installsilence.sh
 Loading install wizard ...
 Install started at Sat Mar 28 10:18:30 NZDT 2015
 Installation information:
@@ -165,9 +126,7 @@ Press 'Enter' to launch DMA.
 [root@imc ~]#
 ```
 
-
 **[UPDATE 20150331] **You can see at the end that it says "Press 'Enter' to launch DMA." Normally it will block here. I created this Expect script to automatically handle this. Now it can be launched remotely, and run with no interaction at all:
-
 
 ```tcl
 
@@ -182,6 +141,5 @@ expect {
  "*launch DMA." { send "\04" }
 }
 ```
-
 
 Then all you need to do us run `installer.tcl`. Because I send "Ctrl+D", it doesn't even launch DMA. That means that everything is installed, but only the Deployment Monitoring Service is running. It would be nice to figure out how to tell IMC to start all processes via the CLI. I don't know any way to do that yet, although I'm sure it's possible.

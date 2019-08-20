@@ -16,15 +16,11 @@ tags:
 
 Our irregular War Stories returns, with a story about a network I worked on with strict change control, but high technical debt. What should have been a simple fix became far more pain than it should have been. Lesson learned: next time just leave things alone. I'm sure the ITIL true believers loved their process, but did they realise it stopped people fixing problems?
 
-
 ## A classic problem: Duplex mismatch
-
 
 I spotted a duplex mismatch with one of the services I was responsible for. Throughput was low, and the NIC was showing late collisions. Classic mismatch. Should be an easy enough fix, right? Whoa there son. This is an ITIL shop. No changes without an approved change request!
 
-
 ## Logging Changes: An Exercise in Frustration
-
 
 Change policy at this company was for a lead time for one week for most systems, or two weeks for some 'important' systems. Changes had to be submitted and approved before the deadline. There was no reason for the delay. Nothing happened during those two weeks, there was no extra review, you just had to wait, because that was the process.
 
@@ -38,9 +34,7 @@ Once you'd finally figured out how to navigate the system, you had to get a coll
 
 Eventually I got there: An approved change.
 
-
 ## The quick part: the actual change
-
 
 Two weeks later, I go to make the change. Login to the server, find the network adapter configuration, change it to 100/full. Easy, right? Not quite. This ancient Windows version said "Wait right there! I'm going to reboot to apply that change! Bye!"
 
@@ -50,9 +44,7 @@ Waiting...
 
 Waiting...
 
-
 ## No response...
-
 
 No response yet. Let's give it a bit longer. You kids won't remember this, but physical servers take a long time to boot.
 
@@ -60,9 +52,7 @@ No response yet. Let's give it a bit longer. You kids won't remember this, but 
 
 Getting access to the DC needs a special swipe card. How do I get that? Oh, you need a special change request. Shit. My change request doesn't mention physical access.
 
-
 ## Emergency Access time
-
 
 Crap. Call the boss. He's not far away, and he comes into the office. We start working through what we need to do. Call the NOC, explain that we've had a problem during a change, and need to get physical access. "But you don't have a change logged for tonight. It's tomorrow"
 
@@ -70,17 +60,13 @@ What? I'm sure I've filled in the damned form!
 
 Not quite. The change form had many, many fields, and I'd put the right date in some places, and the wrong date in one of them. No reviewer had noticed that the dates didn't all line up. So now we need to get emergency changes to a change we're not actually supposed to be doing right now.
 
-
 ## Escalate again
-
 
 In any other organisation, we would have at least just been able to go & look at the server. Not here. We call in the boss' boss. Good thing I've got good relationships with these two. We go through what's required, and somehow Joe figures out the right mechanics to get an emergency change logged, and approved.
 
 Off down to the security guard. Hand in my mobile phone & swipe card. Receive special DC-access swipe card. Back up to the DC.
 
-
 ## At last: Into the DC
-
 
 OK, finally we're into the DC. Find the rack, flip the KVM over to the right server..."Power supply disconnected: Press F1 to continue." Eh? What's going on?
 
@@ -94,21 +80,14 @@ How about: "Yeah, so there's a 30-minute timer on that error message, and if not
 
 Hours of time spent pissing around, due to one administrative mistake on my part, all because someone didn't bother plugging the server in properly. But hey, I'm sure they filled in the change forms properly, right?
 
-
 ## Process vs Practice
-
 
 To summarise: The ITIL processes ticked every box. The zealots were happy, and probably thought they were doing a Good Job, making the system better. But had that led to better practice? No, not at all. Look at all the technical failures:
 
-
-  1. No remote access to the server console.
-
-  2. Servers running on single power supplies - and no-one detected it.
-
-  3. No active monitoring for NIC errors.
-
-  4. Outdated server & application software.
-
+1. No remote access to the server console.
+2. Servers running on single power supplies - and no-one detected it.
+3. No active monitoring for NIC errors.
+4. Outdated server & application software.
 
 The really crushing aspect of the ITIL processes was that they had made it too hard to make changes. No-one was prepared to put the effort into fixing broken things. It was just all too hard. Easier to focus on the new projects, and let the old technical debt keep incurring interest. Only deal with it in an emergency. Such a shame. They'd invested heavily into processes, but hadn't made sure that it matched their practices.
 

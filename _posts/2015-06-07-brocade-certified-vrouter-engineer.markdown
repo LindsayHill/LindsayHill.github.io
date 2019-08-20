@@ -16,39 +16,26 @@ If you've visited the [Brocade](http://www.brocade.com/) website recently, you'
 
 {% include note.html content="Disclaimer: I now work for Brocade. Assume what you will about my biases. These are my opinions, not my employer's." %}
 
-
 ## What's the Course/Exam About?
-
 
 From the [official documentation:](http://www.brocade.com/education/certification-accreditation/certified-vrouter-engineer/index.page)
 
-
 > As a Brocade Certified vRouter Engineer, you must be able to demonstrate the ability to install, configure and troubleshoot features of Brocade Vyatta Network OS.
-
 
 i.e. it's primarily about the basics of Vyatta.
 
-
 ## What's Included?
-
 
 Here's what you get when you sign up:
 
-
-  1. A download link to the Brocade Vyatta 5400 vRouter image.
-
-  2. Access to the "Brocade Certified vRouter Engineer Course."
-
-  3. Links to certification materials and communities.
-
-  4. Promo code for the BCVRE exam.
-
+1. A download link to the Brocade Vyatta 5400 vRouter image.
+2. Access to the "Brocade Certified vRouter Engineer Course."
+3. Links to certification materials and communities.
+4. Promo code for the BCVRE exam.
 
 Note that you can run the Vyatta image on a local hypervisor, or if you prefer you can select it from the [AWS marketplace](https://aws.amazon.com/marketplace/pp/B009I5TLOE/ref=srh_res_product_title?ie=UTF8&sr=0-2&qid=1432685267612). Personally I ran it on VMware Fusion on my laptop. It's light on resource, so you can easily spin up several vRouters.
 
-
 ## The Course
-
 
 The course is delivered as a series of 10 approximately half-hour modules. These are Flash-based, with slides, audio, and sometimes PDF attachments. It's delivered through the [Saba](http://www.saba.com/us/) platform. You may have come across it elsewhere.
 
@@ -58,9 +45,7 @@ I recommend running Vyatta at the same time as you watch the modules, so you can
 
 [Brocade's website](http://www.brocade.com/education/certification-accreditation/certified-vrouter-engineer/curriculum.page) has a full list of the modules, with more detailed descriptions.
 
-
 ## The Exam Itself
-
 
 The exam (170-010) is proctored through [Pearson Vue](http://home.pearsonvue.com/Home.aspx), at the usual test centres. The exam would normally cost $150USD. Use the promo code Brocade provides, and it magically becomes free.
 

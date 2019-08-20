@@ -12,21 +12,13 @@ tags:
 
 Recently I’ve been musing on IT Generalists vs Specialists. We used to have more generalist roles, covering all parts of the stack. ITIL then pushed us towards greater specialisation. I believe that we’ve gone back to valuing the Generalist, as the person who can glue components together. Will the pendulum swing again?
 
-
-
 ## Generalists: Soup-to-Nuts
-
-
 
 When I started working in IT, our roles were more generalist in nature. We did everything. To set up a new app, we racked the servers and switches, installed the OS, configured the network, installed the DB & application, and made it all work.
 
 We weren’t specialists in any one area, but we knew how everything fitted together. So if something broke, we could probably figure it out. If we had to investigate a problem, we could follow it through all layers of the stack. When we found the problem, we had license to fix it.
 
-
-
 ## ITIL takes over: Specialisation
-
-
 
 Sometime around the early-mid 2000s the “ITIL Consultants” moved in. Their talk of structure, processes and SLAs seduced senior management. We couldn’t just have people who Got Shit Done. No, everyone needed to be placed in a box, with formal definitions around what they could & couldn’t do.
 
@@ -36,33 +28,15 @@ The problem was that people became responsible for their individual components, 
 
 Meanwhile, things were still broken for end-users…and somehow no one team was responsible.
 
-
-
 ## Generalists Strike Back
-
-
 
 Things have changed over the last few years:
 
-
-
-
-    
-  * COTS components & systems are often ‘Good Enough.’
-
-    
-  * SaaS is practical for many common applications.
-
-    
-  * Sites like Google + [StackExchange](http://stackexchange.com) give everyone more than enough information to be dangerous.
-
-    
-  * Virtualisation means that admins need a better understanding of how compute, networking and storage work together.
-
-    
-  * Automation and management frameworks have come a long way.
-
-
+* COTS components & systems are often ‘Good Enough.’
+* SaaS is practical for many common applications.
+* Sites like Google + [StackExchange](http://stackexchange.com) give everyone more than enough information to be dangerous.
+* Virtualisation means that admins need a better understanding of how compute, networking and storage work together.
+* Automation and management frameworks have come a long way.
 
 Combine this with an appreciation that enforced silos resulted in worse service outcomes. I believe that is why we’ve seen a rise in roles like Site Reliability Engineers, and more recently cultural shifts to models like DevOps.
 

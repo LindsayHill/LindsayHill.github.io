@@ -28,11 +28,7 @@ The other related trend is that people have more wireless devices at home, and t
 
 Now they have > 10 devices, and > 100Mbps links. This created demand to upgrade home routers. ISPs offer better devices for 'free', and people are buying their own. These newer devices support IPv6. As ISPs start enabling IPv6 at their edge, everything else is in place.
 
-
-
 ## Why does it matter?
-
-
 
 You could still look at the overall uptake (global peak ~13% of Google users) and say "meh, doesn't matter to me."
 

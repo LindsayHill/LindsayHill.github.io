@@ -17,9 +17,7 @@ The entire transaction could be completed in a few minutes - receive phone call,
 
 Yet someone, somewhere, decided we needed to measure things, to improve them. No-one was exempt. I presume even the receptionists had to randomly sample some of the site visitors. I wondered what would happen if I put a negative rating in a survey, or filled in some nonsense. I didn't want the poor mailman to get a pay cut though, so I never dared try it. I always gave him top marks. I hope he got a pay rise out of it. They probably laid him off when management drove the company into the ground. I don't think they surveyed senior management on what they were doing to the company. Or maybe they did, and knew just how big a hole they were digging? But no-one acted on the information, and they went broke anyway? But I digress...
 
-
 ## Pointless surveys in an electronic world
-
 
 I spend a lot of time on HP's websites, as part of my job. I'm often searching through the knowledge base, updating cases, or downloading software and manuals. It depends on the client I'm working for, but on a bad day, I might be visiting their site several times every hour. I'll also be using at least 2, sometimes 4 different systems to reach their site.
 
@@ -35,9 +33,7 @@ Hmm. So I tried again. And again. I'm determined to fill in the damn form, and y
 
 The whole thing makes you wonder what's going on. Who is asking for this research, and what do they do with the results? Is it like those mailroom surveys I filled in, probably carefully filed, never to be looked at again? Why is it that the feel they need to constantly ask for feedback? My current working theory is that it was like the fatwa issued against Salman Rushdie - someone in marketing ordered the survey forms, but they later got sacked, and since then, no-one's been able to rescind the order.
 
-
 ## It's not just HP to blame
-
 
 It's very easy, but I don't want to pick on HP here. They're not the only ones doing this. Many of the sites I visit constantly seek my feedback, yet what do I get in return? Nothing. So if there's nothing on offer, why should I bother with the survey forms? OK, so maybe I'll stop filling them in. Ever. So now how valid are your statistics, if huge swathes of your user base never fill them in?
 

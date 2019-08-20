@@ -44,7 +44,7 @@ OK, so it's an RST syntax error. But I didn't change that file. What's going on?
 
 If you dig into our documentation build process, it clones the main [StackStorm repo](https://github.com/StackStorm/st2) and uses the CHANGELOG.RST file from that repo to create docs.stackstorm.com/changelog.html.
 
-When our developers make changes to StackStorm, they include an entry in that file to document the change we've made. The build process then prettifies that changelog and turns it into a more readable HTML file. 
+When our developers make changes to StackStorm, they include an entry in that file to document the change we've made. The build process then prettifies that changelog and turns it into a more readable HTML file.
 
 Someone made a change to that file but had a small mistake in their syntax. When the file got pulled into the docs build process, it resulted in a failure.
 
@@ -59,7 +59,7 @@ OK, no big deal, I've seen that a couple of times before. I'll submit a [PR to f
 
 Simple fix, remove the extra space, and should be fine, right?
 
-Sort of. 
+Sort of.
 
 But that only fixes *this* instance of the problem.
 
@@ -69,8 +69,8 @@ But that only fixes *this* instance of the problem.
 
 * Fix the indentation error
 * Fix another problem with some duplicate content
-* But more importantly: He adds linting checks that will get run on every PR to that repo in future, to ensure that any RST errors will be identified in that repo, pre-merge. 
+* But more importantly: He adds linting checks that will get run on every PR to that repo in future, to ensure that any RST errors will be identified in that repo, pre-merge.
 
 That's the real difference. I wanted to just fix the immediate problem, and get on with what I wanted to do. Kami did the right thing, fixing the problem, and ensuring that if it happens again, it will be picked up earlier in the chain, to reduce downstream effects.
 
-I really should know better. I know the pattern. But I still have a lot to learn, to make that sort of thing automatic when I'm working on code. 
+I really should know better. I know the pattern. But I still have a lot to learn, to make that sort of thing automatic when I'm working on code.

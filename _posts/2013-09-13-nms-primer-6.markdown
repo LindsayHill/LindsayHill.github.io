@@ -16,30 +16,19 @@ tags:
 
 We've covered [what an NMS does]({% post_url 2013-09-08-nms-primer-1 %}), [selecting an NMS,]({% post_url 2013-09-10-nms-primer-3 %}) and some [tips on implementing]({% post_url 2013-09-12-nms-primer-5 %}) an NMS. But how do we keep an NMS up-to-date and relevant?
 
-
 ## Signs of a well-maintained NMS:
 
-
-  * Most Operations Engineers have the console up at their desktop. It’s just part of the routine to look at it each morning.
-
-  * When people report network issues, the first place the network engineers look is the NMS. It’s frequently used to prove that no, it’s not the network’s fault.
-
-  * You check the NMS both before and after planned work, to check that everything is behaving as expected.
-
-  * There’s a handful of alarms, and they’ve all been acknowledged, with a note added.
-
-  * There’s more than one person that knows how to drive it
-
+* Most Operations Engineers have the console up at their desktop. It’s just part of the routine to look at it each morning.
+* When people report network issues, the first place the network engineers look is the NMS. It’s frequently used to prove that no, it’s not the network’s fault.
+* You check the NMS both before and after planned work, to check that everything is behaving as expected.
+* There’s a handful of alarms, and they’ve all been acknowledged, with a note added.
+* There’s more than one person that knows how to drive it
 
 ## Signs of an NMS that’s losing the battle:
 
-
-  * No-one uses the system, except perhaps on a big screen that’s only there because the boss wanted something to look at. When there is a fault, people start logging into routers first.
-
-  * There’s a long list of alarms, including “Node Down” alarms for sites that have been decommissioned.
-
-  * The person who installed it has left, and no-one else really knows how to manage it.
-
+* No-one uses the system, except perhaps on a big screen that’s only there because the boss wanted something to look at. When there is a fault, people start logging into routers first.
+* There’s a long list of alarms, including “Node Down” alarms for sites that have been decommissioned.
+* The person who installed it has left, and no-one else really knows how to manage it.
 
 If your NMS regularly displays a long list of alarms like this, something's going wrong:
 
@@ -48,24 +37,16 @@ If your NMS regularly displays a long list of alarms like this, something's goin
 {:.image-caption}
 Too Many Alarms
 
-
 ## No More Shelfware!
-
 
 How can we ensure that our NMS is like the first one, and doesn’t become shelfware? Several things have to happen - some of them are straightforward technical maintenance, but the more important issues are cultural: NMS management needs to become core to your network management. It’s not an adjunct, a side thing done by the junior - it needs to be something that everyone does. Any network changes should include updates to the NMS.
 
-
 ## What You Must Do
 
-
-  * Assign responsibility: You may choose to use external resources for some elements of maintenance, but you need an internal person who is responsible.
-
-  * Keep the NMS platform itself up to date. You must stay on top of your patching. The NMS can’t magically know about all new devices that get released - you need to keep it up to date. Plan on patching the application at least every 6 months. Don’t let it get more than one patch cycle behind.
-
-  * Auto-discovery helps with maintaining your inventory, but you should still verify that all new devices show up in your system. Most networks don’t have a high rate of device change - it’s not that hard to check that new devices show up, and old ones are removed. Auto-discovery only works if your templates are up to date, and allow SNMP.
-
-  * Look at it every day, and take action on all alarms. Never simply acknowledge an alarm without knowing why it occurred. Change the threshold, or suppress the alert - preferably at the source, or within the NMS if you must. If you’re repeatedly acknowledging the same alarm, you’re doing it wrong - and heading towards insanity.
-
+* Assign responsibility: You may choose to use external resources for some elements of maintenance, but you need an internal person who is responsible.
+* Keep the NMS platform itself up to date. You must stay on top of your patching. The NMS can’t magically know about all new devices that get released - you need to keep it up to date. Plan on patching the application at least every 6 months. Don’t let it get more than one patch cycle behind.
+* Auto-discovery helps with maintaining your inventory, but you should still verify that all new devices show up in your system. Most networks don’t have a high rate of device change - it’s not that hard to check that new devices show up, and old ones are removed. Auto-discovery only works if your templates are up to date, and allow SNMP.
+* Look at it every day, and take action on all alarms. Never simply acknowledge an alarm without knowing why it occurred. Change the threshold, or suppress the alert - preferably at the source, or within the NMS if you must. If you’re repeatedly acknowledging the same alarm, you’re doing it wrong - and heading towards insanity.
 
 {% include warning.html content="Keep your NMS up to date by doing the basics well, on a regular basis, and it will return the investment ten times over. Ignore the regular maintenance, and it will end up like the bike in your shed: Once shiny, but now a sullenly rusting reminder of those grand dreams you once harboured of “getting fit.”" %}
 

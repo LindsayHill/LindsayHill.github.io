@@ -12,11 +12,7 @@ tags:
 
 One of the things I struggled with when starting at a vendor was dealing with project codenames. There is no [secret decoder ring](https://en.wikipedia.org/wiki/Secret_decoder_ring) - you have to learn the names the hard way. I couldn't understand why descriptive names weren't used. It took a while, but I've come to understand the reasoning behind the obscure names now. It's still a stretch to say I 'love' them, but I can at least understand them now.
 
-
-
 ## Naming Standards & Bikeshedding
-
-
 
 When I started my professional career, it was common to name servers using things like Greek & Roman Gods, or Star Wars characters. Billing might run on Apollo, while Medusa was used for third-party connections.
 
@@ -24,21 +20,13 @@ This is fine for 5-10 servers, but clearly doesn't scale. I've wasted many long 
 
 Arguments went back and forth, then virtualisation came along and server numbers exploded. That killed the arguments for 'personalised' names.
 
-
-
 ## Project Naming
-
-
 
 Project numbers haven't had the same explosion. It's still possible to have 'custom' names for each project. And so businesses do. These names don't describe the project functionality. Instead they might be planet names, animal names, cities, etc. There might be a vague theme - e.g. all versions of a software product might all be named after chemical elements. Other products will follow their own theme.
 
 You might ask: Doesn't that have the same problems as server naming? Isn't it hard for new employees to understand what that project is? Why bother? Why not use something descriptive, like _Customer Billing v10.40_?
 
-
-
 ## There _Might_ be a Good Reason
-
-
 
 I thought that secrecy must be the goal. "Let's use codenames like [Overlord](https://en.wikipedia.org/wiki/Operation_Overlord), [Manhattan](https://en.wikipedia.org/wiki/Manhattan_Project), [Torch](https://en.wikipedia.org/wiki/Operation_Torch) and play spies! No-one will know what we're up to. World domination will be ours!"
 
@@ -53,4 +41,3 @@ Then a week before launch, the team realises that Twiddler is a silly name, and 
 If we instead used the codename "Project Doohickie" then it's highly unlikely to end up in the code. The project team will know what Doohickie refers to, and there will be a little bit of secrecy. But it also makes sure that we can change the application name at any time, without risking leftover references.
 
 I'm still struggling with recalling all the project names, or finding out how to look up the project name for an old product version. But at least now I think I understand part of why we use those codenames.
-

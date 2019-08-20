@@ -21,19 +21,12 @@ The New Zealand Information Security Interest Group (ISIG) runs monthly meetin
 Attend enough meetings, and sooner or later you'll be called upon to present. I was 'volunteered' to speak on [Shellshock](https://en.wikipedia.org/wiki/Shellshock_(software_bug)), about a month after the exploit was made public. I didn't talk about the technical aspects of the exploit itself - instead I explored some of the wider implications, and industry trends. I felt the talk went well, mainly because it wasn't just me talking: everyone got involved and contributed to the discussion. It would be a bit meaningless to just give you the slides. Instead I've written up the talk into a blog post format, and tried to incorporate some of the points that came up during the talk.
 
 1. [Shellshock: Bigger than Heartbleed?](#bigger-heartbleed)
-
 2. [Was it all over-blown?](#all-over-blown)
-
 3. [A new class of attack?](#new-class-attack)
-
 4. [Loss of Diversity vs Centralised Control](#loss-diversity)
-
 5. [What's Next?](#whats-next)
-
 6. [Have big OSS users been getting a free ride?](#oss-free-ride)
-
 7. [It will happen again: What can we do?](#will-happen-again)
-
 8. [Closing thoughts](#closing-thoughts)
 
 ## Shellshock: Bigger than Heartbleed?   {#bigger-heartbleed}
@@ -73,11 +66,8 @@ It looked like it was going to be carnage. Wide-spread attacks, worms, major mel
 So was all the hype over-done? Yes, it probably was. It was certainly a nasty bug, but it had several factors that limited its impact:
 
 * It was relatively easy to filter via IPS/ADC
-
 * It was reasonably simple to patch, without requiring any service restarts
-
 * Bash isn't actually all that widely used on custom appliances - they tend to use more limited shells
-
 * Applying a simple code patch is a lot easier than fixing application logic flaws
 
 But perhaps the hype also helped. If bugs are only known as something forgettable like [CVE-2002-0649](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-0649), it doesn't get any attention. Give it a memorable name and a logo, and suddenly the public starts talking about it. Maybe it's like Hurricanes/Cyclones? They all have names, and people take them seriously. We can connect to "Hurricane Lucy" far better than we could to "Tropical Storm 2014-10-482." Perhaps we need to have a policy of naming major exploits, with the first of each year starting with A, the second with B, etc?

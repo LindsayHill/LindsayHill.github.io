@@ -17,12 +17,8 @@ tags:
 
 The main goal of Basic is to put [PCM+](http://h17007.www1.hp.com/us/en/networking/products/network-management/HP_PCM_Plus_Network_Management_Software_Series/index.aspx) out to pasture. It comes in two flavours:
 
-
-  * [IMC Basic Software Platform](https://www.hpe.com/us/en/product-catalog/networking/networking-software/pip.hp-intelligent-management-center-basic-software-platform.5333786.html)
-
-  * [IMC Basic WLAN Manager Software Platform](https://h17007.www1.hp.com/us/en/networking/products/network-management/IMC_WLANM_Software/index.aspx) - same as Basic, with added Wireless Management capabilities
-
-
+* [IMC Basic Software Platform](https://www.hpe.com/us/en/product-catalog/networking/networking-software/pip.hp-intelligent-management-center-basic-software-platform.5333786.html)
+* [IMC Basic WLAN Manager Software Platform](https://h17007.www1.hp.com/us/en/networking/products/network-management/IMC_WLANM_Software/index.aspx) - same as Basic, with added Wireless Management capabilities
 
 There is plenty of information published on each edition, but HP does not seem to have a table showing a side-by-side comparison of the editions. This can make it a little hard to work out which edition you should choose. Here's my stab at bringing this information together:
 
@@ -80,6 +76,4 @@ Note that you can get upgrade pricing from PCM+ to IMC.
 
 {% include warning.html content="The inability to expand the Basic edition beyond 50 SNMP nodes, along with limited configuration management capabilities, means it should only be considered for small networks, that are extremely unlikely to grow. I don't know if Basic customers can upgrade to Standard or Enterprise." %}
 
-
 {% include note.html content="This information was collected from publicly available sources. Do not take it as official - there may be some things I have missed. Errors will be updated as I become aware of them. Prices were obtained from CDW.com on April 13, 2015, and are in USD.  I've published these prices for comparative purposes - you can probably get a bigger discount, particularly if you're buying HPN kit." %}
-

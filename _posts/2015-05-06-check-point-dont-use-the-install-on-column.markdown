@@ -16,7 +16,6 @@ When you create a firewall policy using Check Point, you define the set of possi
 
 {% include note.html content="In the 4.1 days, we didn't have this option. At install time, you had to choose from the complete list of firewalls. The default had all firewalls selected. You can imagine the merriment that ensued when someone would install the wrong policy on a firewall." %}
 
-
 Most organisations will only have one installation target per policy. But sometimes you want to have the same policy on multiple firewalls. This is pretty easy to do, and might make sense if you have many common rules.
 
 But then you say "What if I had 30 common rules, 50 that only applied to firewall A, and another 50 that only applied to firewall B?" That's where people start using the "Install On" column. This lets you define at a per-rule level, which firewall will enforce that rule. When you compile & install policy, it will only install the rules that apply to that specific firewall.

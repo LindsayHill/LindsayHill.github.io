@@ -13,48 +13,21 @@ tags:
 
 PyNOS v1.1 has been published. This is a python library that simplifies automating Brocade VDX systems. It is built on top of ncclient, and uses NETCONF to communicate with the VDX systems. Using the libraries is much simpler than writing your own NETCONF calls.
 
-
-
 ## What can I do with it?
-
-
 
 Use Python to script configuration or management tasks against VDX devices, e.g.:
 
-
-
-
-    
-  * Configure interfaces & VLANs
-
-    
-  * Find LLDP neighbors
-
-    
-  * Find out which port a MAC is connected to
-
-    
-  * Configure BGP
-
-    
-  * Configure SNMP
-
-
+* Configure interfaces & VLANs
+* Find LLDP neighbors
+* Find out which port a MAC is connected to
+* Configure BGP
+* Configure SNMP
 
 You can also use Python as an interactive shell to run commands against multiple systems.
 
-
-
 ## Examples:
 
-
-
-
-
 ### Connect to device and check firmware version & uptime:
-
-
-
 
 ```python
 >>> import pynos.device
@@ -70,13 +43,7 @@ True
 >>>
 ```
 
-
-
-
 ### Change switchport description:
-
-
-
 
 ```python
 >>> with pynos.device.Device(conn=conn, auth=auth) as dev:
@@ -85,22 +52,13 @@ True
 ...     desc=’RTR1 Ethernet1’)
 ```
 
-
-
-
 ## Who should use it?
-
-
 
 Any Brocade VDX customers that want to automate network configuration - e.g. to integrate with their provisioning systems.
 
 It's helpful to have some Python experience. This is a toolbox for making some things easier - it is not a complete application in itself.
 
-
-
 ## Where Can I Get It?
-
-
 
 To install it, run `pip install pynos`
 

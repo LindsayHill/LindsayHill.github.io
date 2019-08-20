@@ -20,25 +20,20 @@ To quote [Splunk themselves](http://www.splunk.com/product):
 > Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data. Splunk Enterprise is easy to deploy and use. It turns machine data into rapid visibility, insight and intelligence.
 
 Basically Splunk takes in all of your text-based log data, and provides you an easy way to search through it. It started out as "Google for your logs", but it's become far more than that, as capabilities have been added. Now you can pull in all sorts of data, and perform all kinds of interesting statistical analysis on it, and present it in a variety of formats. You can simply search for specific patterns, or you can generate all manner of graphical reports:
-[![](https://www.splunk.com/content/dam/splunk2/images/products/product-tour/splunk-enterprise/tour-search-investigate.png)](https://www.splunk.com/en_us/products/splunk-enterprise.html)
-[![](https://www.splunk.com/content/dam/splunk2/images/products/product-tour/splunk-enterprise/05-correlate-complex-events-product-tour.png)](https://www.splunk.com/en_us/products/splunk-enterprise.html)
-
+[![Splunk Overview](https://www.splunk.com/content/dam/splunk2/images/products/product-tour/splunk-enterprise/tour-search-investigate.png)](https://www.splunk.com/en_us/products/splunk-enterprise.html)
+[![Splunk Events](https://www.splunk.com/content/dam/splunk2/images/products/product-tour/splunk-enterprise/05-correlate-complex-events-product-tour.png)](https://www.splunk.com/en_us/products/splunk-enterprise.html)
 
 ## How does it work?
 
 There's three key components to a Splunk installation:
 
-  * **Forwarder:** Forwarders forward data to remote indexers. They may also index it locally. Data can be taken in via many different methods - monitoring log files, syslog, TCP, WMI, running scripts, querying a database, etc. Data can be forwarded to multiple indexers, or split.
-
-  * **Indexer:** This is the heart of the Splunk setup - it stores and indexes data, and responds to search requests. This is their "Magic Sauce" - they use some [fairly interesting techniques with MapReduce](http://www.splunk.com/web_assets/pdfs/secure/Splunk_and_MapReduce.pdf) to store and process large amounts of unstructured data, and still be able to return timely search results.
-
-  * **Search Head:** This is the main front-end, commonly accessed via the Splunk web interface. Search Heads can run searches across multiple Indexers, so you can scale out.
+* **Forwarder:** Forwarders forward data to remote indexers. They may also index it locally. Data can be taken in via many different methods - monitoring log files, syslog, TCP, WMI, running scripts, querying a database, etc. Data can be forwarded to multiple indexers, or split.
+* **Indexer:** This is the heart of the Splunk setup - it stores and indexes data, and responds to search requests. This is their "Magic Sauce" - they use some [fairly interesting techniques with MapReduce](http://www.splunk.com/web_assets/pdfs/secure/Splunk_and_MapReduce.pdf) to store and process large amounts of unstructured data, and still be able to return timely search results.
+* **Search Head:** This is the main front-end, commonly accessed via the Splunk web interface. Search Heads can run searches across multiple Indexers, so you can scale out.
 
 These components can be combined, or distributed for full flexibility. Recent development work has been around SDKs and APIs to provide more methods for inserting data, and for running queries. Using the API allows you to integrate Splunk into your other applications, without using the regular Splunk web interface. The Splunk team are quite happy about that - they see their value in the indexing and searching, not in the presentation.
 
-
 ## What makes it so good?
-
 
 > Splunk...4-5 years ago...it just pulls a lot of logs in, tells you what happened in a specific time span. Today it's really a platform, that you build apps on top of.
 
@@ -49,31 +44,22 @@ The other things that make Splunk so good are its flexibility and speed. By brea
 
 Speed comes from the underlying technology, and the ability to scale out. It's certainly not always super-fast: But it's a vast amount better at querying unstructured data than traditional databases. You do need to commit a reasonable amount of resources to make it fast, but at least it's relatively simple to do so.
 
-
 ## Common Use-cases
 
-
-  * **Operational Monitoring:** automated alerting, investigating incidents across multiple logs, capacity planning. NOC-style dashboards are easy to create, to show current activity.
-
-  * **Security:** I've seen it used to help comply with the PCI-DSS "Daily Log Review" requirement. A classic dashboard might show all security "incidents", or perhaps all log patterns that do NOT match known good patterns.
-
-  * **Customer Behaviour Analysis:** You might pull together data from a variety of sources, in an attempt to understand customer buying patterns, e.g. look at how many customers are logging in each day, what items are most commonly added to baskets, and how long a user spends on your site before purchasing.
+* **Operational Monitoring:** automated alerting, investigating incidents across multiple logs, capacity planning. NOC-style dashboards are easy to create, to show current activity.
+* **Security:** I've seen it used to help comply with the PCI-DSS "Daily Log Review" requirement. A classic dashboard might show all security "incidents", or perhaps all log patterns that do NOT match known good patterns.
+* **Customer Behaviour Analysis:** You might pull together data from a variety of sources, in an attempt to understand customer buying patterns, e.g. look at how many customers are logging in each day, what items are most commonly added to baskets, and how long a user spends on your site before purchasing.
 
 Note that these are not exclusive uses - you could take in the same data, but each group could have a unique set of views, reports and saved searches against that data. Combining multiple use-cases is often the best way to use Splunk, and it can help you get funding for your project.
 
-
 ## Why Might I **NOT **Use Splunk?
-
 
 There's two main reasons for not using Splunk:
 
-
-  1. The price is well into the "reassuringly expensive" category, and if you have large daily data volumes, it can become prohibitively expensive. It's licensed on the basis of daily log volumes. NB: You can burst above your daily limit up to 5 times per month before it will stop working, so you can cope with short spikes in demand. You can also run a free instance if you're using less than 500MB/day, and don't need authentication.
-
-  2. You don't want to run your own infrastructure, but would prefer to access it as a service. Splunk does offer [Splunk Storm,](http://www.splunkstorm.com/) a cloud-based version of Splunk, but it's feature limited, and development seems a little slow.
+1. The price is well into the "reassuringly expensive" category, and if you have large daily data volumes, it can become prohibitively expensive. It's licensed on the basis of daily log volumes. NB: You can burst above your daily limit up to 5 times per month before it will stop working, so you can cope with short spikes in demand. You can also run a free instance if you're using less than 500MB/day, and don't need authentication.
+2. You don't want to run your own infrastructure, but would prefer to access it as a service. Splunk does offer [Splunk Storm,](http://www.splunkstorm.com/) a cloud-based version of Splunk, but it's feature limited, and development seems a little slow.
 
 This is not to say that you should only use Splunk. Not at all. There are many other good products on the market, and others may well fit your needs better. You might find other products have better integrations with other systems you use - e.g. if you use the HP BSM suite, then [ArcSight](http://www8.hp.com/us/en/software-solutions/software.html?compURI=1340712#.UjQpqWRgZVc) might be an excellent choice based upon its integration capabilities. Splunk's general-purpose nature might appeal to you, or you might need something that is tightly targeted towards a specific need.
-
 
 ## Wrapping Up
 

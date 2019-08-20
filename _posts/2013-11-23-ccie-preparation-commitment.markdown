@@ -18,16 +18,12 @@ This is the start of a new series on preparing for the CCIE lab. This will addre
 
 Before getting into the nuts and bolts, we need to address a few key aspects that need to be sorted out first, before you ever pick up a textbook:
 
-
-  1. Personal Commitment and Motivation
-
-  2. Family Support
+1. Personal Commitment and Motivation
+2. Family Support
 
 Once you have those in place, you can then go on to the technical aspects, such as study processes, training materials, lab equipment, etc.
 
-
-# Personal Commitment and Motivation
-
+## Personal Commitment and Motivation
 
 It’s easy to say “I want to be a CCIE!” It’s easy to order a bunch of textbooks from Amazon. It’s slightly more hassle to buy a few switches and routers. If you’ve got a solid CCNP-level of knowledge, and 5+ years experience, it’s relatively straightforward to pass the CCIE written exam.
 
@@ -35,9 +31,7 @@ But once you start to really knuckle down into the lab study, you find that’s 
 
 Why is that? I submit that it is because the decision to start was undertaken lightly, without a full evaluation of the requirements, the commitment needed, and the consequences of doing it. Before starting, sit down and take a long hard look at it. Ask yourself Why? Why do you want to do this? What are your reasons for doing it? More money? Fame and glory? There’s probably easier ways to get that. Figure out why **you** want to become a CCIE.
 
-
-# Family Support
-
+## Family Support
 
 CCIE study can become all-consuming, taking up all your waking hours. The only way you can do this is if you have full support from those around you. You have to get them on your side, making sure they understand what it means to you. You also need to make sure that they’re not forgotten.
 
@@ -45,9 +39,7 @@ I’ll write more about setting schedules later, but a schedule can really help 
 
 CCIE is not worth ruining your family relationships. It doesn’t matter if you take a bit longer to reach the end. But it does matter if it ruins your home life.
 
-
-# A Few Inconvenient Truths
-
+## A Few Inconvenient Truths
 
 Your study won’t go exactly to schedule. Life will get in the way. Shit will happen. You will get distracted by major projects at work, or personal crises. You have to accept that this will happen, find a way to deal with it, and get back on track once the crisis/distraction has passed.
 

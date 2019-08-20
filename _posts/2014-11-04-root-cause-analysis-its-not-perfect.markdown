@@ -36,11 +36,7 @@ No alarms. NMS shows no new incidents. If we drill into the switch, it might sho
 
 From the perspective of the NMS, it still thinks the path is via the old router. It knows that it can poll the switches and server, but it is still suppressing alerts for those devices, because it thinks the old router is still down. If we were watching a visual map, we would see the colour change for devices, but it won't raise any new incidents.
 
-
-
 ## How do we fix it?
-
-
 
 The key is to pay attention to all incidents in your NMS, and make sure that old incidents are properly resolved. The NMS would still have an older incident, which might have been closed manually. You need to properly investigate incidents, and wherever possible, they should be closed automatically, by the NMS detecting that the issue is now resolved.
 

@@ -16,16 +16,14 @@ tags:
 
 An update to the CCIE Routing and Switching blueprint has been strongly rumoured over the last year, but with no official confirmation. The Cisco Live Milan program schedule has been published, and it includes this session on January 28, 2014: "[CCIE Routing & Switching version 5](https://www.ciscolivemilan.com/connect/sessionDetail.ww?SESSION_ID=3480)", presented by Bruno van de Werve, the CCIE R&S Exam Product Manager. This session:
 
-
 > ...introduces the new curriculum of the CCIE Routing and Switching Program and highlights the changes to both the training and the exams (written and lab). The main objective of this session is to provide candidates with clear expectations of what to expect with the new training and exams.
-
 
 So now we know that it's coming, and soon. We don't know the exact date, and we don't know exactly what will be included, but INE seems to think they've got a [pretty good idea](http://blog.ine.com/2013/10/31/routing-and-switching-ccie-version-5-update/). Key points from their post:
 
 > 100% Virtual Environment, so no reliance on specific hardware
-> 
+>
 > ...Frame-Relay Removed....so the lesser used features like Zone-Based Firewall, WCCP, IPv6 multicast, and PfR could be removed....
-> 
+>
 > A few of the topics we should see added are IPSec, DMVPN and Embedded Packet Capture
 
 Other features they think will be removed are L2 features not supported in virtual environments, such as QinQ, ISL trunks, DHCP Snooping, Private VLANs, SPAN/RSPAN/ERSPAN.

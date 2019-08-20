@@ -16,55 +16,38 @@ tags:
 
 We found out [what an NMS does]({% post_url 2013-09-08-nms-primer-1 %}), [we selected one]({% post_url 2013-09-11-nms-primer-4 %}),[ we implemented it]({% post_url 2013-09-12-nms-primer-5 %}), and we've been [keeping the lights on]({% post_url 2013-09-13-nms-primer-6 %}). Our system is patched, up to date, and monitoring all our systems. We're tweaking it as we go to deal with faults. This final post in our NMS Primer series looks at how we can get extra value from our NMS.
 
-
 ## Operational Discipline
-
 
 The most critical element here is Operational Discipline. Every time you have a fault, ask yourself the question:
 
-
 > How could we have detected this sooner? Could we have known about this before there was a problem, or could have we have identified the source of the issue faster?
-
 
 {% include note.html content="Here’s an example: You have applications reporting timeouts, and users are unhappy. After some investigation, you realise that disk write latency is very high on your ESXi systems. With further digging, you find that you have a small number of errors on some of your FibreChannel switchports. Since FibreChannel can only cope with extremely low numbers of errors, it doesn’t take many to start causing problems." %}
 
-
 So what do you do? You make sure that:
 
-
-  1. You’re polling for disk latency, with appropriate alert thresholds, and
-
-  2. You change the thresholds for your FibreChannel error polling, to alert at extremely low levels, well below the level you would alert at for regular Ethernet.
-
+1. You’re polling for disk latency, with appropriate alert thresholds, and
+2. You change the thresholds for your FibreChannel error polling, to alert at extremely low levels, well below the level you would alert at for regular Ethernet.
 
 {% include note.html content="Yes, it’s somewhat reactive, and yes, you might ask “Why weren’t you doing that upfront?” But it’s really hard to know **EVERYTHING** that needs monitoring up front. The only realistic thing to do is to keep tweaking your systems, to ensure that you don’t get caught by the same thing twice." %}
 
-
 ## Searching Below the Noise Floor
-
 
 Once you've dealt with your high-priority alerts, you need to start searching below the noise floor. Start trawling through your logs and traps. Take a look at those low-priority logs, the ones that you regularly ignore. Take the time to properly evaluate them, and decide if they need action, or suppression. Given time, and analysis, you should start to see trends in your data. Are you seeing abnormal levels of alerts from specific systems? Or high numbers of a specific alert across multiple systems. Investigate trends like this, and you may be able fix problems before they become larger ones. Or you might just be able to filter a lot of noise from your systems, and improve performance of the NMS itself.
 
-
 ## Automation
 
-
 > Never send a human to do a machine's job
-
 
 [![Agent Smith](/assets/2013/09/agent-smith.jpg)](/assets/2013/09/agent-smith.jpg)
 
 The next stage is automated actions. Given specific alerts, is there a standard course of action you can take? e.g. on seeing a disk space alert, do you regularly compress old log files, and empty temp directories? Consider triggering an automatic action. You might be able to fix the problem, without manual intervention. A little time spent now, a lot of time saved in future, every single time that action triggers.
 
-
 ## Compliance
-
 
 If your NMS includes Configuration Management capabilities, you can get a tremendous amount of value from Compliance checking, automated deployments, and pushing changes across multiple systems. This is particularly valuable in organisations that have regular audits. Rather than show your auditors configuration from every device, just show them the automated system for enforcing compliance. They'll love you, and they'll leave you alone. Win-win.
 
-
 ## Request Fulfilment
-
 
 Deeper integration is also an option. Can you string together actions, to automate request fulfilment? e.g. Get your Service Desk to trigger some form of network provisioning through your NMS, when a change has been requested and approved. This can be challenging, but done well, it can pay off in a big way. Remove the drudgery from your life, and completely change the your users' experience, by delivering services straight away.
 

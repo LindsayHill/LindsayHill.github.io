@@ -13,36 +13,22 @@ tags:
 
 Today marks one year since I passed CCIE Routing and Switching, and was branded number 36708. This is supposed to be a huge achievement, bringing fame and fortune, right? You're supposed to immediately change jobs, with an accompanying large pay rise, right? No more drudgery for me, I'm a rock star now! Isn't that how it's supposed to work? Let's look at what's changed in the last 12 months for me:
 
-
-  * I'm still working for the same company.
-
-  * I'm still earning exactly the same salary.
-
-  * The work I do has changed a little, although the bulk of it is the same.
-
-  * I'm still married to the same beautiful woman.
-
-  * I'm still living in the same crappy house.
-
-  * I've got a lot more time for other interests, such as blogging, and non-CCIE study and reading.
-
+* I'm still working for the same company.
+* I'm still earning exactly the same salary.
+* The work I do has changed a little, although the bulk of it is the same.
+* I'm still married to the same beautiful woman.
+* I'm still living in the same crappy house.
+* I've got a lot more time for other interests, such as blogging, and non-CCIE study and reading.
 
 Looking at that list, you might ask:
 
-
 > Was it really worth it? You invested an enormous amount of time and money in it, with no support from your employer. Shouldn't you be seeing some more payback?
-
-
 
 First, a few data points:
 
-
-  * I wasn't exactly on junior rates beforehand. Sure, I'd like more money, but I'm not starving. If I had done this in 2005, when I really should have done it, I would have expected a large pay rise.
-
-  * I don't do full-time networking - I primarily work in network and infrastructure management.
-
-  * One of the main goals for me for CCIE was in proving to myself that I could do it. Not to make more money or change jobs.
-
+* I wasn't exactly on junior rates beforehand. Sure, I'd like more money, but I'm not starving. If I had done this in 2005, when I really should have done it, I would have expected a large pay rise.
+* I don't do full-time networking - I primarily work in network and infrastructure management.
+* One of the main goals for me for CCIE was in proving to myself that I could do it. Not to make more money or change jobs.
 
 The work I do has changed a little - I am doing some network-related work that I could not have been selected for without having a CCIE behind me. Perception matters. It helps establish credibility when I'm working with new clients, and hey - all that stuff I learnt actually comes in handy quite often. Even Frame Relay. It's still out there.
 

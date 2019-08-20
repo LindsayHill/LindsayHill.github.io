@@ -14,18 +14,11 @@ This is a basic overview of the [ScienceLogic EM7](http://www.sciencelogic.com/)
 
 The ScienceLogic system can be broken down into five functions:
 
-
-  1. **Database:** Stores all configuration and performance data. The heart of the system.
-
-  2. **User Interface:** Web interface, where users interact with ScienceLogic.
-
-  3. **Data Collection:** Scheduled polling of monitoring systems, using SNMP, WMI, XML API, etc.
-
-  4. **Message Collection:** Receive inbound SNMP traps and syslog messages.
-
-  5. **API:** External systems can interact with ScienceLogic API, either to retrieve data, or to submit events and change configuration - e.g. Add new devices, change monitoring policies, etc.
-
-
+1. **Database:** Stores all configuration and performance data. The heart of the system.
+2. **User Interface:** Web interface, where users interact with ScienceLogic.
+3. **Data Collection:** Scheduled polling of monitoring systems, using SNMP, WMI, XML API, etc.
+4. **Message Collection:** Receive inbound SNMP traps and syslog messages.
+5. **API:** External systems can interact with ScienceLogic API, either to retrieve data, or to submit events and change configuration - e.g. Add new devices, change monitoring policies, etc.
 
 Where this gets interesting is that these functions can be deployed on one centralised servers, or spread out across multiple physical and virtual servers. You can run everything on one system, like this:
 

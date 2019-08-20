@@ -10,7 +10,7 @@ tags:
 - Worklife
 ---
 
-Right now, it's an employee's market in the Bay Area. Technology firms are growing, and they're always trying to hire more people. So I regularly receive emails from recruiters. This is not to brag, it's just the way things are right now, based upon the economy, my background, my current location, and my age. I'm lucky. 
+Right now, it's an employee's market in the Bay Area. Technology firms are growing, and they're always trying to hire more people. So I regularly receive emails from recruiters. This is not to brag, it's just the way things are right now, based upon the economy, my background, my current location, and my age. I'm lucky.
 
 Some of these approaches are outstanding. Well-crafted, tailored to the person and the role. Some are pathetically bad, and I don't know why they try.
 
@@ -21,9 +21,9 @@ A good approach goes like this:
 > Hi Lindsay!
 >
 > I'm a recruiter at $CoolCompany. We're looking for great people to work on our teams doing $InterestingThingOne and $InterestingThingsTwo! We're hoping to do This, That and the Other Thing! Check out our projects on Github &lt;here&gt; and &lt;here&gt;.
-> 
+>
 > We think this would be a good match because of your background working on $RecentProject in $PreviousIndustries.
-> 
+>
 > We were thinking about someone to do these sorts of things: X, Y, Z. But mainly it's about finding the right people, and we're fine with re-working the role a bit to suit.
 >
 > Let us know what you think
@@ -33,7 +33,7 @@ A good approach goes like this:
 
 ## The Wrong Approach
 
-> Hi <Insert Name Here>
+> Hi `<Insert Name Here>`
 >
 > We have a job opening for a Senior Product Manager in your area, which you may find of interest. If you are interested, please get in touch with us.
 >

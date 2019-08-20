@@ -15,11 +15,7 @@ Recently I've been thinking about [Cisco Prime Infrastructure](http://www.cisco.
 
 Cisco Prime Infrastructure is an NMS/NCCM product from Cisco, aimed at Enterprises running all-Cisco network equipment. It provides fault and performance monitoring, configuration management, network visibility, and provisioning, across Cisco wired and wireless products. [According to Cisco](http://www.cisco.com/en/US/products/ps12239/index.html):
 
-
-
 > Cisco Prime Infrastructure empowers IT departments to more effectively manage their networks and the services they deliver. This scalable, integrated solution tightly couples end-user awareness and application performance visibility with comprehensive lifecycle management of wired and wireless access, campus and branch networks.
-
-
 
 Fairly sickening marketing-speak, but you get the idea. Cisco Prime Infrastructure is the direct descendant of Cisco Prime LMS, previously known as CiscoWorks LMS. CiscoWorks has a bad reputation amongst grizzled network engineers, but you can't deny the number of customers: 30,000 (in 2011, the most recent I could find). No doubt many of those customers got the product for free with a large hardware deal, and will never install it. But we'll gloss over that for now. It also gets reasonable [reviews](http://showbrain.blogspot.co.nz/2012/06/not-your-fathers-ciscoworks.html) [these days.](http://networkingnerd.net/2012/04/13/cisco-borderless-network-field-day-3/) Because we all love Gartner around here, this is what they had to say in their [2011 NCCM MarketScope](http://blogs.gartner.com/jonah-kowall/2011/11/01/network-configuration-and-change-management-nccm-marketscope-published/):
 
@@ -31,8 +27,6 @@ If your network is small, and you've only got a few non-Cisco devices, then no b
 
 Let's think about something for a minute: What do you think would happen if Cisco Prime Infrastructure supported non-Cisco equipment? Assuming the product does what it says on the tin, we could reasonably expect to see more Cisco Prime sales, particularly in networks that are 50-85% Cisco. People who had shunned it previously could now consider it. What about hardware sales? This is a more debatable question. Would we see reduced sales of Cisco gear, as previously 100% Cisco shops introduced other vendors. Or would we see a halo effect, where people use Cisco Prime, realise how much better it is with all Cisco gear, and go out and buy more 3850s?
 
-
 > Well I guess that depends on whether Cisco is a hardware or software company, right? They keep telling us they want to be a software company. Do any of us believe that?
-
 
 Note that I am not saying that Cisco should actively support non-Cisco devices - I just think they should have an infrastructure that allows customers to integrate other vendors. Provide a mechanism for customers to share those integrations too, and build up a community around the product. Who knows - maybe a few more companies will decide to get over their deap-seated loathing of Cisco Works, and give it another go? And if that works out well, maybe they'll feel a bit better about buying more Cisco kit.

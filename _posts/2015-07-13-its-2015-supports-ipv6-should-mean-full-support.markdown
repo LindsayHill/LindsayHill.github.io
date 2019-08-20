@@ -14,9 +14,7 @@ It's 2015. ARIN is [finally out of IPv4 addresses](https://www.arin.net/resource
 
 I purchased the [Archer D5](http://www.tp-link.com.au/products/details/cat-15_Archer-D5.html) "AC1200 Wireless Dual Band Gigabit ADSL2+ Modem Router." The website blurb includes this:
 
-
 > IPv6 Supported. The next generation of Internet protocol, helping you to future-proof your network.
-
 
 And the [specifications page](http://www.tp-link.com.au/products/details/cat-15_Archer-D5.html#specifications) says: "IPv6 and IPv4 dual stack."
 
@@ -30,12 +28,8 @@ I have confirmed this with TP-Link support. They suggested that a future firmwar
 
 This is disappointing. I will return the TP-Link device this week. I'll tell them why at [PBTech](http://www.pbtech.co.nz/), but it probably won't get back to the vendor. Anyone got any suggestions for a suitable replacement? I'm looking for these features:
 
-
-  * ADSL2+ modem.
-
-  * Dual-radio wireless, preferably with 802.11ac, but 802.11n may be acceptable.
-
-  * Full IPv6 support for DHCPv6 PD via PPPoA
-
+* ADSL2+ modem.
+* Dual-radio wireless, preferably with 802.11ac, but 802.11n may be acceptable.
+* Full IPv6 support for DHCPv6 PD via PPPoA
 
 Shouldn't be too hard? Maybe I should just stick with the SRX-110, and upgrade the Airport Express to a newer dual-radio version?

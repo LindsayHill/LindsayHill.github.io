@@ -17,23 +17,14 @@ HP Software recently released [6 free network utilities and tools](http://www8.h
 
 The six tools are:
 
-
-  * **Ping Your Network** - pings in each host in a given subnet
-
-  * **Network Port Scanner** - scan an IP, tell you open/closed ports
-
-  * **VM Reporter** - connect to vCenter, show hosts, VMs and relationships
-
-  * **Network Device Configuration Inspector** - pull Cisco device configuration. Can compare two devices
-
-  * **User Registrations Viewer for Microsoft Lync** - show currently connected Lync users, client versions, etc.
-
-  * **Network Flow Analytics** - simple NetFlow data analysis and reporting
-
-
+* **Ping Your Network** - pings in each host in a given subnet
+* **Network Port Scanner** - scan an IP, tell you open/closed ports
+* **VM Reporter** - connect to vCenter, show hosts, VMs and relationships
+* **Network Device Configuration Inspector** - pull Cisco device configuration. Can compare two devices
+* **User Registrations Viewer for Microsoft Lync** - show currently connected Lync users, client versions, etc.
+* **Network Flow Analytics** - simple NetFlow data analysis and reporting
 
 ## Product Test Drive
-
 
 I had a few moments to try the first four of these recently. Overall I was not impressed, and I don't understand what HP is doing with these. None of them have any obvious tie-in to HP's commercial products, no similarities with interfaces, and all of them are feature-limited, some so much so as to be unusable.
 
@@ -62,14 +53,10 @@ HP VM Reporter
 
 None of these tools use any GUIs consistent with the commercial products, nor do they offer any obvious tie-in/upgrade path. The other issue is that the sort of person who downloads a free product probably can't afford the enormous prices HP charges for some of its Network Management products. What is the strategy here?
 
-
 ## Contrast with Virtualization Performance Viewer
-
 
 Compare this approach with HP's "[Virtualization Performance Viewer](http://www8.hp.com/us/en/software-solutions/software.html?compURI=1270035) (vPV)" - this is a tool for performance management and diagnostics for VMware and Hyper-V. Gives you a quick overview of your VMs, and identifies any that may have performance problems. The free version is limited to 200 VMs, only retains data for 1 day, and doesn't support authorization or reporting. But it's the same tool, and you can quickly see what it does, try it out, and if you like it, there's a clear path to the full version. This is the sort of strategy I can understand.
 
-
 ## Conclusion
-
 
 It seems like someone in the marketing department decided HP should offer free tools, to entice people into their mega-expensive products. Maybe that's a good strategy, maybe it's not. Some groups within HP understood the strategy, and released something that made sense (vPV). The NMC group decided they didn't want to miss out on the fun, so they rushed something out - but they just didn't think it through properly.

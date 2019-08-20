@@ -26,15 +26,11 @@ The other reason I finally got around to moving to CloudFlare was that Tim Hoffm
 
 Here's the steps I went through to add my blog to CloudFlare:
 
-  1. Create an account at CloudFlare, and add lkhill.com - it then scanned my domain, and chose some sensible defaults - e.g. noting that I have ftp.lkhill.com, and configuring that to bypass CloudFlare.
-
-  2. Updated the NS records for lkhill.com to point to the DNS servers provided by CloudFlare
-
-  3. [Add PageRule](https://support.cloudflare.com/hc/en-us/articles/201717894-Using-CloudFlare-and-WordPress-Five-Easy-First-Steps) to exclude `/wp/wp-admin/*` from Caching.
-
-  4. Install [CloudFlare Wordpress plugin](http://wordpress.org/plugins/cloudflare/)
-
-  5. Change CloudFlare settings to enable IPv6 (CloudFlare Settings -> Automatic IPv6 -> Full)
+1. Create an account at CloudFlare, and add lkhill.com - it then scanned my domain, and chose some sensible defaults - e.g. noting that I have ftp.lkhill.com, and configuring that to bypass CloudFlare.
+2. Updated the NS records for lkhill.com to point to the DNS servers provided by CloudFlare
+3. [Add PageRule](https://support.cloudflare.com/hc/en-us/articles/201717894-Using-CloudFlare-and-WordPress-Five-Easy-First-Steps) to exclude `/wp/wp-admin/*` from Caching.
+4. Install [CloudFlare Wordpress plugin](http://wordpress.org/plugins/cloudflare/)
+5. Change CloudFlare settings to enable IPv6 (CloudFlare Settings -> Automatic IPv6 -> Full)
 
 Pretty painless really.
 

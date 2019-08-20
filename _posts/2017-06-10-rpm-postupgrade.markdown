@@ -15,7 +15,7 @@ Something different today: Here's something I learnt about RPM package managemen
 
 ## RPM Package Management
 
-[RPM](https://en.wikipedia.org/wiki/RPM_Package_Manager) is a Linux package management system. It is a way of distributing and managing applications installed on Linux systems. Packages get distributed as .rpm files. These contain the application binaries, configuration files, and application metadata such as dependencies. They can also contain scripts to run pre- and post- installations, upgrades and removal. 
+[RPM](https://en.wikipedia.org/wiki/RPM_Package_Manager) is a Linux package management system. It is a way of distributing and managing applications installed on Linux systems. Packages get distributed as .rpm files. These contain the application binaries, configuration files, and application metadata such as dependencies. They can also contain scripts to run pre- and post- installations, upgrades and removal.
 
 Using package management systems is a vast improvement over distributing source code, or requiring users to manually copy files around and run scripts themselves.
 
@@ -25,7 +25,7 @@ We use RPMs to distribute [StackStorm](https://stackstorm.com) packages for RHEL
 
 ## Customer Reports: Too Many Logs
 
-We started getting reports from some users that they had too many StackStorm logs under `/var/log/st2`. This was surprising to us, since we include an [st2 logrotate configuration](https://github.com/StackStorm/st2/blob/master/conf/logrotate.conf) file in our standard packaging. This should exist at `/etc/logrotate.d/st2`. It contains rules for automatic compression and deletion of st2 logs. 
+We started getting reports from some users that they had too many StackStorm logs under `/var/log/st2`. This was surprising to us, since we include an [st2 logrotate configuration](https://github.com/StackStorm/st2/blob/master/conf/logrotate.conf) file in our standard packaging. This should exist at `/etc/logrotate.d/st2`. It contains rules for automatic compression and deletion of st2 logs.
 
 Yet some users said they didn't have this file. What was going on? We couldn't reproduce it. All our test systems had this file present.
 
@@ -79,7 +79,7 @@ Now this step will only be executed on uninstall, not on upgrade.
 
 ## One Upgrade's Not Enough
 
-The StackStorm packages have been updated, but unfortunately a single upgrade doesn't fully solve the problem. If existing users upgrade, it will run the current `%postun` scripts - so it will still delete the logrotate configuration file. 
+The StackStorm packages have been updated, but unfortunately a single upgrade doesn't fully solve the problem. If existing users upgrade, it will run the current `%postun` scripts - so it will still delete the logrotate configuration file.
 
 Users have to carry out a second upgrade cycle. This time the config file won't get deleted, and all future upgrades will also be OK.
 

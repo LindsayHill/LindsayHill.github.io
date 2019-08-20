@@ -13,11 +13,7 @@ tags:
 
 I'm reviewing the presenters for [Network Field Day 9](http://techfieldday.com/events/nfd9), in particular looking at those I'm not familiar with. [NetBeez](http://netbeez.net/) is one of those making their first Tech Field Day appearance.
 
-
-
 ## NetBeez
-
-
 
 We all know that our users and the applications they access are incredibly distributed. We don't control all the network elements, but the network team still gets the blame if things go wrong. You need greater visibility to prove it's not the network, but getting that visibility is tough. Current options for probes aren't always cost-effective to deploy across many sites. Many sites don't have any local server infrastructure.
 
@@ -31,59 +27,30 @@ While you could build your own agents to do all this testing, that's a hassle t
 
 I'm also pleased to see that they are **not** based in Silicon Valley.
 
-
-
 > ...we are located in Pittsburgh, and Pittsburgh rocks, simple as that.
-
-
 
 [NetBeez Careers](http://netbeez.net/careers/)
 
 Not that I've got anything against Silicon Valley - I think I might like to work there. It's just that it's great to hear about interesting firms based in other parts of the world.
 
-
-
 ## Troubleshooting Challenge
-
-
 
 NetBeez is running a [Troubleshooting Challenge](http://netbeez.net/the-great-troubleshooting-challenge/?utm_source=NetBeez&utm_medium=LearnMoreTab&utm_content=HaveWhatItTakes?&utm_campaign=Troubleshooting%20Challenge), starting January 20th at 12:00 EST.
 
-
-
 > _Participants will receive access to our Dashboard and instructions once the contest begins.  Once logged in, users must troubleshoot a network or application problem that is affecting the end user._
-
 
 This sounds like a great way to raise company awareness. Nothing shows off a product better than getting your hands onto it and solving a 'real' problem.
 
 Maybe I shouldn't be telling my readers about it though, to try to improve my chances??
 
-
-
 ## What I'm Looking For
-
-
 
 These are some of the topics I'm interested in:
 
-
-
-
-    
-  * Deployment models for the server-side - cloud-based vs on-premises.
-
-    
-  * Other agents - e.g. virtual agents, or installable packages
-
-    
-  * Pricing models - how does the pricing scale?
-
-    
-  * Data extraction + integration with other monitoring systems, etc.
-
-    
-  * Options for running other application tests
-
-
+* Deployment models for the server-side - cloud-based vs on-premises.
+* Other agents - e.g. virtual agents, or installable packages
+* Pricing models - how does the pricing scale?
+* Data extraction + integration with other monitoring systems, etc.
+* Options for running other application tests
 
 I'm looking forward to seeing what they have to say.

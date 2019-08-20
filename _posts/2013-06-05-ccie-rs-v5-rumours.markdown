@@ -24,20 +24,15 @@ I've been following a few forums, and watching a bit of the chatter. I've got so
 
 {% include note.html content="STP, OSPF, BGP, IPv6, Multicast will all be on the v5 blueprint. Same with at least 80% of what you're studying now. Core protocols don't change." %}
 
-
 That's right folks, remember you read that here first. Now, on to the speculation:
 
-
 ## Timing
-
 
 Hottest prediction: Announcement at [Cisco Live US](http://www.ciscolive.com/us/?zid=cl-global-hinav) on June 23-27 this year. If I was announcing it, I would probably do it at [TECCCIE-8000](https://www.ciscolive2013.com/connect/sessionDetail.ww?SESSION_ID=10733).
 
 Cisco gives 6 months notice between announcing a new version, and it going live. It would probably get rounded up to a launch date of January 1 2014.
 
-
 ## Hardware
-
 
 With version 4, Cisco introduced a virtualised environment, running IOU (IOS on Unix) for the troubleshooting section (TS). Using a virtualised environment gave Cisco tremendous flexibility to rapidly release updates, and just the sight of 30+ devices was enough to scare off those who'd only ever configured a small lab network.
 
@@ -49,9 +44,7 @@ If Cisco does keep real switches in the lab, I'd love to see the [3850](http://w
 
 You might also be asking: If Cisco virtualises everything, what does it mean for my home lab, or my rack rentals? If they've got a virtual platform, will they sell it to me? Either on a time-based access basis, or give me the software to run at home? Or will it leak? Yes, your lab of 1841s and 3560s will drop in value - but it's still not worthless. There will only be some parts of the blueprint that you can't study on older gear.
 
-
 ## IOS Versions
-
 
 Currently Cisco uses 12.4(15)T on the routers, and 12.2(46)SE on the switches. These are very old - 12.4(15)T went End of Software Maintenance in [January 2012](http://www.cisco.com/en/US/prod/collateral/iosswrel/ps8802/ps6969/ps1835/prod_bulletin0900aecd801eda8a_ps6350_Products_Bulletin.html).
 
@@ -59,23 +52,15 @@ Using newer hardware (virtualised or not), I would expect to see 15.2 on routers
 
 There will be a lot of problems for those using GNS3. Licensing and emulation will become very difficult. GNS3 users know this day has been coming for a while.
 
-
 ## Technology Changes
-
 
 Rumours I've heard include:
 
-
-  * Frame Relay replaced with NHRP/DMVPN, but with no crypto.
-
-  * Simple point-to-point IPSec VPN.
-
-  * More PfR.
-
-  * IPv6 everywhere, including IPv6 Security.
-
-  * No more RIPv2.
-
+* Frame Relay replaced with NHRP/DMVPN, but with no crypto.
+* Simple point-to-point IPSec VPN.
+* More PfR.
+* IPv6 everywhere, including IPv6 Security.
+* No more RIPv2.
 
 I see the last two as most plausible. IPv6 should be completely integrated, not a separate section. The upcoming CCNA changes are dropping RIPv2, so it will probably be dropped here too. Cisco might say that having EIGRP is enough to cover distance vector protocols.
 
@@ -85,32 +70,24 @@ Simple DMVPN and basic IPSec would make useful additions, given that CCIEs are h
 
 PfR is tough to love with 12.4(15)T, but it is apparently much more reliable, with many more features in IOS 15. Expect to see more of it.
 
-
 ## Question Styles/Exam Layout
-
 
 I think the Troubleshooting section will stay. Candidates without strong Operational experience get very nervous about this section. I've seen many good engineers crack up under time pressure. It's like everything falls out of their head when they see a ticking clock. I think it helps to separate CCIEs from CCNPs.
 
 If the Configuration Section does get virtualised, with many more devices, I think we'll see less basic setup, and more configuration of advanced features. So less configuring IP addresses, and more configuring/tweaking routing protocols and QoS, Multicast, PfR, etc. Some vendor labs in particular put a lot of time into configuring interfaces, but really, do you need a CCIE to type in 255.255.255.0 again and again? This sort of thing can make the exam harder though - if you build it yourself from the ground up, you have a better understanding than if you come in and work with a half-built network.
 
-
 ## What I'd Like to See
-
 
 I would like to see some 'real' servers and clients added to the mix. DHCP clients, SNMP servers, syslog servers. traffic generating systems, etc. Some things are hard to simulate using routers and switches. With a virtualised lab, it would be possible to add small Linux VMs to use to simulate real-world traffic.
 
 I would also like to see more EEM and TCL tasks. I think it's not enough for network engineers to just be fast at the CLI - I think you should also be able to do some basic scripting.
 
-
 ## What Should Candidates Do?
-
 
 Firstly, don't panic. Even if there is a new blueprint announced next week, you'll still have 6 months to sit the lab. Seats will get tough to book. If you're well into your studies, book the lab as soon as you can, and hopefully you'll pass. If you're early on in your studies, make a note of the huge overlap that will exist, and just study those things for a while, until the vendors ([INE](http://www.ine.com), [IPExpert](http://www.ipexpert.com), etc) release updated materials. Note that the vendors are already thinking about likely changes coming up - they won't be taken by surprise.
 
 {% include warning.html content="Don't Panic. Routing & Switching will still be Routing & Switching." %}
 
-
 ## But isn't this just all Speculation?
-
 
 Yup. And you should take it all with a very large grain of salt. I'll be closely watching upcoming announcements at Cisco Live - let's see how far off the mark I am!

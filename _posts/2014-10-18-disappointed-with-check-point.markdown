@@ -20,11 +20,7 @@ That’s what I’ve done with Check Point recently. Through much of the 2000s, 
 
 Stepping away from Check Point for a few years has given me a different perspective, and I’m disappointed by what I’ve seen. I was expecting to see more progress, but it doesn’t seem to have happened.
 
-
-
 ## Functionality Challenges
-
-
 
 The biggest issue I have right now is that the management interfaces seem to actively resist automation. There are some methods for scripting bulk changes, but it is still too limited, and unsuitable for use by regular admins. Too many change requests are still of the form “Go to about rule 500. Add a new rule with this source and destination. Install policy.”
 
@@ -34,47 +30,21 @@ The default SmartView Tracker (aka Log Viewer) is far better than the options av
 
 OPSEC is still poorly documented, and still a major pain to try to integrate with other non-Check Point products.
 
-
-
 ## Same Old Bugs
-
-
 
 There are still too many core product bugs that haven’t been properly resolved. Yes, there are many extra features that have been added, but I expect that core functionality should be nailed by now. Problems I’ve seen include:
 
-
-
-
-    
-  * Management clients crash once or twice per week. Still.
-
-    
-  * ClusterXL is still flaky, with clusters going into split brain. This is not a new feature - it has been around for well over 10 years.
-
-    
-  * Firewalls stop logging remotely, and need a cprestart to fix. I have logged several cases about this over the years, but Check Point seems unable/unwilling to fix it.
-
-    
-  * CPD & FWD memory leaks. Still. It seems that every single patch includes fixes for memory leaks in CPD. But it still leaks.
-
-    
-  * File corruption on gateways. How does that happen?
-
-    
-  * NIC drivers - still far too many driver issues causing poor throughput/high CPU.
-
-    
-  * IPS - this is still untrustworthy. Updating signatures is still very scary, with good reason - there’s still a high risk of blocking legitimate traffic.
-
-
+* Management clients crash once or twice per week. Still.
+* ClusterXL is still flaky, with clusters going into split brain. This is not a new feature - it has been around for well over 10 years.
+* Firewalls stop logging remotely, and need a cprestart to fix. I have logged several cases about this over the years, but Check Point seems unable/unwilling to fix it.
+* CPD & FWD memory leaks. Still. It seems that every single patch includes fixes for memory leaks in CPD. But it still leaks.
+* File corruption on gateways. How does that happen?
+* NIC drivers - still far too many driver issues causing poor throughput/high CPU.
+* IPS - this is still untrustworthy. Updating signatures is still very scary, with good reason - there’s still a high risk of blocking legitimate traffic.
 
 All these are core features, and should be well under control. It is disappointing to see the same bugs you first saw more than 10 years ago.
 
-
-
 ## It’s Not All Bad
-
-
 
 Some things have improved - e.g. Check Point manuals are now available in HTML as well as PDF format for new releases. KB articles are restricted, but they always were.
 
@@ -84,10 +54,6 @@ Identity Awareness (allowing rules to be defined using Users, not IP Addresses) 
 
 I hear that R80 (the next major release) will include major overhauls of the underlying management systems. This should help with automation and stability. But the first few releases will be full of pain.
 
-
-
 ## Will it get better?
-
-
 
 Yes, Check Point will get better in future. But will it develop at the pace I want to see, and will they resolve core issues? Or will they just add more pointless “blades” to try to extract more licensing revenue? I’m not confident.

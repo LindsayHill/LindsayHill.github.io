@@ -15,7 +15,7 @@ I am the Product Manager for [StackStorm](https://stackstorm.com). This gives me
 
 ## SREcon Americas
 
-This year [SREcon Americas](https://www.usenix.org/conference/srecon17americas) was held in San Francisco, a nice walk along the Embarcadero from where I live. This is bliss compared to my regular daily tour of the Californian outdoor antique railway museum, aka [Caltrain](http://www.caltrain.com). 
+This year [SREcon Americas](https://www.usenix.org/conference/srecon17americas) was held in San Francisco, a nice walk along the Embarcadero from where I live. This is bliss compared to my regular daily tour of the Californian outdoor antique railway museum, aka [Caltrain](http://www.caltrain.com).
 
 According to the organizers, SREcon is:
 
@@ -32,15 +32,15 @@ The problems that people were solving were very, very interesting too. I've done
 
 If my [circumstances](https://en.wikipedia.org/wiki/L-1_visa) were a little different, it might be an area for me to explore more.
 
-Related to that, I was **very** surprised at just how many of the booths were companies actively hiring people. Normally at these events the booths are companies like mine, with relevant products to pitch. But there were very few product pitch booths. Instead it was companies like LinkedIn, Google, Twitter, Capital One, all talking about the cool things they are doing, and actively pitching their **company** to prospective employees. 
+Related to that, I was **very** surprised at just how many of the booths were companies actively hiring people. Normally at these events the booths are companies like mine, with relevant products to pitch. But there were very few product pitch booths. Instead it was companies like LinkedIn, Google, Twitter, Capital One, all talking about the cool things they are doing, and actively pitching their **company** to prospective employees.
 
 Very different to what I was expecting. **Take note, potential SREs**: get yourself along to an [SREcon](https://www.usenix.org/conferences) and talk to the companies there. Find out if it sounds like what you want to do, and talk to hiring managers.
 
 Oh and it's not news to anyone here, but if you think that you're a special case and can't use public cloud: You're probably wrong. Plenty of companies at SREcon were *not* Web 2.0 companies. They have complex technical, regulatory and legal challenges, but they are aggressively moving to public cloud.
 
-## Devopsdays 
+## Devopsdays
 
-Devopsdays are more localized affairs, with many [events](https://www.devopsdays.org/events/) happening all around the world. 
+Devopsdays are more localized affairs, with many [events](https://www.devopsdays.org/events/) happening all around the world.
 
 > Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them. Topics often include automation, testing, security, and organizational culture.
 ([From](https://www.devopsdays.org/about/))
@@ -50,7 +50,7 @@ This event had a very different feel to SREcon, more so than I expected. Convers
 * "How do we get started on this journey? We're still dealing with many legacy processes. How do we get started?"
 * "How do we take our staff on this transition?" Not just "how do we implement _blah_ at our company?" but "What are the impacts on our staff? We want to keep our existing team together, how do we do that?" People are thinking about culture, and the impact of changing roles through move to cloud & automation.
 
-Both were a little surprising to me. The first one because when I think of Seattle, the first thing that comes to mind is [Cloud City](http://www.platformonomics.com/2016/01/a-dispatch-from-cloud-city-state-of-the-union-2016/). All the major Western public cloud teams are based there. Sorry Oracle, you don't yet count.  
+Both were a little surprising to me. The first one because when I think of Seattle, the first thing that comes to mind is [Cloud City](http://www.platformonomics.com/2016/01/a-dispatch-from-cloud-city-state-of-the-union-2016/). All the major Western public cloud teams are based there. Sorry Oracle, you don't yet count.
 
 As ever, the future is here; it's just unevenly distributed. There are many smart people in Seattle doing amazing cloudy things. There's also many people just like the rest of us, struggling to figure out what to do. It's reassuring really.
 

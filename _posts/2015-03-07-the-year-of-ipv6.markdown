@@ -38,9 +38,7 @@ If people are still telling you that IPv6 isn’t happening, point them to the d
 
 Of course, these stats don’t tell us what percentage of services are available. But since Google, Facebook and Netflix are all available via IPv6, it’s easy for an ISP to see a huge chunk of their traffic using IPv6. We should also see more websites available via v6, as people switch to services like CloudFlare.
 
-
 ## Aside: More proof that Enterprise tech is lagging
-
 
 Take a close look at the Google [IPv6 adoption traffic stats](http://www.google.com/intl/en/ipv6/statistics.html#tab=ipv6-adoption). At first glance they show a spiky nature, moving up and down around a line. But zoom in closer, and look at the stats:
 

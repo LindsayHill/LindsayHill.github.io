@@ -27,12 +27,10 @@ Once you've got that working, run `/opt/iMC/deploy/dma.sh` - that will pop up th
 
 Note: You may have noticed the `imcdmsd` service added to your system:
 
-
 ```bash
 [root@IMC ~]# chkconfig --list imcdmsd
 imcdmsd         0:off   1:off   2:off   3:on    4:off   5:on    6:off
 [root@IMC ~]#
 ```
-
 
 This service must be running before the Deployment Monitoring Agent will work. It should be started by default. If not, start it with `service imcdmsd start`. If you have set IMC to auto-start, starting this service will also start IMC.

@@ -19,17 +19,17 @@ Two years ago I wrote about how to use [InfluxDB & Grafana]({% post_url 2015-10-
 
 There's three parts to this:
 
-  * **[Grafana](https://grafana.com/):** Grafana is "The open platform for beautiful analytics and monitoring." It makes it easy to create dashboards for displaying data from many sources, particularly time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB. We're going to use this as our main front end for visualizing our network statistics.
+* **[Grafana](https://grafana.com/):** Grafana is "The open platform for beautiful analytics and monitoring." It makes it easy to create dashboards for displaying data from many sources, particularly time-series data. It works with several different data sources such as Graphite, Elasticsearch, InfluxDB, and OpenTSDB. We're going to use this as our main front end for visualizing our network statistics.
 
-  * **[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/):** InfluxDB is "...a data store for any use case involving large amounts of timestamped data." This is where we're going to store our network statistics. It is designed for exactly this use-case, where metrics are collected over time.
+* **[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/):** InfluxDB is "...a data store for any use case involving large amounts of timestamped data." This is where we're going to store our network statistics. It is designed for exactly this use-case, where metrics are collected over time.
 
-  * **[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/):** Telegraf is "...a plugin-driven server agent for collecting and reporting metrics." This can collect data from a wide variety of sources, e.g. system statistics, API calls, DB queries, and SNMP. It can then send those metrics to a variety of datastores, e.g. Graphite, OpenTSDB, Datadog, Librato. Telegraf is maintained by [InfluxData](https://www.influxdata.com), the people behind InfluxDB. So it has **very** good support for writing data to InfluxDB.
+* **[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/):** Telegraf is "...a plugin-driven server agent for collecting and reporting metrics." This can collect data from a wide variety of sources, e.g. system statistics, API calls, DB queries, and SNMP. It can then send those metrics to a variety of datastores, e.g. Graphite, OpenTSDB, Datadog, Librato. Telegraf is maintained by [InfluxData](https://www.influxdata.com), the people behind InfluxDB. So it has **very** good support for writing data to InfluxDB.
 
 You might ask why I'm using separate collection, storage and presentation layers, rather than using one system that does it all. The advantage of this model is that is much more flexible - I can easily add collectors to get data from different sources, or I can query different data stores from my visualization layer. Maybe I can even mash up multiple data sources in one graph or dashboard. If I later decide I don't like Grafana, I can switch to something else, e.g. [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/), a user interface written by InfluxData.
 
 ## Installation
 
-My base system is a minimal install of [Ubuntu 16.04 LTS](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes), with all updates applied. I use [Vagrant](https://www.vagrantup.com) I'm using stable versions of Telegraf, InfluxDB and Grafana. No need for nightly or custom builds anymore! 
+My base system is a minimal install of [Ubuntu 16.04 LTS](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes), with all updates applied. I use [Vagrant](https://www.vagrantup.com) I'm using stable versions of Telegraf, InfluxDB and Grafana. No need for nightly or custom builds anymore!
 
 To give us something to monitor, I have an Extreme VDX 6740 switch in my lab. We'll use that as a target device.
 
@@ -110,7 +110,7 @@ ubuntu@telegraf:~$ sudo systemctl start telegraf
 ubuntu@telegraf:~$
 ```
 
-This includes the right packaging bits such that Telegraf is now properly configured as a service. Much simpler than having to build Influxsnmp. 
+This includes the right packaging bits such that Telegraf is now properly configured as a service. Much simpler than having to build Influxsnmp.
 
 Now we just need to configure it to poll our switch. Before we do that, let's install some SNMP utilities, so we can test our switch SNMP configuration:
 
@@ -258,7 +258,7 @@ That will now begin collecting data and storing it in InfluxDB.
 
 After a couple of minutes, check to see if InfluxDB is storing results:
 
-```
+```shell
 ubuntu@telegraf:~$ influx
 Connected to http://localhost:8086 version 1.3.7
 InfluxDB shell version: 1.3.7
@@ -293,7 +293,6 @@ Next step: installing and configuring Grafana, our visualization tool.
 ### Grafana
 
 Follow the [standard installation instructions](http://docs.grafana.org/installation/debian/) to add the Grafana repo and signing key, then install the package:
-
 
 ```sh
 ubuntu@telegraf:/etc/telegraf$ echo "deb https://packagecloud.io/grafana/stable/debian/ jessie main" | sudo tee /etc/apt/sources.list.d/grafana.list
@@ -341,7 +340,7 @@ ubuntu@telegraf:/etc/telegraf$ sudo systemctl start grafana-server
 ubuntu@telegraf:/etc/telegraf$
 ```
 
-Grafana is now listening on port 3000. Open a web browser, go to http://{VM_IP}:3000/ and login using the default username/password combo: `admin/admin`. 
+Grafana is now listening on port 3000. Open a web browser, go to `http://{VM_IP}:3000/` and login using the default username/password combo: `admin/admin`.
 
 [![first_screen](/assets/2017/11/first_screen.png)](/assets/2017/11/first_screen.png)
 
@@ -351,16 +350,15 @@ Click on _Add data source_:
 
 Fill in these details:
 
-  * _Name:_ telegraf
+* _Name:_ telegraf
 
-  * _Default:_ selected
+* _Default:_ selected
 
-  * _Type:_ InfluxDB
+* _Type:_ InfluxDB
 
-  * _HTTP settings:_ URL http://localhost:8086, Access: proxy
+* _HTTP settings:_ URL `http://localhost:8086`, Access: proxy
 
-  * _InfluxDB Details:_ Set Database to 'telegraf'. No username/password.
-
+* _InfluxDB Details:_ Set Database to 'telegraf'. No username/password.
 
 Add that, and you should see "Data source is working":
 
@@ -398,9 +396,9 @@ On the _General_ tab, give it a title. Configure the _Metrics_ tab like this:
 Key points:
 
 * Use the ifHC* fields - for modern high-speed interfaces these are a better choice than the older ifInOctets/ifOutOctets.
-* Note the use of `derivative(1s)`. The underlying data is stored as a counter that increments with every 8 bits received. This is not particularly useful on its own. By using `derivative()`, combined with `math(*8)`, we can calculate bits per second. 
+* Note the use of `derivative(1s)`. The underlying data is stored as a counter that increments with every 8 bits received. This is not particularly useful on its own. By using `derivative()`, combined with `math(*8)`, we can calculate bits per second.
 * My switch hostname is `LEAF1` - you will need to use a different `WHERE hostname =` filter.
-* We've grouped by time and `tag(ifDescr)` - this splits the data out into separate lines per interface. 
+* We've grouped by time and `tag(ifDescr)` - this splits the data out into separate lines per interface.
 * The _ALIAS BY_ setting controls the labels given to each series. In this case it makes it show up as something like _TenGigabitEthernet 34/0/1 Input_.
 
 On the _Axes_ tab, set the _Left Y_ Unit to data rate -> bits/sec.
@@ -448,16 +446,11 @@ If the switch is rebooted, the background will change color. You can test what t
 
 Obviously there's a lot that could be improved upon here:
 
-  * Add templating to enable selection of specific interfaces, or repeating graphs per interface.
-
-  * Write Ansible + Vagrant config to package up the above.
-
-  * Even better: Do it with Docker, based upon [Brent's work](http://networkstatic.net/building-network-tools-using-docker/).
-
-  * Add more network data sources - e.g. system-level stats, or NOS data collected via API.
-
-  * Add events (e.g. BGP peer status change, application code deploy) as [annotations](http://docs.grafana.org/reference/annotations/).
-
-  * Add alerting.
+* Add templating to enable selection of specific interfaces, or repeating graphs per interface.
+* Write Ansible + Vagrant config to package up the above.
+* Even better: Do it with Docker, based upon [Brent's work](http://networkstatic.net/building-network-tools-using-docker/).
+* Add more network data sources - e.g. system-level stats, or NOS data collected via API.
+* Add events (e.g. BGP peer status change, application code deploy) as [annotations](http://docs.grafana.org/reference/annotations/).
+* Add alerting.
 
 The point is that it's a flexible framework, and it doesn't need to just be network stats. It gets much more interesting once you start adding other data sources.

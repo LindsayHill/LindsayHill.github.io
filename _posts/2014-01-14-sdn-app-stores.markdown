@@ -15,19 +15,16 @@ I've been thinking a lot about HP's SDN App Store approach. In case you missed i
 
 > The HP SDN App Store will be the industry’s first enterprise-ready marketplace for SDN applications. The HP SDN App Store gives developers a robust platform to share their SDN innovations
 
-
 I'm still thinking about their overall approach, and I haven't yet decided if it makes sense or not. Expect more blogs on this topic in future, as I dig into their strategy. But in the mean time, I've got a problem with some of their messaging. Here's a couple of examples:
 
 First from [Newsha Sharifzadeh](http://h30507.www3.hp.com/t5/HP-Networking/HP-takes-innovation-to-the-next-level-with-SDN-App-Store/ba-p/150285#.UtT0IHlBRfd):
 
-
-> Actually the idea is similar to smartphone app store that with a single click you can download an application. Just think of how much your smartphone apps have simplified your life, it sure did mine.</blockquote>
-
+> Actually the idea is similar to smartphone app store that with a single click you can download an application. Just think of how much your smartphone apps have simplified your life, it sure did mine.
 
 Secondly from [Kash Shaikh](http://h30507.www3.hp.com/t5/HP-Networking/Reigniting-Innovation-with-HP-s-SDN-Open-Ecosystem-Software/ba-p/146891#.UtT0HHlBRfd):
 
 > If you own a smartphone or tablet, then you’ve almost certainly visited your phone’s or tablet’s app store. The apps we buy entertain, inform, and make us more productive. In fact, a smartphone or tablet without apps is almost as unthinkable as a television with no channels.
-> 
+>
 > Someday, everyone – well, at least those in the IT industry – may look back at enterprise networks way and wonder: how did they ever function without an app store?
 
 I think that this is a vast over-simplification, and it is somewhat ridiculous to compare the complexities of an Enterprise network with a mobile phone. My phone provides communications and connectivity for me, and me alone. If it breaks, I'm the one that's affected. An Enterprise network provides communications and connectivity for an entire business. If it's broken, the entire business might be affected, and if it's bad enough, large amounts of money will be lost.

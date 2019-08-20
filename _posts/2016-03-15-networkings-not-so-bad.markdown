@@ -14,27 +14,19 @@ tags:
 
 Consider a conversation between a sysadmin & a network engineer:
 
-
 > Look at how I can virtualise these systems! Now I can isolate users and consolidate hardware resources. They have no idea they’re on the same hardware. It's incredible!
-
 
 Oh. Bit like these VLANs, VRFs, and VDCs we’ve been doing for 15+ years now?
 
-
 > Look at how I can use Puppet to define this server’s complete configuration using a single text file! This is amazing! I can use version control for my infrastructure!
-
 
 Oh. You mean like this single text file that defines the configuration of my network device here? Yes, yes that does seem useful.
 
-
 > Why do you networking people have so many different ways of configuring systems? Why don’t you just have one common API?
-
 
 Oh. You mean like the way that there’s a [Universal install script](https://xkcd.com/1654/) Linux systems?
 
-
 > SNMP sucks. The data format is terrible, implementations are inconsistent. Why don’t you switch to gRPC?
-
 
 Wait, weren’t you telling me last month to use JSON? No wait, it was XML before that. But obviously it’s _hopelessly_ outdated now. Should be using SOAP? No, that’s right, we’ve moved to REST. Ah no, CIM is the data model that’s going to rule us all! Wait, when does that one arrive? I lose track.
 

@@ -20,13 +20,9 @@ A reader asked how I use [OmniFocus](http://www.omnigroup.com/omnifocus/#omnifoc
 Create a new Project in OmniFocus. Go through your usual sources of information for certification study (Cisco blueprints, blogs, etc). Figure out everything that might be a "Task" for studying. The list will vary based upon the exam, but these are the sorts of things it might contain:
 
 * Books to read
-
 * Cisco Live presentations to view
-
 * Websites to look at
-
 * Practice tests
-
 * Lab exercises
 
 Create a task for each of these items, e.g. go through the suggested reading lists, and create a task for each book. Don't worry too much about the exact ordering at this point, just get the tasks into OmniFocus.

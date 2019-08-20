@@ -47,42 +47,40 @@ I wrote a simple Python script to do this analysis for me. It retrieves the late
       title: "APNIC Transfers per Month",
       height: 500,
       hAxis: {
-      	format: "MMM yyyy", 
-        gridlines: {count: "-1"}, 
+        format: "MMM yyyy",
+        gridlines: {count: "-1"},
       },
-      seriesType: "bars", 
-      series: { 
+      seriesType: "bars",
+      series: {
         0: {
-          targetAxisIndex: 0, 
+          targetAxisIndex: 0,
           type: "line"
-        }, 
+        },
         1: {
           targetAxisIndex: 1,
           type: "bars"
-        }, 
-      }, 
-      vAxes: { 
+        },
+      },
+      vAxes: {
         0: {
-          title: "Transactions", 
+          title: "Transactions",
           side: "left"
-        }, 
+        },
         1: {
-          title: "Prefixes (/24s)", 
+          title: "Prefixes (/24s)",
           side: "right"
-        }, 
+        },
       },
     };
     visualization = new google.visualization.ComboChart(document.getElementById('visualization'));
     visualization.draw(data, options);
   }
-  
 
   google.setOnLoadCallback(drawVisualization);
 </script>
 
 <div id="visualization">
 </div>
-
 
 Note this does not do live updates. It is a point in time snapshot, generated using the current data at the time the script is run. If you would like to update the code to do live updates, fork it from Github [here](https://github.com/LindsayHill/transfer-count). I'd also love to update the script to include stats from other RIRs.
 

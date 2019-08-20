@@ -31,4 +31,3 @@ Could they then become a neutral clearing-house for Internet faults? I had origi
 I was hugely impressed when I first saw them at [Network Field Day 6](http://techfieldday.com/events/nfd6), and I remain so. I think they are solving real problems affecting almost all organisations, and their price-point makes it an easy decision. I’m pleased to see they are continuing to grow and develop.
 
 {% include note.html content="Disclaimer: ThousandEyes was a sponsor of Network Field Day 8. This meant that they indirectly covered some of my costs to attend. However, I am under no obligation to write anything about any of the presenters." %}
-

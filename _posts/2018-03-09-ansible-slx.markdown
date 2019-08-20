@@ -17,9 +17,9 @@ Here's something I've been working on recently: Ansible modules for Extreme SLX 
 
 ## Background
 
-Ansible is an agent-less configuration management system. It uses "playbooks", written in YAML, to define desired configuration state. "modules" written in Python translate this into whatever is needed to configure the system, application, database or network device. 
+Ansible is an agent-less configuration management system. It uses "playbooks", written in YAML, to define desired configuration state. "modules" written in Python translate this into whatever is needed to configure the system, application, database or network device.
 
-Ansible has been making great strides in adding network automation capabilities. But we haven't had any modules for working with <s>Brocade</s> Extreme devices. That is now changing. 
+Ansible has been making great strides in adding network automation capabilities. But we haven't had any modules for working with <s>Brocade</s> Extreme devices. That is now changing.
 
 [PaulQuack](https://github.com/PaulQuack) has contributed MLXe (Ironware) [modules](http://docs.ansible.com/ansible/devel/modules/list_of_network_modules.html#ironware), which were included in Ansible 2.5. I've been working on modules for the SLX, with my colleagues. These have now been released with Ansible 2.6.
 
@@ -44,15 +44,17 @@ Our modules have been included in the latest Ansible GA release (2.6), so you ca
 Add entries to `/etc/hosts` file for your switches - e.g. `172.16.10.42 slx01`
 
 Create `~/.ansible.cfg` containing this:
+
 ```ini
 [defaults]
 host_key_checking = False
-inventory = ~/playbooks/hosts 
+inventory = ~/playbooks/hosts
 ```
 
 Create these directories: `~/playbooks`, `~/playbooks/backups`, `~/playbooks/group_vars`.
 
 Create the file `~/playbooks/hosts` containing this:
+
 ```ini
 [slx]
 slx01 ansible_network_os=slxos ansible_connection=network_cli
@@ -61,6 +63,7 @@ slx01 ansible_network_os=slxos ansible_connection=network_cli
 If you have more than one switch (e.g. `slx02`, `slx03`, add additional lines as required)
 
 Create the file `~/playbooks/group_vars/slx.yaml` containing this:
+
 ```yaml
 ---
 ansible_user: admin
@@ -80,8 +83,9 @@ This can be used to do things like run `show chassis`, and capture the output. T
 All commands below are run from the `~/playbooks` directory.
 
 ### Run `show version` and publish output:
-    
+
 Create `slx_command_ver.yaml`, containing this:
+
 ```yaml
 ---
 - hosts: slx01
@@ -97,17 +101,17 @@ Create `slx_command_ver.yaml`, containing this:
       debug:
         var: show_ver.stdout_lines[0]
 ```
-    
+
 Run it with `ansible-playbook slx_command_ver.yaml`. Here's some example output:
-    
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook slx_command_ver.yaml
-   
+
 PLAY [slx01] *************************************************************************************************************************
-   
+
 TASK [Grab version] ******************************************************************************************************************
 ok: [slx01]
-   
+
 TASK [var_result] ********************************************************************************************************************
 ok: [slx01] => {
     "failed": false,
@@ -132,27 +136,30 @@ ok: [slx01] => {
         "                17s.1.02"
     ]
 }
-   
+
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=3    changed=0    unreachable=0    failed=0
 ```
-    
+
 ### Run a command and check the output
 
 In this example, we're checking for specific NTP servers in the output. On my device there is only one NTP server configured and in use. This playbook should pass the first task, and fail the second one.
-    
+
 Here's what's configured on my device:
+
 ```shell
 SLX01# show run | inc ntp
 ntp server 172.16.10.2 use-vrf mgmt-vrf
 SLX01#
 ```
+
 Create `slx_command_ntp.yaml`:
+
 ```yaml
 ---
 - hosts: slx01
   gather_facts: no
-  
+
   tasks:
     - name: Check ntp status
       slxos_command:
@@ -166,31 +173,34 @@ Create `slx_command_ntp.yaml`:
         wait_for: result[0] contains 172.16.10.3
         retries: 1
 ```
+
 Example output:
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook slx_command_ntp.yaml
-   
+
 PLAY [slx01] *************************************************************************************************************************
-   
+
 TASK [Check ntp status] **************************************************************************************************************
 ok: [slx01]
-   
+
 TASK [Check for non-existent NTP server] *********************************************************************************************
 fatal: [slx01]: FAILED! => {"changed": false, "failed": true, "failed_conditions": ["result[0] contains 172.16.10.3"], "msg": "One or more conditional statements have not been satisfied"}
 to retry, use: --limit @/home/lhill/playbooks/slx_command_ntp.retry
-   
+
 PLAY RECAP ***************************************************************************************************************************
 slx01                      : ok=1    changed=0    unreachable=0    failed=1
-   
+
 lhill@bwc:~/playbooks$
 ```
+
 Note that this is the expected behavior - that second task **should** fail.
 
 ## Config Module:
 
 This module is used to manage configuration sections on SLXes. It is not for use with `show` commands. The syntax is very similar to [ios_config](http://docs.ansible.com/ansible/latest/ios_config_module.html). It is used to ensure config lines are present. These can be at the global level, or under specific parents (e.g. under an `interface Ethernet` stanza or an access-list). You can also run commands before or after changing lines. This is useful when updating ACLs.
 
-This module will report if any changes were made. This is very handy for auditing devices - you can keep re-running the same playbook, and identify which devices had unauthorized changes made. It can also be run in `check` mode, where it reports differences, but does not make changes. 
+This module will report if any changes were made. This is very handy for auditing devices - you can keep re-running the same playbook, and identify which devices had unauthorized changes made. It can also be run in `check` mode, where it reports differences, but does not make changes.
 
 You can choose if you want to save the configuration after making changes. There are four options for `save_when`:
 
@@ -204,6 +214,7 @@ You can choose if you want to save the configuration after making changes. There
 This example sets an NTP server if not already set, and saves the configuration if we change it.
 
 Create `slx_config_set_ntp.yaml`:
+
 ```yaml
 ---
 - hosts: slx01
@@ -217,12 +228,15 @@ Create `slx_config_set_ntp.yaml`:
 ```
 
 This was our config before running the playbook:
-```
+
+```text
 SLX01# show run | inc ntp
 ntp server 172.16.10.2 use-vrf mgmt-vrf
 SLX01#
 ```
+
 Example output (note the added `-vv` here to give us additional information about what's happening):
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook -vv slx_config_set_ntp.yaml
 ansible-playbook 2.6.0 (slxos_modules 2a7acba239) last updated 2018/02/21 02:06:16 (GMT +200)
@@ -250,8 +264,10 @@ slx01                      : ok=1    changed=1    unreachable=0    failed=0
 
 lhill@bwc:~/playbooks$
 ```
+
 Now look at the startup and running configs on the device:
-```
+
+```text
 SLX01# show run | inc ntp
 ntp server 172.16.10.2 use-vrf mgmt-vrf
 ntp server 172.16.10.3 use-vrf mgmt-vrf
@@ -260,9 +276,11 @@ ntp server 172.16.10.2 use-vrf mgmt-vrf
 ntp server 172.16.10.3 use-vrf mgmt-vrf
 SLX01#
 ```
+
 We can see our command has been added **and saved**.
 
 Now run the playbook again:
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_set_ntp.yaml
 Using /home/lhill/.ansible.cfg as config file
@@ -277,6 +295,7 @@ slx01                      : ok=1    changed=0    unreachable=0    failed=0
 
 lhill@bwc:~/playbooks$
 ```
+
 Note the output: `changed=0`. It sees that the line is already there, and does not need to be changed.
 
 ### Removing a configuration line
@@ -284,11 +303,12 @@ Note the output: `changed=0`. It sees that the line is already there, and does n
 The `slxos_config` module is not declarative. By default it will not remove additional lines. There are ways around this with more complex playbooks. That's an exercise for the reader. But you can use `no` statements. Be aware that this will **always** report changes, because it sees that command as 'not present' so runs it every time.
 
 Create `slxos_config_remove_ntp.yaml`:
+
 ```yaml
 ---
 - hosts: slx01
   gather_facts: no
-  
+
   tasks:
     - name: NTP server 172.16.10.3
       slxos_config:
@@ -296,6 +316,7 @@ Create `slxos_config_remove_ntp.yaml`:
 ```
 
 Output:
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook -v slx_config_remove_ntp.yaml
 Using /home/lhill/.ansible.cfg as config file
@@ -316,11 +337,12 @@ lhill@bwc:~/playbooks$
 This example has multiple tasks - first it grabs the running config, and saves it to a local timestamped backup file. Then it makes a configuration change, but only on one specific interface. This uses the `parents` option. Also note the use of `gather_facts: yes` to get the current date & time, which is then used in the variable `ansible_facts.date_time.iso8601`. Here we're going to enable PTP on a specific interface:
 
 `slx_config_parents.yaml`:
+
 ```yaml
 ---
 - hosts: slx01
   gather_facts: yes
-  
+
   tasks:
     - name: Get running config
       slxos_command:
@@ -338,7 +360,9 @@ This example has multiple tasks - first it grabs the running config, and saves i
         parents: interface Ethernet 0/24
         save_when: modified
 ```
+
 Example output:
+
 ```shell
 lhill@bwc:~/playbooks$ ansible-playbook slx_config_parents.yaml
 
@@ -361,7 +385,9 @@ slx01                      : ok=4    changed=2    unreachable=0    failed=0
 
 lhill@bwc:~/playbooks$
 ```
+
 We can see that we have a backup file saved locally:
+
 ```shell
 lhill@bwc:~/playbooks$ head backups/slx01-2018-02-21T06\:55\:58Z.txt
 root enable
@@ -376,8 +402,10 @@ hardware
 http server use-vrf default-vrf
 lhill@bwc:~/playbooks$
 ```
+
 And we can see that our `protocol ptp` command was added to one specific interface:
-```
+
+```text
 SLX01# show run | begin ^interface\ Ethernet\ 0/23
 interface Ethernet 0/23
  shutdown

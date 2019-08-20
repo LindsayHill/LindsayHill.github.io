@@ -16,12 +16,9 @@ TFTP is an unauthenticated, plain-text file transfer protocol. It is commonly u
 
 The main complaints I hear from engineers are “How do I get a TFTP server set up?”, and “Why is this taking so long to transfer?” Server configuration is just a Google exercise, but let’s look at file transfer speed.
 
-
 ## Speedy? Not so much
 
-
 For this test, I have a CentOS 6.x VM running on my laptop. I’m downloading a 20MB file from the VM to my laptop.
-
 
 ```bash
 lhill$ time scp centos6:/var/lib/tftpboot/testfile .
@@ -38,12 +35,9 @@ lhill$
 
 ```
 
-
 That’s a pretty significant difference. If you’re transferring a large file across a network, this will mean the difference between waiting a few seconds, and wandering off to get a cup of coffee.
 
-
 ## But why is TFTP so slow?
-
 
 I’ve taken a couple of packet captures here. This one shows a regular TFTP transfer. Click on the image to go to the Cloudshark-hosted version.
 
@@ -63,12 +57,9 @@ SCP Transfer - click for Cloudshark version
 
 Note how TCP is doing its thing, and figuring out the optimum transfer window, and does not require acknowledgement of each packet before sending the next.
 
-
 ## What About Using Larger Block Sizes?
 
-
 Some (most?) TFTP clients have an option to use larger block sizes. Most modern TFTP servers should support this. Use the `-e` option with the OS X TFTP client to set the block size to 65,536. Now look at the transfer times:
-
 
 ```bash
 lhill$ tftp -e 192.168.225.133
@@ -78,7 +69,6 @@ tftp> quit
 lhill$
 ```
 
-
 That’s a lot better. Look at the packet capture, and you can see more of what’s going on - the TFTP server sends many fragmented packets, which get re-assembled by the client.
 
 [![TFTP transfer using larger block size - click for Cloudshark version](/assets/2014/08/TFTP-Extended.png)](https://www.cloudshark.org/captures/17967fd28649)
@@ -86,9 +76,7 @@ That’s a lot better. Look at the packet capture, and you can see more of what�
 {:.image-caption}
 TFTP transfer using larger block size - click for Cloudshark version
 
-
 ## Still Not Good Enough
-
 
 So we can improve the transfer rate somewhat. But ask yourself what would have happened if we’d lost some packets in the above trace? It would be handled poorly, since the client/server can’t dynamically adjust to changing conditions.
 
@@ -98,9 +86,7 @@ What about text files though? If we’re only transferring a text configuration 
 
 And the TFTP server itself has no security. How do you know that the config was uploaded from your device? What’s stopping someone else retrieving all your configs? Or uploading malicious configuration?
 
-
 ## Change your methods
-
 
 What’s stopping us using better methods (SCP/SFTP, or at a pinch, FTP) ? Mainly inertia, and old habits. There are definitely systems that will only use TFTP, but there’s many that no longer require it - e.g. VoIP phones might need to get their initial configuration via TFTP, but they can probably download their firmware via HTTP these days. I’m sure you’ve got a special use-case, but make sure you’ve actually checked the docs first.
 

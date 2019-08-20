@@ -23,7 +23,7 @@ tags:
 |---------+-----------------------+--------------------|
 |**Summary** | High-end network monitoring system, for very large networks. Focuses on policies, automatic rules, capabilities above ease of use or look and feel | Mid-range network monitoring system, for a range of network sizes, ideal for monitoring and managing mixed-vendor networks. Simpler to use, with nicer look and feel, but at the expense of some capabilities.
 |---------+-----------------------+--------------------|
-|**History** | NNMi is the modern successor to HP OpenView - one of the first network management tools on the market, many years ago. Completely rewritten in 2008, with a new name (NNMi), interface, discovery and polling engine. R&D team based in the US, with development and support teams in India. It is part of the HP Software group, and has strong ties to HP's BSM Software suite. Current version of NNMi is 10.00. | IMC was originally developed by 3Com, for managing large 3Com/H3C networks in China. After the HP acquisition, it was brought into the HP fold, but has stayed with the HP Networking group (as opposed to HP Software). It now supports HP ProCurve systems, and a variety of other vendors, including Cisco. R&D, development and support are done from China. Current version is 7.1 | 
+|**History** | NNMi is the modern successor to HP OpenView - one of the first network management tools on the market, many years ago. Completely rewritten in 2008, with a new name (NNMi), interface, discovery and polling engine. R&D team based in the US, with development and support teams in India. It is part of the HP Software group, and has strong ties to HP's BSM Software suite. Current version of NNMi is 10.00. | IMC was originally developed by 3Com, for managing large 3Com/H3C networks in China. After the HP acquisition, it was brought into the HP fold, but has stayed with the HP Networking group (as opposed to HP Software). It now supports HP ProCurve systems, and a variety of other vendors, including Cisco. R&D, development and support are done from China. Current version is 7.1 |
 |---------+-----------------------+--------------------|
 
 ---
@@ -90,4 +90,3 @@ tags:
 ---
 
 {% include note.html content="Last updated: 18th November 2014" %}
-

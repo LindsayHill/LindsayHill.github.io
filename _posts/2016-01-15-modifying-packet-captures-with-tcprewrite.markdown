@@ -14,7 +14,6 @@ Recently I wanted to look at the structure of [sFlow](http://www.sflow.org) pac
 
 Unfortunately I had a bit of a brain fade, and configured sFlow to use port 2055, not port 6343. So it looked like this:
 
-
 ```sh
 vagrant@ubuntu:~$ tcpdump -r sflow.cap
 reading from file sflow.cap, link-type EN10MB (Ethernet)
@@ -28,7 +27,6 @@ reading from file sflow.cap, link-type EN10MB (Ethernet)
 vagrant@ubuntu:~$
 ```
 
-
 This is totally fine, but by default [Wireshark](http://www.wireshark.org/) won't decode this as sFlow. It appears like this:
 
 [![Wireshark_UDP_2055](/assets/2016/01/Wireshark_UDP_2055.png)](/assets/2016/01/Wireshark_UDP_2055.png)
@@ -40,7 +38,6 @@ No big deal, I can right-click, go "Decode As...", set UDP Port to 2055, choose 
 But I don't want to do that every time I open the file. More to the point, I don't want to have tell someone else to do that when opening the file. I wanted to change the packets to have a destination port of 6343, the commonly used sFlow port. Wireshark will default to decoding UDP/6343 packets as sFlow.
 
 I'd torn down my lab my this stage, and couldn't be bothered re-configuring it & collecting new traffic. What I really wanted was to edit the existing packets to change the destination port. I found [Tcpreplay](http://tcpreplay.appneta.com) did exactly what I needed. Here's how I did it:
-
 
 ```sh
 vagrant@ubuntu:~$ sudo apt-get install tcpreplay
@@ -70,6 +67,5 @@ reading from file sflow_6343.cap, link-type EN10MB (Ethernet)
 13:50:17.808959 IP 10.254.4.125.44695 > 10.254.4.170.6343: sFlowv5, IPv4 agent 10.254.4.125, agent-id 0, length 148
 vagrant@ubuntu:~$
 ```
-
 
 Easy as that. Of course there are many more options for rewriting packets if you want to do something complex. All I needed was this simple change, and it was quick and easy.

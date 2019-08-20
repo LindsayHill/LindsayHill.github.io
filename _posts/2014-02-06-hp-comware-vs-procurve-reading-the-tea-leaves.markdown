@@ -17,12 +17,7 @@ HP acquired 3Com in 2009. This added a large range of routing, switching and wir
 
 {% include warning.html content="Note: I have no inside information on this. I am simply speculating, based upon available public information. Do your own thinking before making major purchasing decisions." %}
 
-
-
-
 ## History: Two Networking Lines
-
-
 
 HP's ProCurve group has its roots going back [as far as 1979](http://en.wikipedia.org/wiki/ProCurve). Through the 2000s, HP developed and sold their own software, hardware and custom ASICs, powering their ProCurve line of switches. These switches are aimed at the middle of the market - those organisations that wanted reasonably powerful, fully managed access switches, but didn't need/want the complete featureset and high price that Cisco was offering. They offered fixed-port, stackable and modular switches, but they stuck to a focus of switching, with some basic routing capabilities.
 
@@ -32,11 +27,7 @@ In 2008, they had approximately 8% of the [Ethernet switch market](http://h30507
 
 In 2009, partly as a result of Cisco's move into servers with UCS, HP acquired 3Com, significantly boosting their network offerings. The problem is that the network line now has some overlaps, and there has not yet been a significant shakedown.
 
-
-
 ## Codebase: One Source Tree, Multiple Images
-
-
 
 I asked about the future of ProCurve/Comware at HP Discover Barcelona 2013, and how they might be combined. I was told that the plan is to have "One source tree, with multiple images." There would be separate drivers for different models/ASICs, and individual binary builds for each device type. It's not quite as elegant as Arista's approach of running one single binary image across all devices, but HP has to support a much wider range of hardware.
 
@@ -48,11 +39,7 @@ But I don't think we'll switch "mode" - I think we'll see a continuation of the 
 
 Of course, looking further ahead, it shouldn't matter - because we'll push out changes from the controller, and the underlying operations at a switch level will be abstracted away, right? Yeah, well, that might take a bit longer to roll out everywhere.
 
-
-
 ## Hardware: Both Lines Continue, with Consolidation
-
-
 
 Historically ProCurve systems have used custom ASICs (the ProVision ASIC), while [Comware systems have used merchant silicon](http://www.networkcomputing.com/data-networking-management/hp-on-right-track-with-two-network-oses/231002425). HP has been working with OpenFlow since the early days, initially with their ProCurve line. They also feel that the ProVision ASIC helps them meet a certain price/feature point that they couldn't do with merchant silicon. They've certainly achieved reasonable success doing this at the desktop access layer.
 
@@ -66,11 +53,7 @@ But try using the [switch selector](http://h17007.www1.hp.com/us/en/networking/p
 
 My guess is that HP wants to consolidate some of these lines, but they can't do it until they've got the software sorted out. Once they can run the same OS on either hardware, then there are far fewer differentiators, and we'll start to see some lines get retired. This will probably appear as natural attrition - newer lines like the 2920 and 5930 will stick around, with further software updates, while some of the older lines will start getting retired, and won't see replacement.
 
-
-
 ## So What Do I Buy?
-
-
 
 Whatever fits your needs best, with a caveat: if I had no other HP equipment, I'd probably prefer to get Comware equipment, as that seems to be the clearer software direction. Whatever branch you prefer, make sure you're buying the newest variants - e.g. the 2920, rather than 2910.
 

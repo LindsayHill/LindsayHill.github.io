@@ -21,10 +21,7 @@ Note that the data rate that counts is the volume of traffic that NetFlow is rep
 
 HP publishes more information about this licensing, along with some worked examples here: "[HP IMC Network Traffic Analyzer (NTA) License and Device Sampling Rate Explained](http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&taskId=120&prodSeriesId=4197910&prodTypeId=329290&objectID=c03179342)." I strongly recommend reading this document if you're planning on using IMC to analyse NetFlow data. I particularly like this quote:
 
-
 > It is difficult, if not impossible, to predict how much NTA traffic speed is likely to be in a given network
-
-
 
 Errr...so why do you license it that way then?
 
@@ -33,4 +30,3 @@ The actual setup of of NTA is reasonably easy, except for a couple of tiny bits 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-TG8fpbxRv8?ecver=1" frameborder="0" allowfullscreen></iframe>
 
 {% include note.html content="For reference, HP NNMi NetFlow analysis (iSPI Traffic) is licensed on the number of interfaces generating data, and the type of flow data (NetFlow is more expensive than sFlow). Solarwinds NetFlow Traffic Analyzer needs to have a license that matches your NPM license - so it assumes that all nodes you have managed could be generating flow data." %}
-

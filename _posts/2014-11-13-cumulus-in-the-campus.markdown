@@ -17,18 +17,11 @@ In response to a PacketPushers podcast on [HP Network Management](http://packetp
 
 > For me the benchmark of network management so far is [Meraki](http://meraki.cisco.com/) Dashboard - stupid simple and feature rich...
 > Yes - it’s a niche product that only focuses on Campus scenarios, Yes - it only supports proprietary HW. But it offers pretty much everything network operator needs - detailed visibility, traffic policy engine with L7 capability, MDM and you can hit it and go full speed right away.
-
-How long will it take HP to achieve that level of simplicity/usability?</blockquote>
- 
- 
+> How long will it take HP to achieve that level of simplicity/usability?
 
 He’s right about the Meraki dashboard. It’s fantastic. Fast to get set up, easy to use, it’s what others should aspire to. But there’s a catch: It only works with Meraki hardware. Keep paying your monthly bills, and all is well. But what if you’ve got non-Meraki hardware? Or what if you decide you don’t want to pay Meraki any more? What if Meraki goes out of business (unlikely, but still something to consider). Will you be left with a pile of un-manageable hardware?
 
-
- 
- ## Build on top of Cumulus?
- 
- 
+## Build on top of Cumulus?
 
 If you wanted to create a platform with similar power, but the ability to use open hardware, how would you do it? The key is the software on the switches. You need to control this tightly. The best way is either to write your own complete Network Operating System (NOS), or write plugins that work with other NOSes.
 
@@ -36,21 +29,13 @@ This is where [Cumulus](http://www.cumulusnetworks.com/) could enter the pictur
 
 Cumulus provides an open platform that could easily be extended. You can write plugins that bridge between your management platform and the underlying OS. It would be far easier than trying to write your own NOS from the ground up. Using Cumulus would give you far deeper access to the underlying switch workings than you'll get from Cisco or HP.
 
-
- 
- ## Customer Options
- 
- 
+## Customer Options
 
 It gives the customers flexibility too. If they decide they’ve had enough, they’re not stuck with un-manageable hardware. They could keep using Cumulus, or they could change the NOS to something like [Pica8](http://www.pica8.com), or [Big Cloud Fabric](http://www.bigswitch.com/sdn-products/big-cloud-fabric).
 
 Or just maybe, they could use JunOS, EOS or even IOS, as [@mrtugs](https://twitter.com/mrtugs) was [speculating about](http://lamejournal.com/2014/11/11/response-cisco-arista-disaggregating/)? This is of course the broader dream of network disaggregation.
 
-
- 
- ## Do the costs add up?
- 
- 
+## Do the costs add up?
 
 Maybe not. Cumulus in the campus doesn't currently stack up. That's not surprising - their initial target market has been the data centre. The cheapest switches on the Cumulus HCL are the likes of the [Quanta T1048-LB9](http://whiteboxswitch.com/collections/featured-poc-bundles/products/quanta-t1048-lb9), which is $2,449.00. A Cumulus 1G license adds another $499/year.
 

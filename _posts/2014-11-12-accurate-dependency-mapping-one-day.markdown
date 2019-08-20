@@ -17,9 +17,7 @@ The challenge is that Automated RCA needs an accurate, complete picture of how e
 
 But once your network gets past a moderate size, it’s hard to maintain this sort of dependency mapping. Manual methods break down, and we look for automated means instead - but they have gaps and limitations.
 
-
 ## Automated Mapping - Approaches & Limitations
-
 
 Tools such as [HP’s CMS suite](http://www8.hp.com/nz/en/software-solutions/configuration-management-system-database/) attempt to discover all objects and dependencies using a combination of network scanning and agents. They’ll use things like ping, SNMP, WMI, nmap to identify systems and running services. Agents can then report more data about installed applications, configurations, etc.
 
@@ -31,9 +29,7 @@ The problem is people, and the tools we use to maintain systems. Automated tools
 
 Because you can go and do things to applications and systems individually, automated discovery breaks down.
 
-
 ## What about the (Nearly) All Virtual Future?
-
 
 But what if all change was done through a few orchestration systems? What if I could connect to one controller, and identify all the deployed routers, firewalls, servers, storage devices? What if I could connect to one configuration management system, and see what configuration is deployed to my systems? What if I could trust that configuration management system, and know that it was the source of truth? If someone changes an underlying device, that change should get over-written.
 

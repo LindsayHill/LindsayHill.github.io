@@ -20,7 +20,7 @@ In March 2017, the SixXS team announced that they are [closing down all services
 
 SixXS has provided a free IPv6 tunnel broker service for years, allowing people to get 'native' IPv6 connectivity even when their ISP didn't offer it. A useful service in the early days of IPv6, when ISPs were dragging the chain.
 
-But this is a Good Thing that it is now closing down. It's closing down because their mission has been achieved, and people no longer require tunnel broker services. IPv6 is now widely available in many countries, and not just from niche ISPs. Mainstream ISPs such as [Comcast](https://my.xfinity.com/) in the US, [Sky](https://www.sky.com) in the UK, and [Telstra](https://telstra.com) in Australia now enable IPv6 by default for consumer connections. 
+But this is a Good Thing that it is now closing down. It's closing down because their mission has been achieved, and people no longer require tunnel broker services. IPv6 is now widely available in many countries, and not just from niche ISPs. Mainstream ISPs such as [Comcast](https://my.xfinity.com/) in the US, [Sky](https://www.sky.com) in the UK, and [Telstra](https://telstra.com) in Australia now enable IPv6 by default for consumer connections.
 
 Of course there's technology laggards like [Spark](https://www.spark.co.nz) in NZ dragging the chain, but who cares when every other major ISP in that market offers IPv6?
 

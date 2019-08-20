@@ -13,22 +13,10 @@ tags:
 
 Dobias van Ingen is working to get an HP Networking [scripting community](http://abouthpnetworking.com/2014/06/30/always-wanting-to-join-new-hpn-scripting-github-community/) together. This is to take advantage of various HPN scripting capabilities, [such as](http://abouthpnetworking.com/2014/06/19/hp-network-scripting/):
 
-
-
-
-    
-  * Comware 7 provides support for Python and TCL
-
-    
-  * Comware 7 also provides support for NETCONF
-
-    
-  * IMC provides extensive eAPI support
-
-    
-  * HP VAN SDN controller provides API support
-
-
+* Comware 7 provides support for Python and TCL
+* Comware 7 also provides support for NETCONF
+* IMC provides extensive eAPI support
+* HP VAN SDN controller provides API support
 
 There is now a [GitHub repo](https://github.com/networkingdvi/HPN-Scripting) available, containing all the examples from the recent HP ETSS event in Barcelona. All contributions are encouraged, so if you're doing something interesting, get in touch with Dobias.
 
