@@ -10,7 +10,9 @@ permalink: /about
 
 You can find me on Twitter as [northlandboy](https://twitter.com/northlandboy). You can also email me at [lindsay.k.hill@gmail.com](mailto:lindsay.k.hill@gmail.com). GitHub profile is [LindsayHill](https://github.com/LindsayHill).
 
-In May 2015, I joined [Brocade](http://www.brocade.com/) as a Product Manager. In October 2017, my Business Unit at Brocade was sold to [Extreme Networks](http://www.extremenetworks.com/). In July 2019 I left Extreme Networks. You can assume what you will about my bias.
+I am a Network Engineer at AS32590, where I work on all manner of things vaguely-related to networking. Run an eyeballs network, and looking to peer? [Get in touch](https://www.peeringdb.com/asn/32590).
+
+In May 2015, I joined [Brocade](http://www.brocade.com/) as a Product Manager. In October 2017, my Business Unit at Brocade was sold to [Extreme Networks](http://www.extremenetworks.com/). In July 2019 I left Extreme Networks.
 
 Prior to joining Brocade, I worked in a variety of roles, covering network design and architecture, network management, security, and HP-UX/Linux system administration. This covered a range of organisations, from small development shops, to large financial institutions and telecommunications giants.
 
@@ -32,7 +34,7 @@ I have also travelled widely - my writings on travel, and less serious topics, a
 
 This is my general disclaimer, and applies to all my posts. Should I have anything more specific to add in relation to any specific post, I will add it to that post.
 
-As of May 2015, I work for Brocade as a Product Manager. In October 2017, my Business Unit was sold to Extreme Networks. I will strive to maintain balance in anything I write here, but you can assume that there will be some level of bias. I may also be constrained in what I can say about Brocade, Extreme or its competitors.
+I used to work for Brocade, then got acquired by Extreme Networks. I no longer work for Extreme, but I may still be constrained in what I can say about Brocade and/or Extreme. 
 
 I have never been paid for anything I write on this site, nor have I been unduly influenced by any vendor. Of course, this does not mean that vendors have not tried their best to ensure that I see their products in a favourable light! I am grateful for the assistance I have been given, and help in trying to answer my questions.
 
