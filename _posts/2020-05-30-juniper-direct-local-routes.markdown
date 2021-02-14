@@ -10,7 +10,7 @@ tags:
 - Juniper
 ---
 
-Juniper routers consider a directly configured IP as a "local" route, except when you use `/32` mask. Then it is a "direct" route. This caused me some confusion when creating a policy to redistribute loopback IP addresses into BGP.
+Juniper routers consider a directly configured IP as a "direct" route, except when you use a `/32` mask (for IPv4). Then it is a "local" route. This caused me some confusion when creating a policy to redistribute loopback IP addresses into BGP.
 
 ## Route Protocol Types
 
