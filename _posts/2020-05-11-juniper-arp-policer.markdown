@@ -12,6 +12,8 @@ tags:
 
 Juniper devices have a default ARP policer that drops ARP requests and responses over 150kbps. By default, this is an aggregate policer that applies to **all** interfaces. This can lead to unexpected behavior when high levels of ARP on one interface lead to BGP session drops on another interface. You can't change the default policer limits, but you can create a new policer, with higher limits.
 
+**UPDATE**: There is a similar issue with [PTX]({% post_url 2021-08-16-juniper-arp-policer-ptx %}). A bit easier to diagnose & resolve.
+
 ## Problem: IPv4 BGP Session Flaps on PNI
 
 I was investigating a problem reported by one of our Transit providers. Once a day or so, our IPv4 BGP session with them would flap. The interface itself was stable, and the IPv6 session remained up. One particular site was seeing this more than others. The sites used different platforms, but were running the same code version.
