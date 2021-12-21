@@ -1,0 +1,91 @@
+---
+author: lindsay
+date: '2021-12-20 21:00 -07:00'
+layout: post
+slug: ex3400-disk-space
+title: EX3400 Disk Space and Upgrades
+categories:
+- Routing &amp; Switching
+tags:
+- Juniper
+---
+
+The Juniper EX3400 switch series is a decent access switch. But a Product Manager chose to save $0.50 on COGS by choosing a 2GB disk. That's just not enough space to handle normal Junos upgrades. This has wasted untold engineer hours on busywork. I hope that person (A) got a bonus, and (B) is never allowed to under-spec hardware again.
+
+Here's some tips I've learnt for manual and automated upgrades for EX3400s.
+
+## Manual Upgrades
+
+Search for "Juniper EX3400 disk space" and you'll find plenty of people complaining about this, and some suggestions. [Juniper KB31198](https://kb.juniper.net/InfoCenter/index?page=content&id=KB31198Juniper) looks like a good place to start. But it starts with `request system storage cleanup` and `request system snapshot delete snap*`.
+
+Those _might_ work if you're upgrading from 15.1X -> 18.2. Maybe if you're lucky it will be enough for upgrades within the 18.4 train. But it almost certainly won't work if you're going from 18.4.x -> 20.2.x.
+
+There have been PRs that are supposed to fix this, and they might help around the edges, but they don't help a lot.
+
+With certain version combinations, you could get away with copying the new verson to `/mfs`, and installing from there. It was dependent on your source & target image.
+
+The only method I have found that works is this:
+
+```bash
+lindsayh@ex3400> start shell user root
+Password:
+pkg setop rm previous
+pkg delete old
+exit
+```
+
+This will completely remove the oldest installed image, freeing up plenty of space. These commands have not caused me any problems on the hundreds of systems I have run it on. It would mean that you can't do a rollback from the current version to the previous version, but this is not a problem. You're about to install a new version.
+
+It's not quite as terrifying as my early days of upgrading Cisco 3500s that only enough space for one single image. If the upgrade failed, things went very bad.
+
+## ZTP/Automated Upgrades
+
+The previous method is OK if you only have a handful of systems. It's not practical if you have a large number of systems, or if you are using ZTP to set up new switches.
+
+Juniper switches that have been zeroized will use DHCP to retrieve their config file, and the image to install. So you could have some config like this on your DHCP server:
+
+```shell
+  if ( substring (option vendor-class-identifier, 0,14) = "Juniper-ex3400") {
+     option ztp-ops.config-file-name "ztp/conf/ex3400.txt";
+     option ztp-ops.image-file-name "ztp/images/ex3400.tgz";
+  }
+```
+
+With 15.1X systems, this would work. But new EX3400s ship with at least 18.2 code, and you want to run 18.4 or 20.2. Even on a brand new, out of the box system with no logs or other config, there is not enough space to run a regular upgrade. (Does that speak more to Juniper QA, or just how criminal the under-provisioning of hardware was?)
+
+You need a different approach for ZTP. I use a modified version of the [juniper-ztp scripts here](https://github.com/kquilliam/juniper-ztp). It is a little more complicated, with a few moving parts, but here's how it works:
+
+1/ The new (or newly zeroized) switch boots up. DHCP gives it an IP address, and a [configuration file](https://github.com/kquilliam/juniper-ztp/blob/master/dhcpd.conf#L30).
+2/ The configuration file contains some basic config info, and [this section](https://github.com/kquilliam/juniper-ztp/blob/master/configs/access.conf#L33):
+
+```shell
+event-options {
+    generate-event {
+        staging time-interval 300;
+    }
+    policy staging {
+        events staging;
+        then {
+            execute-commands {
+                commands {
+                    "op url ftp://10.0.0.1/slax/ztp.slax";
+                }
+            }
+        }                               
+    }
+}
+```
+
+3/ That says 'every 5 minutes, generate an event called "staging"'. Whenever you see that event, run the script at that URL
+4/ It is a [SLAX script](https://github.com/kquilliam/juniper-ztp/blob/master/slax/test.slax), which is a bit of a shit to work with. The script defines a target version. It then checks "am I already running that version? If so, remove the event policy, and quit.". It will never run again.
+If it is **not** running the right version, it will free up disk space using the earlier `pkg` commands, pull down the new version, install it and reboot.
+
+Once the switch reboots, it re-runs the script every 5 minutes. Assuming the upgrade worked, it should now clean itself up.
+
+Downloading & installing the image takes more than 5 minutes, so the script also sets a flag when it runs, and checks for the presence of that flag, aborting if it is already running.
+
+I use a variation of this script for updating existing systems. All I need to do is push out the `event-options` config, and the switches will free up space, pull down the new image, and reboot.
+
+It sucks that we have to do this because someone saved $0.50 on a $2,000 switch. This is what happens when people don't think through the total lifecycle of a device. But using these commands and/or this script will make that hoop-jumping a bit easier.
+
+It does make me wonder though: What's Juniper Mist doing for EX3400 software upgrades? There's no magic to what Mist does, underneath it all it probably runs some very similar commands.
