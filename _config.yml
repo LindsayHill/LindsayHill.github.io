@@ -6,7 +6,6 @@ logo: 'assets/images/logo.jpg'
 favicon: 'assets/images/favicon.ico'
 url: 'https://lkhill.com/'
 baseurl: ''
-google_analytics: 'UA-99113050-1'
 disqus: 'lkhill'
 #mailchimp-list: ''
 include: ["_pages",_redirects]
@@ -65,8 +64,6 @@ kramdown:
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
 adsense: "disabled"
-# adsense-data-ad-client: "ca-pub-3412143450191416"
-# adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
