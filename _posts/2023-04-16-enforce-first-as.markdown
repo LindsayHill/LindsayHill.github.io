@@ -2,7 +2,7 @@
 author: lindsay
 categories:
 - Routing &amp; Switching
-date: "2023-04-09 10:00 -07:00"
+date: "2023-04-16 18:00 -07:00"
 layout: post
 slug: enforce-first-as
 tags:
@@ -53,7 +53,9 @@ Imagine that I operate a CDN with extensive peering and transit connections.
 
 And let's say that you operate an eyeballs ISP, with two upstream providers. Your upstream providers charge you on a traffic volume basis. They in turn have transit agreements with other operators, and peer at IXPs. They might have bi-lateral peering at IXPs or PNIs with me.
 
-All else being equal, if I have identical relationships with those networks, I will split traffic to you across them. \[Disclaimer: BGP is a suggestion framework, not a proscribed routing protocol like OSPF. I can and do route traffic according to my business needs. Your routing suggestions are just that: suggestions.\]
+All else being equal, if I have identical relationships with those networks, I will split traffic to you across them.
+
+{% include note.html content="Disclaimer: BGP is a suggestion framework, not a proscribed routing protocol like OSPF. I can and do route traffic according to my business needs. Your routing suggestions are just that: suggestions." %}
 
 Now what if one of your transit networks is a bit shady, and wants to maximize traffic going via their network? They have two levers to pull: Either announce more specifics for your prefixes, or strip their own AS. I ignore any other BGP attributes. Announcing more specifics has other issues, and may not be possible. But they can strip their AS, and hope that I don't notice.
 
