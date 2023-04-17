@@ -54,7 +54,7 @@ What if I don't like the suggested release? What if I need feature \<X\>? Or wha
 
 In those cases you'll need to make your own decision. Remember that Juniper is offering suggested releases - as long as you are still running a supported release, they will still support you. They might question your choice, but if you have a solid rationale, it's fine.
 
-If you really need feature <X> that is only in the very latest code, that's what you have to do. If running brand new hardware, you might need a brand-new software release.
+If you really need feature \<X\> that is only in the very latest code, that's what you have to do. If running brand new hardware, you might need a brand-new software release.
 
 My general advice in those situations is:
 
@@ -68,7 +68,7 @@ If there are multiple suggested versions, look at the future support lifetime, a
 
 > I saw a reference to hardened releases somewhere - what about those?
 
-My advice is to ignore those. As best as I can tell, Juniper decided to do "hardened" releases for specific use-cases, e.g. EVPN-VXLAN, or VCF. But they did a poor job of explaining what a hardened release is, and have not kept their documentation up to date. You can see traces of it in this [PDF](https://pathfinderstatic.s3-us-west-2.amazonaws.com/public/DC-Architecture-Hardened-release-recommendation.pdf), but I have not seen any clear public definitions. If you go to Pathfinder and click on [Data Center](https://apps.juniper.net/home/segment?segment=Cloud%20Providers&subSegment=Data%20Center), then select an architecture, e.g. [MC-LAG](https://apps.juniper.net/home/architecture?type=Data%20Center%20Architectures&name=mc-lag&segment=Cloud%20Providers&subSegment=Data%20Center), you'll see a "hardended release." At the time of writing, it says the hardened release is 20.2R3. Installing a release today that goes End of Engineering in June this year is a bad move. Don't do that.
+My advice is to ignore those. As best as I can tell, Juniper decided to do "hardened" releases for specific use-cases, e.g. EVPN-VXLAN, or VCF. But they did a poor job of explaining what a hardened release is, and have not kept their documentation up to date. You can see traces of it in this [PDF](https://pathfinderstatic.s3-us-west-2.amazonaws.com/public/DC-Architecture-Hardened-release-recommendation.pdf), but I have not seen any clear public definitions. If you go to Pathfinder and click on [Data Center](https://apps.juniper.net/home/segment?segment=Cloud%20Providers&subSegment=Data%20Center), then select an architecture, e.g. [MC-LAG](https://apps.juniper.net/home/architecture?type=Data%20Center%20Architectures&name=mc-lag&segment=Cloud%20Providers&subSegment=Data%20Center), you'll see a "hardended release." At the time of writing, it says that is 20.2R3. Installing a release today that goes End of Engineering in June this year is a bad move. Don't do that.
 
 The "Suggested Releases" page has recommendations for use-cases for the QFX platforms. At 2023/03/30, for MC-LAG (QFX5K) it says "Latest 21.4R3-Sx / 22.2R3". Those are better choices. At the time of writing, they suggest the same version for all use-cases. Probably tells us something about what happened to their plans for "hardened" releases.
 
