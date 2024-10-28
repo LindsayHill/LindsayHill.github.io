@@ -21,7 +21,7 @@ First the good bits. Juniper started a new [release process in 2023](https://sup
 
 I like the new process. It simplifies the versions they have to maintain. We used to say that you should wait for the R3 release, but really there's no difference between R3 and R2-S3. Now Juniper doesn't have to maintain the quarterly releases, and all the maintenance and service releases below them. It avoids the confusion that happened when they kept patching -R2, even after releasing R3.
 
-But here's the thing with a simplified release process: you've got no excuses for not delivering. I have no issue with 6-monthly feature releases. But it feels like we're doing annual releases these days.
+But here's the thing with a simplified release process: you've got no excuses for not delivering. I have no issue with 6-monthly feature releases. But it feels like they're doing annual releases these days.
 
 Look at the current [download page for the QFX5120-48Y](https://support.juniper.net/support/downloads/?p=qfx5120-48y), a very common ToR switch:
 
