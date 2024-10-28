@@ -39,7 +39,7 @@ ATAC wants me to move the connection from port 0/0/4 (a QSFP28 port) to 0/0/3 (a
 
 The router is at a remote site. I need to log a ticket to get remote hands to move the cross-connect. How can I do it with the shortest outage? I'd like to copy the IP address from port 0/0/4 to 0/0/3. That way when the patch cable gets moved, everything comes up:
 
-```
+```bash
 lindsayh@ptx# show interfaces et-0/0/4
 description "Transit: Potatotel AS64497 [100Gbit]"
 unit 0 {
@@ -71,7 +71,7 @@ lindsayh@ptx# show | compare
 
 But I can't do that:
 
-```
+```sh
 {master}[edit]
 lindsayh@ptx# commit check
 re0:
