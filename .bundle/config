@@ -1,2 +1,7 @@
 ---
 BUNDLE_PATH: ".vendor/bundle"
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+BUNDLE_POST___SPAWN: "--with-cflags=-Wno-incompatible-function-pointer-types"
+BUNDLE_POSIX___SPAWN: "--with-cflags=-Wno-incompatible-function-pointer-types"
+BUNDLE_BUILD__POSIX___SPAWN: "--with-cflags=-Wno-incompatible-function-pointer-types"
+BUNDLE_BUILD__RDISCOUNT: "--with-cflags='-Wno-error=implicit-function-declaration -Wno-error=implicit-int'"
